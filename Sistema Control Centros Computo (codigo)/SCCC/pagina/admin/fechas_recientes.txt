@@ -1,2 +1,0 @@
-SELECT docente_clave,hora,  max(fecha_prestamo)  from prestamo GROUP BY fecha_prestamo
-ORDER BY Fecha_prestamo DESC ;
