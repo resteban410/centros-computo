@@ -200,7 +200,7 @@ input:focus {
   margin-bottom: 70px; }
 
 .mb-80 {
-  margin-bottom: 80px; }
+  margin-bottom: 45px; }
 
 .mb-100 {
   margin-bottom: 100px; }
@@ -229,7 +229,7 @@ input:focus {
   padding-bottom: 80px; }
 
 .section-padding-80-0 {
-  padding-top: 80px;
+  padding-top: 45px;
   padding-bottom: 0; }
 
 .section-padding-100 {
@@ -834,45 +834,6 @@ input:focus {
     .single-footer-widget span:last-child {
       margin-bottom: 0; }
 
-.copywrite-text {
-  position: relative;
-  z-index: 1; }
-  @media only screen and (max-width: 767px) {
-    .copywrite-text {
-      margin-bottom: 15px;
-      text-align: center; } }
-  .copywrite-text p {
-    font-size: 14px;
-    color: #afb4bf;
-    margin-bottom: 0; }
-    @media only screen and (max-width: 767px) {
-      .copywrite-text p {
-        font-size: 12px; } }
-    .copywrite-text p a {
-      color: #afb4bf;
-      font-size: 14px; }
-      @media only screen and (max-width: 767px) {
-        .copywrite-text p a {
-          font-size: 12px; } }
-      .copywrite-text p a:focus, .copywrite-text p a:hover {
-        color: #ffffff; }
-
-.copywrite-content {
-  position: relative;
-  z-index: 1;
-  padding: 15px 0;
-  border-top: 1px solid #273d4b; }
-  .copywrite-content .social-info {
-    text-align: right; }
-    @media only screen and (max-width: 767px) {
-      .copywrite-content .social-info {
-        text-align: center; } }
-    .copywrite-content .social-info a {
-      display: inline-block;
-      color: #afb4bf;
-      padding-left: 20px; }
-      .copywrite-content .social-info a:focus, .copywrite-content .social-info a:hover {
-        color: #ffffff; }
 
 /* :: 10.0 Partner Area CSS */
 .partner-logo-content {
