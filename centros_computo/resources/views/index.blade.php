@@ -244,8 +244,8 @@
                 <div class="col-12 col-lg-6">
                     <!-- Section Heading -->
                     <div class="section-heading wow fadeInUp" data-wow-delay="100ms">
-                        <h6>About Us</h6>
-                        <h2>Welcome to <br>Roberto Hotel Luxury</h2>
+                        <h6>BUAP SJCH</h6>
+                        <h2>Sistema De Centros<br> de computo</h2>
                     </div>
                     <div class="about-us-content mb-100">
                         <h5 class="wow fadeInUp" data-wow-delay="300ms">With over 340 hotels worldwide, NH Hotel Group offers a wide variety of hotels catering for a perfect stay no matter where your destination.</h5>
@@ -287,32 +287,27 @@
                         <!-- Single Service Area -->
                         <div class="single-service--area mb-100 wow fadeInUp" data-wow-delay="100ms">
                             <img src="img/core-img/icon-1.png" alt="">
-                            <h5>Transportion</h5>
+                            <h5>Software</h5>
                         </div>
 
                         <!-- Single Service Area -->
                         <div class="single-service--area mb-100 wow fadeInUp" data-wow-delay="300ms">
                             <img src="img/core-img/icon-2.png" alt="">
-                            <h5>Reiseservice</h5>
+                            <h5>Fallas</h5>
                         </div>
 
                         <!-- Single Service Area -->
                         <div class="single-service--area mb-100 wow fadeInUp" data-wow-delay="500ms">
                             <img src="img/core-img/icon-3.png" alt="">
-                            <h5>Spa Relaxtion</h5>
+                            <h5>Calendario</h5>
                         </div>
 
                         <!-- Single Service Area -->
                         <div class="single-service--area mb-100 wow fadeInUp" data-wow-delay="700ms">
                             <img src="img/core-img/icon-4.png" alt="">
-                            <h5>Restaurant</h5>
+                            <h5>Alumnos</h5>
                         </div>
 
-                        <!-- Single Service Area -->
-                        <div class="single-service--area mb-100 wow fadeInUp" data-wow-delay="900ms">
-                            <img src="img/core-img/icon-1.png" alt="">
-                            <h5>Bar &amp; Drink</h5>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -558,72 +553,6 @@
     </section>
     <!-- Projects Area End -->
 
-    <!-- Blog Area Start -->
-    <section class="roberto-blog-area section-padding-100-0">
-        <div class="container">
-            <div class="row">
-                <!-- Section Heading -->
-                <div class="col-12">
-                    <div class="section-heading text-center wow fadeInUp" data-wow-delay="100ms">
-                        <h6>Our Blog</h6>
-                        <h2>Latest News &amp; Event</h2>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <!-- Single Post Area -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-post-area mb-100 wow fadeInUp" data-wow-delay="300ms">
-                        <a href="#" class="post-thumbnail"><img src="img/bg-img/2.jpg" alt=""></a>
-                        <!-- Post Meta -->
-                        <div class="post-meta">
-                            <a href="#" class="post-date">Jan 02, 2019</a>
-                            <a href="#" class="post-catagory">Event</a>
-                        </div>
-                        <!-- Post Title -->
-                        <a href="#" class="post-title">Learn How To Motivate Yourself</a>
-                        <p>How many free autoresponders have you tried? And how many emails did you get through using them?</p>
-                        <a href="index.php" class="btn continue-btn"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-                    </div>
-                </div>
-
-                <!-- Single Post Area -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-post-area mb-100 wow fadeInUp" data-wow-delay="500ms">
-                        <a href="#" class="post-thumbnail"><img src="img/bg-img/3.jpg" alt=""></a>
-                        <!-- Post Meta -->
-                        <div class="post-meta">
-                            <a href="#" class="post-date">Jan 02, 2019</a>
-                            <a href="#" class="post-catagory">Event</a>
-                        </div>
-                        <!-- Post Title -->
-                        <a href="#" class="post-title">What If Let You Run The Hubble</a>
-                        <p>My point here is that if you have no clue for the answers above you probably are not operating a followup.</p>
-                        <a href="index.php" class="btn continue-btn"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-                    </div>
-                </div>
-
-                <!-- Single Post Area -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-post-area mb-100 wow fadeInUp" data-wow-delay="700ms">
-                        <a href="#" class="post-thumbnail"><img src="img/bg-img/4.jpg" alt=""></a>
-                        <!-- Post Meta -->
-                        <div class="post-meta">
-                            <a href="#" class="post-date">Jan 02, 2019</a>
-                            <a href="#" class="post-catagory">Event</a>
-                        </div>
-                        <!-- Post Title -->
-                        <a href="#" class="post-title">Six Pack Abs The Big Picture</a>
-                        <p>Some good steps to take to ensure you are getting what you need out of a autoresponder include…</p>
-                        <a href="index.php" class="btn continue-btn"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-    <!-- Blog Area End -->
 
     <!-- Call To Action Area Start -->
     <section class="roberto-cta-area">
@@ -645,28 +574,6 @@
     </section>
     <!-- Call To Action Area End -->
 
-    <!-- Partner Area Start -->
-    <div class="partner-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="partner-logo-content d-flex align-items-center justify-content-between wow fadeInUp" data-wow-delay="300ms">
-                        <!-- Single Partner Logo -->
-                        <a href="#" class="partner-logo"><img src="img/core-img/p1.png" alt=""></a>
-                        <!-- Single Partner Logo -->
-                        <a href="#" class="partner-logo"><img src="img/core-img/p2.png" alt=""></a>
-                        <!-- Single Partner Logo -->
-                        <a href="#" class="partner-logo"><img src="img/core-img/p3.png" alt=""></a>
-                        <!-- Single Partner Logo -->
-                        <a href="#" class="partner-logo"><img src="img/core-img/p4.png" alt=""></a>
-                        <!-- Single Partner Logo -->
-                        <a href="#" class="partner-logo"><img src="img/core-img/p5.png" alt=""></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Partner Area End -->
 
     <!-- Footer Area Start -->
     <footer class="footer-area section-padding-80-0">
@@ -678,7 +585,7 @@
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="single-footer-widget mb-80">
                             <!-- Footer Logo -->
-                            <a href="#" class="footer-logo"><img src="img/core-img/buap-blanco.png" alt=""></a>
+                            <a href="#" class="footer-logo"><img src="img/core-img/logo2.png" alt=""></a>
 
                             <h4>+12 345-678-9999</h4>
                             <span>Info.colorlib@gmail.com</span>
@@ -730,7 +637,7 @@
                             <span>Subscribe our newsletter gor get notification about new updates.</span>
 
                             <!-- Newsletter Form -->
-                            <form action="index.php" class="nl-form">
+                            <form action="index.html" class="nl-form">
                                 <input type="email" class="form-control" placeholder="Enter your email...">
                                 <button type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
                             </form>
