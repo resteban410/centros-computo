@@ -19,11 +19,6 @@
 </head>
 
 <body>
-    <!--
-    <div id="preloader">
-        <div class="loader"></div>
-    </div>
-    -->
 
     <!-- Header Area Start -->
     <header class="header-area">
@@ -96,7 +91,7 @@
                                     <li><a href="./room.php">Campus</a></li>
                                     <li><a href="./about.php">Reglamento</a></li>
                                     <li><a href="./blog.php">Laboratorios</a></li>
-                                    <li><a href="./contact.php">Contacto</a></li>
+                                    <li><a href="./contacto.php">Contacto</a></li>
                                 </ul>
 
                                 <!-- Search -->

@@ -1064,7 +1064,7 @@ input:focus {
 .single-room-slide {
   position: relative;
   z-index: 1;
-  height: 700px;
+  height: 620px;
   background-color: #0e2737;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
