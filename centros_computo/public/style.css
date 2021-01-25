@@ -853,7 +853,7 @@ input:focus {
 .single-project-slide {
   position: relative;
   z-index: 1;
-  height: 800px;
+  height: 300px;
   overflow: hidden;
   border-right: 1px solid rgba(255, 255, 255, 0.2);
   border-left: 1px solid rgba(255, 255, 255, 0.2); }

@@ -259,15 +259,15 @@
                         <div class="row no-gutters">
                             <div class="col-6">
                                 <div class="single-thumb">
-                                    <img src="img/bg-img/13.jpg" alt="">
+                                    <img src="img/bg-img/lab-2.png" alt="">
                                 </div>
                                 <div class="single-thumb">
-                                    <img src="img/bg-img/14.jpg" alt="">
+                                    <img src="img/bg-img/lab-3.png" alt="">
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="single-thumb">
-                                    <img src="img/bg-img/15.jpg" alt="">
+                                    <img src="img/bg-img/lab-1.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -325,7 +325,7 @@
 
                 <!-- Content -->
                 <div class="room-content">
-                    <h2 data-animation="fadeInUp" data-delay="100ms">Premium King Room</h2>
+                    <h2 data-animation="fadeInUp" data-delay="100ms">Computo Basico</h2>
                     <h3 data-animation="fadeInUp" data-delay="300ms">400$ <span>/ Day</span></h3>
                     <ul class="room-feature" data-animation="fadeInUp" data-delay="500ms">
                         <li><span><i class="fa fa-check"></i> Size</span> <span>: 30 ft</span></li>
@@ -344,7 +344,25 @@
 
                 <!-- Content -->
                 <div class="room-content">
-                    <h2 data-animation="fadeInUp" data-delay="100ms">Best King Room</h2>
+                    <h2 data-animation="fadeInUp" data-delay="100ms">Computo Intermedio</h2>
+                    <h3 data-animation="fadeInUp" data-delay="300ms">125$ <span>/ Day</span></h3>
+                    <ul class="room-feature" data-animation="fadeInUp" data-delay="500ms">
+                        <li><span><i class="fa fa-check"></i> Size</span> <span>: 30 ft</span></li>
+                        <li><span><i class="fa fa-check"></i> Capacity</span> <span>: Max persion 5</span></li>
+                        <li><span><i class="fa fa-check"></i> Bed</span> <span>: King Beds</span></li>
+                        <li><span><i class="fa fa-check"></i> Services</span> <span>: Wifi, Television, Bathroom</span></li>
+                    </ul>
+                    <a href="#" class="btn roberto-btn mt-30" data-animation="fadeInUp" data-delay="700ms">View Details</a>
+                </div>
+            </div>
+
+            <div class="single-room-slide d-flex align-items-center">
+                <!-- Thumbnail -->
+                <div class="room-thumbnail h-100 bg-img" style="background-image: url(img/bg-img/17.jpg);"></div>
+
+                <!-- Content -->
+                <div class="room-content">
+                    <h2 data-animation="fadeInUp" data-delay="100ms">Computo Avanzado</h2>
                     <h3 data-animation="fadeInUp" data-delay="300ms">125$ <span>/ Day</span></h3>
                     <ul class="room-feature" data-animation="fadeInUp" data-delay="500ms">
                         <li><span><i class="fa fa-check"></i> Size</span> <span>: 30 ft</span></li>
@@ -356,7 +374,7 @@
                 </div>
             </div>
         </div>
-    </section>
+   </section>
     <!-- Our Room Area End -->
 
     <!-- Testimonials Area Start -->
@@ -451,11 +469,71 @@
         <!-- Projects Slide -->
         <div class="projects-slides owl-carousel">
             <!-- Single Project Slide -->
-            <div class="single-project-slide active bg-img" style="background-image: url(img/bg-img/5.jpg);">
+            <div class="single-project-slide active bg-img" style="background-image: url(img/bg-img/labotorio.jpg);">
                 <!-- Project Text -->
                 <div class="project-content">
                     <div class="text">
+                        <h6>Prestamos</h6>
+                        <h5>Equipos de Computo</h5>
+                    </div>
+                </div>
+                <!-- Hover Effects -->
+                <div class="hover-effects">
+                    <div class="text">
                         <h6>Entertaiment</h6>
+                        <h5>Racing Bike</h5>
+                        <p>I focus a lot on helping the first time or inexperienced traveler head out prepared and confident...</p>
+                    </div>
+                    <a href="#" class="btn project-btn">Discover Now <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+            <!-- Single Project Slide -->
+            <div class="single-project-slide bg-img" style="background-image: url(img/bg-img/labotorio.jpg);">
+                <!-- Project Text -->
+                <div class="project-content">
+                    <div class="text">
+                        <h6>Software</h6>
+                        <h5>Racing Bike</h5>
+                    </div>
+                </div>
+                <!-- Hover Effects -->
+                <div class="hover-effects">
+                    <div class="text">
+                        <h6>Reservaciones</h6>
+                        <h5>Racing Bike</h5>
+                        <p>I focus a lot on helping the first time or inexperienced traveler head out prepared and confident...</p>
+                    </div>
+                    <a href="#" class="btn project-btn">Discover Now <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+            <!-- Single Project Slide -->
+            <div class="single-project-slide bg-img" style="background-image: url(img/bg-img/laboratorio1.jpg);">
+                <!-- Project Text -->
+                <div class="project-content">
+                    <div class="text">
+                        <h6>Fallas</h6>
+                        <h5>Racing Bike</h5>
+                    </div>
+                </div>
+                <!-- Hover Effects -->
+                <div class="hover-effects">
+                    <div class="text">
+                        <h6>Laptops</h6>
+                        <h5>Racing Bike</h5>
+                        <p>I focus a lot on helping the first time or inexperienced traveler head out prepared and confident...</p>
+                    </div>
+                    <a href="#" class="btn project-btn">Discover Now <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+            <!-- Single Project Slide -->
+            <div class="single-project-slide bg-img" style="background-image: url(img/bg-img/laboratorio1.jpg);">
+                <!-- Project Text -->
+                <div class="project-content">
+                    <div class="text">
+                        <h6>Instalaciones</h6>
                         <h5>Racing Bike</h5>
                     </div>
                 </div>
@@ -471,67 +549,7 @@
             </div>
 
             <!-- Single Project Slide -->
-            <div class="single-project-slide bg-img" style="background-image: url(img/bg-img/6.jpg);">
-                <!-- Project Text -->
-                <div class="project-content">
-                    <div class="text">
-                        <h6>Entertaiment</h6>
-                        <h5>Racing Bike</h5>
-                    </div>
-                </div>
-                <!-- Hover Effects -->
-                <div class="hover-effects">
-                    <div class="text">
-                        <h6>Entertaiment</h6>
-                        <h5>Racing Bike</h5>
-                        <p>I focus a lot on helping the first time or inexperienced traveler head out prepared and confident...</p>
-                    </div>
-                    <a href="#" class="btn project-btn">Discover Now <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-                </div>
-            </div>
-
-            <!-- Single Project Slide -->
-            <div class="single-project-slide bg-img" style="background-image: url(img/bg-img/7.jpg);">
-                <!-- Project Text -->
-                <div class="project-content">
-                    <div class="text">
-                        <h6>Entertaiment</h6>
-                        <h5>Racing Bike</h5>
-                    </div>
-                </div>
-                <!-- Hover Effects -->
-                <div class="hover-effects">
-                    <div class="text">
-                        <h6>Entertaiment</h6>
-                        <h5>Racing Bike</h5>
-                        <p>I focus a lot on helping the first time or inexperienced traveler head out prepared and confident...</p>
-                    </div>
-                    <a href="#" class="btn project-btn">Discover Now <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-                </div>
-            </div>
-
-            <!-- Single Project Slide -->
-            <div class="single-project-slide bg-img" style="background-image: url(img/bg-img/8.jpg);">
-                <!-- Project Text -->
-                <div class="project-content">
-                    <div class="text">
-                        <h6>Entertaiment</h6>
-                        <h5>Racing Bike</h5>
-                    </div>
-                </div>
-                <!-- Hover Effects -->
-                <div class="hover-effects">
-                    <div class="text">
-                        <h6>Entertaiment</h6>
-                        <h5>Racing Bike</h5>
-                        <p>I focus a lot on helping the first time or inexperienced traveler head out prepared and confident...</p>
-                    </div>
-                    <a href="#" class="btn project-btn">Discover Now <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-                </div>
-            </div>
-
-            <!-- Single Project Slide -->
-            <div class="single-project-slide bg-img" style="background-image: url(img/bg-img/9.jpg);">
+            <div class="single-project-slide bg-img" style="background-image: url(img/bg-img/labotorio.jpg);">
                 <!-- Project Text -->
                 <div class="project-content">
                     <div class="text">
@@ -557,16 +575,16 @@
     <!-- Call To Action Area Start -->
     <section class="roberto-cta-area">
         <div class="container">
-            <div class="cta-content bg-img bg-overlay jarallax" style="background-image: url(img/bg-img/1.jpg);">
+            <div class="cta-content bg-img bg-overlay jarallax" style="background-image: url(img/bg-img/62.png);">
                 <div class="row align-items-center">
                     <div class="col-12 col-md-7">
                         <div class="cta-text mb-50">
-                            <h2>Contact us now!</h2>
-                            <h6>Contact (+12) 345-678-9999 to book directly or for advice</h6>
+                            <h2>¡Contáctenos ahora!</h2>
+                            <h6>Contacto 222 229 5500 cualquier informacion o sugerencia</h6>
                         </div>
                     </div>
                     <div class="col-12 col-md-5 text-right">
-                        <a href="#" class="btn roberto-btn mb-50">Contact Now</a>
+                        <a href="#" class="btn roberto-btn mb-50">Enviar Mensaje</a>
                     </div>
                 </div>
             </div>
