@@ -971,6 +971,8 @@ input:focus {
 /* :: 12.0 CTA CSS */
 .roberto-cta-area {
   position: relative;
+  padding-bottom: 60px;
+  padding-top: 60px;
   z-index: 1; }
   .roberto-cta-area .cta-content {
     padding-top: 50px;
