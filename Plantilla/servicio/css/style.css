@@ -1157,3 +1157,182 @@ text-shadow: none;
 	}
 
 	
+/* ===================================
+    About Section
+====================================== */
+.about-text{
+    font-size: 22px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: #0a69de;
+}
+
+.about-heading{
+    font-size: 39px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #1f1f1f;
+}
+
+.about-des{
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #1f1f1f;
+    line-height: 24px;
+}
+
+.about-box {
+    border-radius: 5px;
+    padding: 50px 15px 50px;
+    background: #ffffff;
+    text-align: center;
+    cursor: pointer;
+    -webkit-box-shadow: 0 0 18px rgba(127, 123, 123, 0.5);
+    box-shadow: 0 0 18px rgba(127, 123, 123, 0.5);
+    transition: ease-in-out 0.3s;
+}
+
+.about-box:hover {
+    background-image: linear-gradient( 135deg, rgb(75, 51, 208) 0%, rgb(98, 58, 162) 100%);
+    -webkit-box-shadow: 0 0 10px -2px rgba(127, 123, 123, 0.9);
+    box-shadow: 0 0 10px -2px rgba(127, 123, 123, 0.9);
+}
+
+.about-box .about-main-icon i {
+    color: #0a69de;
+    font-size: 40px;
+    transform: translateY(0);
+    transition: ease-in-out 0.3s;
+}
+
+.about-box:hover .about-main-icon i {
+    transform: translateY(-10px);
+    -webkit-transition: .8s ease;
+    -o-transition: .8s ease;
+    transition: .8s ease;
+}
+
+.about-box h5 {
+    font-size: 22px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: #1f1f1f;
+    transition: ease-in-out 0.3s;
+}
+
+.about-box:hover i, .about-box:hover h5 {
+    color: #fff;
+    -webkit-transition: .8s ease;
+    -o-transition: .8s ease;
+    transition: .8s ease;
+}
+
+.about-opacity-icon {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.about-opacity-icon i {
+    position: absolute;
+    color: #03b3cb;
+    top: 30px;
+    font-size: 120px;
+    font-weight: 800;
+    line-height: 1;
+    text-transform: capitalize;
+    opacity: 0;
+    animation: scale .6s alternate infinite linear both;
+}
+
+@keyframes scale {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-10px)
+    }
+}
+
+.about-box:hover .about-opacity-icon i {
+    opacity: .09;
+}
+
+.about-box.active {
+    background-image: linear-gradient( 135deg, rgb(75, 51, 208) 0%, rgb(98, 58, 162) 100%);
+    -webkit-box-shadow: 0 0 10px -2px rgba(127, 123, 123, 0.9);
+    box-shadow: 0 0 10px -2px rgba(127, 123, 123, 0.9);
+    -webkit-transition: .8s ease;
+    -o-transition: .8s ease;
+    transition: .8s ease;
+}
+
+.about-box.active i, .about-box.active h5 {
+    color: #fff;
+}
+
+.about-box.active .about-opacity-icon i {
+    opacity: .09;
+}
+
+.about-box.active:hover {
+    background: #fff;
+    -webkit-box-shadow: 0 0 5px rgba(127, 123, 123, 0.1);
+    box-shadow: 0 0 5px rgba(127, 123, 123, 0.1);
+    -webkit-transition: .8s ease;
+    -o-transition: .8s ease;
+    transition: .8s ease;
+}
+
+.about-box.active:hover i{
+    color: #0a69de;
+}
+
+.about-box.active:hover h5 {
+    color: #1f1f1f;
+}
+
+.about-box.active:hover .about-opacity-icon i {
+    opacity: .09;
+}
+
+.about-box.active.about-box-green {
+    background: #fff;
+    -webkit-box-shadow: 0 0 18px rgba(127, 123, 123, 0.5);
+    box-shadow: 0 0 18px rgba(127, 123, 123, 0.5);
+    -webkit-transition: .8s ease;
+    -o-transition: .8s ease;
+    transition: .8s ease;
+}
+
+.about-box.active.about-box-green i {
+    color: #0a69de;
+}
+
+.about-box.active.about-box-green h5 {
+    color: #1f1f1f;
+}
+
+.about-box.active.about-box-green .about-opacity-icon i {
+    opacity: 0;
+}
+
+.about-box.active.about-box-green:hover {
+    background-image: linear-gradient( 135deg, rgb(75, 51, 208) 0%, rgb(98, 58, 162) 100%);
+    -webkit-transition: .8s ease;
+    -o-transition: .8s ease;
+    transition: .8s ease;
+}
+
+.about-box.active.about-box-green:hover i {
+    color: #ffffff;
+}
+
+.about-box.active.about-box-green:hover h5 {
+    color: #ffffff;
+}
+
+.about-box.active.about-box-green:hover .about-opacity-icon i {
+    opacity: .09;
+}
