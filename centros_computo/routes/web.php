@@ -125,3 +125,6 @@ Route::get('periodos', [PeriodoController::class,'index'])->name('periodoP');
 Route::post('alta_periodo', [PeriodoController::class, 'store'])->name('altaPeriodo'); 
 Route::put('editar_periodo', [PeriodoController::class, 'edit'])->name('editarPeriodo'); 
 Route::delete('borrar_periodo', [PeriodoController::class, 'destroy'])->name('borrarPeriodo');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
