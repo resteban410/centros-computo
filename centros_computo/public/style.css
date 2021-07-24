@@ -28,7 +28,7 @@ h4,
 h5,
 h6 {
   font-family: "Poppins", sans-serif;
-  color: #003b5c;
+  color: #2a303b;
   line-height: 1.3;
   font-weight: 500; }
 
@@ -36,7 +36,7 @@ a,
 a:active,
 a:focus,
 a:hover {
-  color: #003b5c;
+  color: #2a303b;
   text-decoration: none;
   -webkit-transition-duration: 500ms;
   -o-transition-duration: 500ms;
@@ -200,7 +200,7 @@ input:focus {
   margin-bottom: 70px; }
 
 .mb-80 {
-  margin-bottom: 45px; }
+  margin-bottom: 80px; }
 
 .mb-100 {
   margin-bottom: 100px; }
@@ -229,7 +229,7 @@ input:focus {
   padding-bottom: 80px; }
 
 .section-padding-80-0 {
-  padding-top: 45px;
+  padding-top: 80px;
   padding-bottom: 0; }
 
 .section-padding-100 {
@@ -545,7 +545,7 @@ input:focus {
     .classy-nav-container .classy-navbar .classynav ul li a {
       font-size: 16px;
       text-transform: capitalize;
-      color: #003b5c;
+      color: #2a303b;
       font-weight: 500;
       padding: 0 20px; }
       @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -555,13 +555,13 @@ input:focus {
       @media only screen and (min-width: 768px) and (max-width: 991px) {
         .classy-nav-container .classy-navbar .classynav ul li a {
           font-size: 14px;
-          color: #003b5c; }
+          color: #2a303b; }
           .classy-nav-container .classy-navbar .classynav ul li a:hover, .classy-nav-container .classy-navbar .classynav ul li a:focus {
             color: #00b5e2; } }
       @media only screen and (max-width: 767px) {
         .classy-nav-container .classy-navbar .classynav ul li a {
           font-size: 14px;
-          color: #003b5c; }
+          color: #2a303b; }
           .classy-nav-container .classy-navbar .classynav ul li a:hover, .classy-nav-container .classy-navbar .classynav ul li a:focus {
             color: #00b5e2; } }
       .classy-nav-container .classy-navbar .classynav ul li a:focus, .classy-nav-container .classy-navbar .classynav ul li a:hover {
@@ -573,7 +573,7 @@ input:focus {
       height: 42px;
       line-height: 42px;
       padding: 0 30px;
-      color: #003b5c; }
+      color: #2a303b; }
       .classy-nav-container .classy-navbar .classynav ul li.cn-dropdown-item ul li a:focus, .classy-nav-container .classy-navbar .classynav ul li.cn-dropdown-item ul li a:hover, .classy-nav-container .classy-navbar .classynav ul li.megamenu-item ul li a:focus, .classy-nav-container .classy-navbar .classynav ul li.megamenu-item ul li a:hover {
         color: #00b5e2; }
 
@@ -599,7 +599,7 @@ input:focus {
 .classynav ul li.has-down > a::after,
 .classynav ul li.has-down.active > a::after,
 .classynav ul li.megamenu-item > a::after {
-  color: #003b5c; }
+  color: #2a303b; }
 
 .breakpoint-off .classynav ul li .dropdown,
 .breakpoint-off .classynav ul li .megamenu {
@@ -612,7 +612,7 @@ input:focus {
   width: 100%; }
 
 .classy-navbar-toggler .navbarToggler span {
-  background-color: #003b5c; }
+  background-color: #2a303b; }
 
 .main-header-area {
   position: relative;
@@ -639,7 +639,7 @@ input:focus {
         line-height: 50px;
         border-radius: 30px; } }
     .main-header-area .book-now-btn a:hover, .main-header-area .book-now-btn a:focus {
-      background-color: #003b5c;
+      background-color: #2a303b;
       color: #ffffff; }
   .main-header-area .search-btn {
     cursor: pointer;
@@ -705,7 +705,7 @@ input:focus {
   position: relative;
   z-index: 2;
   width: 100%;
-  height: 500px;
+  height: 770px;
   background-color: #00b5e2; }
   @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .single-welcome-slide {
@@ -725,7 +725,7 @@ input:focus {
       color: #ffffff;
       margin-bottom: 30px; }
     .single-welcome-slide .welcome-text h2 {
-      font-size: 52px;
+      font-size: 72px;
       display: block;
       margin-bottom: 30px;
       color: #ffffff; }
@@ -818,7 +818,7 @@ input:focus {
       -o-transition-duration: 500ms;
       transition-duration: 500ms; }
       .single-footer-widget .nl-form button:focus, .single-footer-widget .nl-form button:hover {
-        background-color: #003b5c; }
+        background-color: #2a303b; }
   .single-footer-widget .footer-logo {
     display: block;
     margin-bottom: 20px; }
@@ -834,6 +834,45 @@ input:focus {
     .single-footer-widget span:last-child {
       margin-bottom: 0; }
 
+.copywrite-text {
+  position: relative;
+  z-index: 1; }
+  @media only screen and (max-width: 767px) {
+    .copywrite-text {
+      margin-bottom: 15px;
+      text-align: center; } }
+  .copywrite-text p {
+    font-size: 14px;
+    color: #afb4bf;
+    margin-bottom: 0; }
+    @media only screen and (max-width: 767px) {
+      .copywrite-text p {
+        font-size: 12px; } }
+    .copywrite-text p a {
+      color: #afb4bf;
+      font-size: 14px; }
+      @media only screen and (max-width: 767px) {
+        .copywrite-text p a {
+          font-size: 12px; } }
+      .copywrite-text p a:focus, .copywrite-text p a:hover {
+        color: #ffffff; }
+
+.copywrite-content {
+  position: relative;
+  z-index: 1;
+  padding: 15px 0;
+  border-top: 1px solid #273d4b; }
+  .copywrite-content .social-info {
+    text-align: right; }
+    @media only screen and (max-width: 767px) {
+      .copywrite-content .social-info {
+        text-align: center; } }
+    .copywrite-content .social-info a {
+      display: inline-block;
+      color: #afb4bf;
+      padding-left: 20px; }
+      .copywrite-content .social-info a:focus, .copywrite-content .social-info a:hover {
+        color: #ffffff; }
 
 /* :: 10.0 Partner Area CSS */
 .partner-logo-content {
@@ -853,7 +892,7 @@ input:focus {
 .single-project-slide {
   position: relative;
   z-index: 1;
-  height: 300px;
+  height: 800px;
   overflow: hidden;
   border-right: 1px solid rgba(255, 255, 255, 0.2);
   border-left: 1px solid rgba(255, 255, 255, 0.2); }
@@ -933,8 +972,6 @@ input:focus {
 /* :: 12.0 CTA CSS */
 .roberto-cta-area {
   position: relative;
-  padding-top: 90px;
-  padding-bottom: 90px;
   z-index: 1; }
   .roberto-cta-area .cta-content {
     padding-top: 50px;
@@ -1064,7 +1101,7 @@ input:focus {
 .single-room-slide {
   position: relative;
   z-index: 1;
-  height: 620px;
+  height: 700px;
   background-color: #0e2737;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
@@ -1194,7 +1231,7 @@ input:focus {
     left: 50%;
     color: #ffffff; }
     .rooms-slides .owl-next:hover, .rooms-slides .owl-next:focus {
-      background-color: #003b5c !important;
+      background-color: #2a303b !important;
       color: #ffffff; }
 
 .single-room-area {
@@ -1272,7 +1309,7 @@ input:focus {
           .single-room-area .room-content .room-feature h6 {
             font-size: 14px; } }
         .single-room-area .room-content .room-feature h6 span {
-          color: #003b5c;
+          color: #2a303b;
           display: block; }
     .single-room-area .room-content .view-detail-btn {
       padding: 0;
@@ -1410,7 +1447,7 @@ html .ui-button.ui-state-disabled:active {
         padding: 20px 10px; } }
     .room-features-area h6 span {
       display: block;
-      color: #003b5c; }
+      color: #2a303b; }
     .room-features-area h6:last-child {
       border-right: 1px solid #ebebeb; }
 
@@ -1587,7 +1624,7 @@ html .ui-button.ui-state-disabled:active {
       font-size: 22px;
       color: #ffffff; }
   .single-service-area:hover .service-title, .single-service-area:focus .service-title {
-    background-color: #003b5c; }
+    background-color: #2a303b; }
 
 .roberto-service-area {
   position: relative;
@@ -1602,7 +1639,7 @@ html .ui-button.ui-state-disabled:active {
   position: relative;
   z-index: 1;
   background-color: #ffffff;
-
+  box-shadow: 0 2px 14px 5px rgba(20, 20, 20, 0.05);
   border-radius: 3px;
   padding: 30px;
   text-align: center; }
@@ -2211,7 +2248,7 @@ html .ui-button.ui-state-disabled:active {
       color: #636a76;
       margin-bottom: 30px; }
       .blog-details-text ul li span {
-        color: #003b5c; }
+        color: #2a303b; }
       .blog-details-text ul li i {
         font-size: 14px;
         margin-right: 10px; }
@@ -2245,17 +2282,17 @@ html .ui-button.ui-state-disabled:active {
   border-top: 1px solid #ebebeb;
   padding-top: 10px; }
   .post-author-area .popular-tags li a {
-    color: #003b5c; }
+    color: #2a303b; }
   .post-author-area .author-social-info p {
     margin-bottom: 0;
     margin-right: 20px;
-    color: #003b5c; }
+    color: #2a303b; }
     @media only screen and (max-width: 767px) {
       .post-author-area .author-social-info p {
         margin-right: 10px; } }
   .post-author-area .author-social-info a {
     display: inline-block;
-    color: #003b5c;
+    color: #2a303b;
     margin-right: 20px; }
     @media only screen and (max-width: 767px) {
       .post-author-area .author-social-info a {
@@ -2275,7 +2312,7 @@ html .ui-button.ui-state-disabled:active {
     border-bottom-left-radius: 3px; }
   .pagination .page-link {
     padding: 12px 15px;
-    color: #003b5c;
+    color: #2a303b;
     border: none;
     background-color: #e8f1f8;
     margin-right: 5px;

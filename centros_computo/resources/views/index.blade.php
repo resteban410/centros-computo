@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Title -->
-    <title>Centros Computo - SJCH</title>
+    <title>Centros Computo - SJCH - Administrador</title>
 
     <!-- Favicon -->
     <link rel="icon" href="img/core-img/favicon.png">
@@ -19,6 +19,11 @@
 </head>
 
 <body>
+    <!--
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+    -->
 
     <!-- Header Area Start -->
     <header class="header-area">
@@ -87,22 +92,17 @@
                             <!-- Nav Start -->
                             <div class="classynav">
                                 <ul id="nav">
-                                    <li class="active"><a href="index.php">Inicio</a></li>
-                                    <li><a href="./room.php">Campus</a></li>
-                                    <li><a href="./about.php">Reglamento</a></li>
-                                    <li><a href="./blog.php">Laboratorios</a></li>
-                                    <li><a href="./contacto.php">Contacto</a></li>
+                                    <li class="active"><a href="{{route('index')}}">Inicio</a></li>
+                                    <li><a href="{{route('alumnosP')}}">Alumnos</a></li>
+                                    <li><a href="{{route('laboratoriosP')}}">Laboratorios</a></li>
+                                    <li><a href="{{route('usuariosP')}}">Usuarios</a></li>
+                                    <li><a href="{{route('materiasP')}}">Materias</a></li>
                                 </ul>
 
                                 <!-- Search -->
                                 <div class="search-btn ml-4">
                                     <i class="fa fa-search" aria-hidden="true"></i>
-                                </div>
-
-                                <!-- Book Now -->
-                                <div class="book-now-btn ml-3 ml-lg-5">
-                                    <a href="#">Reservaciones <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-                                </div>
+                                </di>
                             </div>
                             <!-- Nav End -->
                         </div>
@@ -127,7 +127,6 @@
                                 <div class="welcome-text text-center">
                                     <h6 data-animation="fadeInLeft" data-delay="200ms">BUAP SAN JOSE CHIAPA</h6>
                                     <h2 data-animation="fadeInLeft" data-delay="500ms">CENTROS DE COMPUTO</h2>
-                                    <a href="#" class="btn roberto-btn btn-2" data-animation="fadeInLeft" data-delay="800ms">Reserva Ahora</a>
                                 </div>
                             </div>
                         </div>
@@ -146,7 +145,6 @@
                                 <div class="welcome-text text-center">
                                     <h6 data-animation="fadeInUp" data-delay="200ms">BUAP SAN JOSE CHIAPA</h6>
                                     <h2 data-animation="fadeInUp" data-delay="500ms">CENTROS DE COMPUTO</h2>
-                                    <a href="#" class="btn roberto-btn btn-2" data-animation="fadeInUp" data-delay="800ms">Reserva Ahora</a>
                                 </div>
                             </div>
                         </div>
@@ -165,7 +163,6 @@
                                 <div class="welcome-text text-center">
                                     <h6 data-animation="fadeInDown" data-delay="200ms">BUAP SAN JOSE CHIAPA</h6>
                                     <h2 data-animation="fadeInDown" data-delay="500ms">CENTROS DE COMPUTO</h2>
-                                    <a href="#" class="btn roberto-btn btn-2" data-animation="fadeInDown" data-delay="800ms">Reserva Ahora</a>
                                 </div>
                             </div>
                         </div>
@@ -173,134 +170,80 @@
                 </div>
             </div>
         </div>
-    </section>
-    <!-- Welcome Area End -->
+    </section>  
 
-    <!-- About Us Area Start
-    <section class="roberto-about-area section-padding-100-0">
+    
 
-        <div class="hotel-search-form-area">
-            <div class="container-fluid">
-                <div class="hotel-search-form">
-                    <form action="#" method="post">
-                        <div class="row justify-content-between align-items-end">
-                            <div class="col-6 col-md-2 col-lg-3">
-                                <label for="checkIn">Check In</label>
-                                <input type="date" class="form-control" id="checkIn" name="checkin-date">
-                            </div>
-                            <div class="col-6 col-md-2 col-lg-3">
-                                <label for="checkOut">Check Out</label>
-                                <input type="date" class="form-control" id="checkOut" name="checkout-date">
-                            </div>
-                            <div class="col-4 col-md-1">
-                                <label for="room">Room</label>
-                                <select name="room" id="room" class="form-control">
-                                    <option value="01">01</option>
-                                    <option value="02">02</option>
-                                    <option value="03">03</option>
-                                    <option value="04">04</option>
-                                    <option value="05">05</option>
-                                    <option value="06">06</option>
-                                </select>
-                            </div>
-                            <div class="col-4 col-md-1">
-                                <label for="adults">Adult</label>
-                                <select name="adults" id="adults" class="form-control">
-                                    <option value="01">01</option>
-                                    <option value="02">02</option>
-                                    <option value="03">03</option>
-                                    <option value="04">04</option>
-                                    <option value="05">05</option>
-                                    <option value="06">06</option>
-                                </select>
-                            </div>
-                            <div class="col-4 col-md-2 col-lg-1">
-                                <label for="children">Children</label>
-                                <select name="children" id="children" class="form-control">
-                                    <option value="01">01</option>
-                                    <option value="02">02</option>
-                                    <option value="03">03</option>
-                                    <option value="04">04</option>
-                                    <option value="05">05</option>
-                                    <option value="06">06</option>
-                                </select>
-                            </div>
-                            <div class="col-12 col-md-3">
-                                <button type="submit" class="form-control btn roberto-btn w-100">Check Availability</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
--->
-        <div class="container mt-100">
-            <div class="row align-items-center">
-                <div class="col-12 col-lg-6">
-                    <!-- Section Heading -->
-                    <div class="section-heading wow fadeInUp" data-wow-delay="100ms">
-                        <h6>BUAP SJCH</h6>
-                        <h2>Sistema De Centros<br> de computo</h2>
-                    </div>
-                    <div class="about-us-content mb-100">
-                        <h5 class="wow fadeInUp" data-wow-delay="300ms">With over 340 hotels worldwide, NH Hotel Group offers a wide variety of hotels catering for a perfect stay no matter where your destination.</h5>
-                        <p class="wow fadeInUp" data-wow-delay="400ms">Manager: <span>Michen Taylor</span></p>
-                        <img src="img/core-img/signature.png" alt="" class="wow fadeInUp" data-wow-delay="500ms">
-                    </div>
-                </div>
-
-                <div class="col-12 col-lg-6">
-                    <div class="about-us-thumbnail mb-100 wow fadeInUp" data-wow-delay="700ms">
-                        <div class="row no-gutters">
-                            <div class="col-6">
-                                <div class="single-thumb">
-                                    <img src="img/bg-img/lab-2.png" alt="">
-                                </div>
-                                <div class="single-thumb">
-                                    <img src="img/bg-img/lab-3.png" alt="">
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="single-thumb">
-                                    <img src="img/bg-img/lab-1.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- About Us Area End -->
-
-    <!-- Service Area Start -->
+    <br></br>
     <div class="roberto-service-area">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="service-content d-flex align-items-center justify-content-between">
                         <!-- Single Service Area -->
-                        <div class="single-service--area mb-100 wow fadeInUp" data-wow-delay="100ms">
+                        <div class="single-service--area mb-100 wow fadeInUp" data-wow-delay="300ms">
                             <img src="img/core-img/icon-1.png" alt="">
-                            <h5>Software</h5>
+                            <a href="{{route('equiposP')}}">
+                                <h5>Registro de equipos</h5></a>
                         </div>
 
                         <!-- Single Service Area -->
                         <div class="single-service--area mb-100 wow fadeInUp" data-wow-delay="300ms">
+                            <a href="{{route('autoaccesoP')}}">
                             <img src="img/core-img/icon-2.png" alt="">
-                            <h5>Fallas</h5>
+                            <h5>Autoacceso Alumnos</h5></a>
                         </div>
 
                         <!-- Single Service Area -->
-                        <div class="single-service--area mb-100 wow fadeInUp" data-wow-delay="500ms">
-                            <img src="img/core-img/icon-3.png" alt="">
-                            <h5>Calendario</h5>
+                        <div class="single-service--area mb-100 wow fadeInUp" data-wow-delay="300ms">
+                            <a href="{{route('adeudoP')}}">
+                            <img src="img/core-img/icon-2.png" alt="">
+                            <h5>Adeudos Alumnos</h5></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="service-content d-flex align-items-center justify-content-between">
+                        <!-- Single Service Area -->
+                        <div class="single-service--area mb-100 wow fadeInUp" data-wow-delay="300ms">
+                            <a href="{{route('fallaP')}}">
+                            <img src="img/core-img/icon-2.png" alt="">
+                            <h5>Fallas de equipos</h5></a>
+                        </div>
+                        <div class="single-service--area mb-100 wow fadeInUp" data-wow-delay="300ms">
+                            <a href="{{route('faltaP')}}">
+                            <img src="img/core-img/icon-2.png" alt="">
+                            <h5>Faltas de equipos</h5></a>
+                        </div>
+                        <div class="single-service--area mb-100 wow fadeInUp" data-wow-delay="300ms">
+                            <a href="{{route('softwareP')}}">
+                            <img src="img/core-img/icon-2.png" alt="">
+                            <h5>Software - Equipos</h5></a>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="service-content d-flex align-items-center justify-content-between">
+                        <!-- Single Service Area -->
+                        <div class="single-service--area mb-100 wow fadeInUp" data-wow-delay="300ms">
+                            <a href="{{route('horarioP')}}">
+                            <img src="img/core-img/icon-2.png" alt="">
+                            <h5>Gestión de horarios</h5></a>
                         </div>
 
-                        <!-- Single Service Area -->
-                        <div class="single-service--area mb-100 wow fadeInUp" data-wow-delay="700ms">
-                            <img src="img/core-img/icon-4.png" alt="">
-                            <h5>Alumnos</h5>
+                        <div class="single-service--area mb-100 wow fadeInUp" data-wow-delay="300ms">
+                            <a href="{{route('periodoP')}}">
+                            <img src="img/core-img/icon-2.png" alt="">
+                            <h5>Periodos</h5></a>
                         </div>
 
                     </div>
@@ -310,283 +253,28 @@
     </div>
     <!-- Service Area End -->
 
-    <!-- Our Room Area Start -->
-    <section class="roberto-rooms-area">
-        <div class="rooms-slides owl-carousel">
-            <!-- Single Room Slide -->
-            <div class="single-room-slide d-flex align-items-center">
-                <!-- Thumbnail -->
-                <div class="room-thumbnail h-100 bg-img" style="background-image: url(img/bg-img/16.jpg);"></div>
-
-                <!-- Content -->
-                <div class="room-content">
-                    <h2 data-animation="fadeInUp" data-delay="100ms">Computo Basico</h2>
-                    <h3 data-animation="fadeInUp" data-delay="300ms">400$ <span>/ Day</span></h3>
-                    <ul class="room-feature" data-animation="fadeInUp" data-delay="500ms">
-                        <li><span><i class="fa fa-check"></i> Size</span> <span>: 30 ft</span></li>
-                        <li><span><i class="fa fa-check"></i> Capacity</span> <span>: Max persion 5</span></li>
-                        <li><span><i class="fa fa-check"></i> Bed</span> <span>: King Beds</span></li>
-                        <li><span><i class="fa fa-check"></i> Services</span> <span>: Wifi, Television, Bathroom</span></li>
-                    </ul>
-                    <a href="#" class="btn roberto-btn mt-30" data-animation="fadeInUp" data-delay="700ms">View Details</a>
-                </div>
-            </div>
-
-            <!-- Single Room Slide -->
-            <div class="single-room-slide d-flex align-items-center">
-                <!-- Thumbnail -->
-                <div class="room-thumbnail h-100 bg-img" style="background-image: url(img/bg-img/17.jpg);"></div>
-
-                <!-- Content -->
-                <div class="room-content">
-                    <h2 data-animation="fadeInUp" data-delay="100ms">Computo Intermedio</h2>
-                    <h3 data-animation="fadeInUp" data-delay="300ms">125$ <span>/ Day</span></h3>
-                    <ul class="room-feature" data-animation="fadeInUp" data-delay="500ms">
-                        <li><span><i class="fa fa-check"></i> Size</span> <span>: 30 ft</span></li>
-                        <li><span><i class="fa fa-check"></i> Capacity</span> <span>: Max persion 5</span></li>
-                        <li><span><i class="fa fa-check"></i> Bed</span> <span>: King Beds</span></li>
-                        <li><span><i class="fa fa-check"></i> Services</span> <span>: Wifi, Television, Bathroom</span></li>
-                    </ul>
-                    <a href="#" class="btn roberto-btn mt-30" data-animation="fadeInUp" data-delay="700ms">View Details</a>
-                </div>
-            </div>
-
-            <div class="single-room-slide d-flex align-items-center">
-                <!-- Thumbnail -->
-                <div class="room-thumbnail h-100 bg-img" style="background-image: url(img/bg-img/17.jpg);"></div>
-
-                <!-- Content -->
-                <div class="room-content">
-                    <h2 data-animation="fadeInUp" data-delay="100ms">Computo Avanzado</h2>
-                    <h3 data-animation="fadeInUp" data-delay="300ms">125$ <span>/ Day</span></h3>
-                    <ul class="room-feature" data-animation="fadeInUp" data-delay="500ms">
-                        <li><span><i class="fa fa-check"></i> Size</span> <span>: 30 ft</span></li>
-                        <li><span><i class="fa fa-check"></i> Capacity</span> <span>: Max persion 5</span></li>
-                        <li><span><i class="fa fa-check"></i> Bed</span> <span>: King Beds</span></li>
-                        <li><span><i class="fa fa-check"></i> Services</span> <span>: Wifi, Television, Bathroom</span></li>
-                    </ul>
-                    <a href="#" class="btn roberto-btn mt-30" data-animation="fadeInUp" data-delay="700ms">View Details</a>
-                </div>
-            </div>
-        </div>
-   </section>
-    <!-- Our Room Area End -->
-
-    <!-- Testimonials Area Start -->
-    <section class="roberto-testimonials-area section-padding-100-0">
+    <!-- Partner Area Start -->
+    <div class="partner-area">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-12 col-md-6">
-                    <div class="testimonial-thumbnail owl-carousel mb-100">
-                        <img src="img/bg-img/10.jpg" alt="">
-                        <img src="img/bg-img/11.jpg" alt="">
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6">
-                    <!-- Section Heading -->
-                    <div class="section-heading">
-                        <h6>Testimonials</h6>
-                        <h2>Our Guests Love Us</h2>
-                    </div>
-                    <!-- Testimonial Slide -->
-                    <div class="testimonial-slides owl-carousel mb-100">
-
-                        <!-- Single Testimonial Slide -->
-                        <div class="single-testimonial-slide">
-                            <h5>“This can be achieved by applying search engine optimization or popularly known as SEO. This is a marketing strategy which increases the quality and quantity of traffic flow to a particular website via search engines.”</h5>
-                            <div class="rating-title">
-                                <div class="rating">
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                </div>
-                                <h6>Robert Downey <span>- CEO Deercreative</span></h6>
-                            </div>
-                        </div>
-
-                        <!-- Single Testimonial Slide -->
-                        <div class="single-testimonial-slide">
-                            <h5>“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus delectus facilis molestias, error vitae praesentium quos eaque qui ea, tempore blanditiis sint reprehenderit, quaerat. Commodi ab architecto sit suscipit exercitationem!”</h5>
-                            <div class="rating-title">
-                                <div class="rating">
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                </div>
-                                <h6>Akash Downey <span>- CEO Deercreative</span></h6>
-                            </div>
-                        </div>
-
-                        <!-- Single Testimonial Slide -->
-                        <div class="single-testimonial-slide">
-                            <h5>“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, ex quos. Alias a rem maiores, possimus dicta sit distinctio quis iusto!”</h5>
-                            <div class="rating-title">
-                                <div class="rating">
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                </div>
-                                <h6>Downey Sarah <span>- CEO Deercreative</span></h6>
-                            </div>
-                        </div>
-
-                        <!-- Single Testimonial Slide -->
-                        <div class="single-testimonial-slide">
-                            <h5>“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore sequi laboriosam fugit suscipit aspernatur, minima minus voluptatum, id ab atque similique ex earum. Magni.”</h5>
-                            <div class="rating-title">
-                                <div class="rating">
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                </div>
-                                <h6>Robert Brown <span>- CEO Deercreative</span></h6>
-                            </div>
-                        </div>
-
+            <div class="row">
+                <div class="col-12">
+                    <div class="partner-logo-content d-flex align-items-center justify-content-between wow fadeInUp" data-wow-delay="300ms">
+                        <!-- Single Partner Logo -->
+                        <a href="#" class="partner-logo"><img src="img/core-img/p1.png" alt=""></a>
+                        <!-- Single Partner Logo -->
+                        <a href="#" class="partner-logo"><img src="img/core-img/p2.png" alt=""></a>
+                        <!-- Single Partner Logo -->
+                        <a href="#" class="partner-logo"><img src="img/core-img/p3.png" alt=""></a>
+                        <!-- Single Partner Logo -->
+                        <a href="#" class="partner-logo"><img src="img/core-img/p4.png" alt=""></a>
+                        <!-- Single Partner Logo -->
+                        <a href="#" class="partner-logo"><img src="img/core-img/p5.png" alt=""></a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- Testimonials Area End -->
-
-    <!-- Projects Area Start -->
-    <section class="roberto-project-area">
-        <!-- Projects Slide -->
-        <div class="projects-slides owl-carousel">
-            <!-- Single Project Slide -->
-            <div class="single-project-slide active bg-img" style="background-image: url(img/bg-img/labotorio.jpg);">
-                <!-- Project Text -->
-                <div class="project-content">
-                    <div class="text">
-                        <h6>Prestamos</h6>
-                        <h5>Equipos de Computo</h5>
-                    </div>
-                </div>
-                <!-- Hover Effects -->
-                <div class="hover-effects">
-                    <div class="text">
-                        <h6>Entertaiment</h6>
-                        <h5>Racing Bike</h5>
-                        <p>I focus a lot on helping the first time or inexperienced traveler head out prepared and confident...</p>
-                    </div>
-                    <a href="#" class="btn project-btn">Discover Now <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-                </div>
-            </div>
-
-            <!-- Single Project Slide -->
-            <div class="single-project-slide bg-img" style="background-image: url(img/bg-img/labotorio.jpg);">
-                <!-- Project Text -->
-                <div class="project-content">
-                    <div class="text">
-                        <h6>Software</h6>
-                        <h5>Racing Bike</h5>
-                    </div>
-                </div>
-                <!-- Hover Effects -->
-                <div class="hover-effects">
-                    <div class="text">
-                        <h6>Reservaciones</h6>
-                        <h5>Racing Bike</h5>
-                        <p>I focus a lot on helping the first time or inexperienced traveler head out prepared and confident...</p>
-                    </div>
-                    <a href="#" class="btn project-btn">Discover Now <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-                </div>
-            </div>
-
-            <!-- Single Project Slide -->
-            <div class="single-project-slide bg-img" style="background-image: url(img/bg-img/laboratorio1.jpg);">
-                <!-- Project Text -->
-                <div class="project-content">
-                    <div class="text">
-                        <h6>Fallas</h6>
-                        <h5>Racing Bike</h5>
-                    </div>
-                </div>
-                <!-- Hover Effects -->
-                <div class="hover-effects">
-                    <div class="text">
-                        <h6>Laptops</h6>
-                        <h5>Racing Bike</h5>
-                        <p>I focus a lot on helping the first time or inexperienced traveler head out prepared and confident...</p>
-                    </div>
-                    <a href="#" class="btn project-btn">Discover Now <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-                </div>
-            </div>
-
-            <!-- Single Project Slide -->
-            <div class="single-project-slide bg-img" style="background-image: url(img/bg-img/laboratorio1.jpg);">
-                <!-- Project Text -->
-                <div class="project-content">
-                    <div class="text">
-                        <h6>Instalaciones</h6>
-                        <h5>Racing Bike</h5>
-                    </div>
-                </div>
-                <!-- Hover Effects -->
-                <div class="hover-effects">
-                    <div class="text">
-                        <h6>Entertaiment</h6>
-                        <h5>Racing Bike</h5>
-                        <p>I focus a lot on helping the first time or inexperienced traveler head out prepared and confident...</p>
-                    </div>
-                    <a href="#" class="btn project-btn">Discover Now <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-                </div>
-            </div>
-
-            <!-- Single Project Slide -->
-            <div class="single-project-slide bg-img" style="background-image: url(img/bg-img/labotorio.jpg);">
-                <!-- Project Text -->
-                <div class="project-content">
-                    <div class="text">
-                        <h6>Entertaiment</h6>
-                        <h5>Racing Bike</h5>
-                    </div>
-                </div>
-                <!-- Hover Effects -->
-                <div class="hover-effects">
-                    <div class="text">
-                        <h6>Entertaiment</h6>
-                        <h5>Racing Bike</h5>
-                        <p>I focus a lot on helping the first time or inexperienced traveler head out prepared and confident...</p>
-                    </div>
-                    <a href="#" class="btn project-btn">Discover Now <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Projects Area End -->
-
-
-    <!-- Call To Action Area Start -->
-    <section class="roberto-cta-area">
-        <div class="container">
-            <div class="cta-content bg-img bg-overlay jarallax" style="background-image: url(img/bg-img/62.png);">
-                <div class="row align-items-center">
-                    <div class="col-12 col-md-7">
-                        <div class="cta-text mb-50">
-                            <h2>¡Contáctenos ahora!</h2>
-                            <h6>Contacto 222 229 5500 cualquier informacion o sugerencia</h6>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-5 text-right">
-                        <a href="#" class="btn roberto-btn mb-50">Enviar Mensaje</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Call To Action Area End -->
-
+    </div>
+    <!-- Partner Area End -->
 
     <!-- Footer Area Start -->
     <footer class="footer-area section-padding-80-0">
@@ -598,30 +286,30 @@
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="single-footer-widget mb-80">
                             <!-- Footer Logo -->
-                            <a href="#" class="footer-logo"><img src="img/core-img/logo2.png" alt=""></a>
+                            <a href="#" class="footer-logo"><img src="../img/core-img/logo_buap.png" alt=""></a>
 
-                            <h4>+12 345-678-9999</h4>
-                            <span>Info.colorlib@gmail.com</span>
-                            <span>856 Cordia Extension Apt. 356, Lake Deangeloburgh, South Africa</span>
+                            <h4> 222 229 5500</h4>
+                            <span>centros_com@gmail.com</span>
+                            <span>Blvd. Audi Sur,  S/N San Jose Chiapa Puebla</span>
                         </div>
                     </div>
 
                     <!-- Single Footer Widget Area -->
-                    <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="col-12 col-sm-6 col-lg-2">
                         <div class="single-footer-widget mb-80">
                             <!-- Widget Title -->
-                            <h5 class="widget-title">Our Blog</h5>
+                            <h5 class="widget-title">Horarios</h5>
 
                             <!-- Single Blog Area -->
                             <div class="latest-blog-area">
-                                <a href="#" class="post-title">Freelance Design Tricks How</a>
-                                <span class="post-date"><i class="fa fa-clock-o" aria-hidden="true"></i> Jan 02, 2019</span>
+                                <a href="#" class="post-title">Horario Matutino</a>
+                                <span class="post-date"><i class="fa fa-clock-o" aria-hidden="true"></i> 08:00 AM- 12:00 PM</span>
                             </div>
 
                             <!-- Single Blog Area -->
                             <div class="latest-blog-area">
-                                <a href="#" class="post-title">Free Advertising For Your Online</a>
-                                <span class="post-date"><i class="fa fa-clock-o" aria-hidden="true"></i> Jan 02, 2019</span>
+                                <a href="#" class="post-title">Horario Vespertinos</a>
+                                <span class="post-date"><i class="fa fa-clock-o" aria-hidden="true"></i> 13:00 PM- 15:00 PM</span>
                             </div>
                         </div>
                     </div>
@@ -630,30 +318,53 @@
                     <div class="col-12 col-sm-4 col-lg-2">
                         <div class="single-footer-widget mb-80">
                             <!-- Widget Title -->
-                            <h5 class="widget-title">Links</h5>
+                            <h5 class="widget-title">Páginas</h5>
 
                             <!-- Footer Nav -->
                             <ul class="footer-nav">
-                                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> About Us</a></li>
-                                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Our Room</a></li>
-                                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Career</a></li>
+                                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Equipo</a></li>
+                                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Galeria</a></li>
+                                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Nosotros</a></li>
                                 <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> FAQs</a></li>
                             </ul>
                         </div>
                     </div>
 
                     <!-- Single Footer Widget Area -->
-                    <div class="col-12 col-sm-8 col-lg-4">
+                    <div class="col-12 col-sm-8 col-lg-3">
                         <div class="single-footer-widget mb-80">
                             <!-- Widget Title -->
-                            <h5 class="widget-title">Subscribe Newsletter</h5>
-                            <span>Subscribe our newsletter gor get notification about new updates.</span>
+                            <h5 class="widget-title">BUAP</h5> 
+                            <!-- Footer Nav -->
+                            <ul class="footer-nav">
+                                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Calendario Escolar </a></li>
+                                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Correo BUAP</a></li>
+                                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Identidad Gráfica</a></li>
+                                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Directorio</a></li>
+                            </ul> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-                            <!-- Newsletter Form -->
-                            <form action="index.html" class="nl-form">
-                                <input type="email" class="form-control" placeholder="Enter your email...">
-                                <button type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
-                            </form>
+        <!-- Copywrite Area -->
+        <div class="container">
+            <div class="copywrite-content">
+                <div class="row align-items-center">
+                    <div class="col-12 col-md-8">
+                        <!-- Copywrite Text -->
+                        <div class="copywrite-text">
+                            <p>Copyright &copy; <script>document.write(new Date().getFullYear()); </script>  ISTII 2017 </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <!-- Social Info -->
+                        <div class="social-info">
+                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
@@ -661,7 +372,6 @@
         </div>
     </footer>
     <!-- Footer Area End -->
-
     <!-- **** All JS Files ***** -->
     <!-- jQuery 2.2.4 -->
     <script src="js/jquery.min.js"></script>
