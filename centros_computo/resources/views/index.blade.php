@@ -12,6 +12,9 @@
 
     <!-- Favicon -->
     <link rel="icon" href="img/core-img/favicon.png">
+        <link href="../css/LineIcons.min.css" rel="stylesheet">
+    <link href="vendor/css/line-awesome.min.css" rel="stylesheet">
+    <link href="../css/line-awesome.min.css" rel="stylesheet">
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
@@ -113,8 +116,8 @@
     </header>
     <!-- Header Area End -->
 
-    <!-- Welcome Area Start -->
-    <section class="welcome-area">
+   <!-- Body -->
+   <section class="welcome-area">
         <div class="welcome-slides owl-carousel">
             <!-- Single Welcome Slide -->
             <div class="single-welcome-slide bg-img bg-overlay" style="background-image: url(img/bg-img/62.png);" data-img-url="img/bg-img/62.png">
@@ -127,6 +130,7 @@
                                 <div class="welcome-text text-center">
                                     <h6 data-animation="fadeInLeft" data-delay="200ms">BUAP SAN JOSE CHIAPA</h6>
                                     <h2 data-animation="fadeInLeft" data-delay="500ms">CENTROS DE COMPUTO</h2>
+                                    <a href="#" class="btn roberto-btn btn-2" data-animation="fadeInLeft" data-delay="800ms">Reserva Ahora</a>
                                 </div>
                             </div>
                         </div>
@@ -145,6 +149,7 @@
                                 <div class="welcome-text text-center">
                                     <h6 data-animation="fadeInUp" data-delay="200ms">BUAP SAN JOSE CHIAPA</h6>
                                     <h2 data-animation="fadeInUp" data-delay="500ms">CENTROS DE COMPUTO</h2>
+                                    <a href="#" class="btn roberto-btn btn-2" data-animation="fadeInUp" data-delay="800ms">Reserva Ahora</a>
                                 </div>
                             </div>
                         </div>
@@ -163,6 +168,7 @@
                                 <div class="welcome-text text-center">
                                     <h6 data-animation="fadeInDown" data-delay="200ms">BUAP SAN JOSE CHIAPA</h6>
                                     <h2 data-animation="fadeInDown" data-delay="500ms">CENTROS DE COMPUTO</h2>
+                                    <a href="#" class="btn roberto-btn btn-2" data-animation="fadeInDown" data-delay="800ms">Reserva Ahora</a>
                                 </div>
                             </div>
                         </div>
@@ -170,88 +176,121 @@
                 </div>
             </div>
         </div>
-    </section>  
+    </section>
+    <!-- Welcome Area End -->
 
     
 
     <br></br>
-    <div class="roberto-service-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="service-content d-flex align-items-center justify-content-between">
-                        <!-- Single Service Area -->
-                        <div class="single-service--area mb-100 wow fadeInUp" data-wow-delay="300ms">
-                            <img src="img/core-img/icon-1.png" alt="">
-                            <a href="{{route('equiposP')}}">
-                                <h5>Registro de equipos</h5></a>
-                        </div>
+    <br></br>
 
-                        <!-- Single Service Area -->
-                        <div class="single-service--area mb-100 wow fadeInUp" data-wow-delay="300ms">
-                            <a href="{{route('autoaccesoP')}}">
-                            <img src="img/core-img/icon-2.png" alt="">
-                            <h5>Autoacceso Alumnos</h5></a>
-                        </div>
 
-                        <!-- Single Service Area -->
-                        <div class="single-service--area mb-100 wow fadeInUp" data-wow-delay="300ms">
-                            <a href="{{route('adeudoP')}}">
-                            <img src="img/core-img/icon-2.png" alt="">
-                            <h5>Adeudos Alumnos</h5></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="service-content d-flex align-items-center justify-content-between">
-                        <!-- Single Service Area -->
-                        <div class="single-service--area mb-100 wow fadeInUp" data-wow-delay="300ms">
-                            <a href="{{route('fallaP')}}">
-                            <img src="img/core-img/icon-2.png" alt="">
-                            <h5>Fallas de equipos</h5></a>
-                        </div>
-                        <div class="single-service--area mb-100 wow fadeInUp" data-wow-delay="300ms">
-                            <a href="{{route('faltaP')}}">
-                            <img src="img/core-img/icon-2.png" alt="">
-                            <h5>Faltas de equipos</h5></a>
-                        </div>
-                        <div class="single-service--area mb-100 wow fadeInUp" data-wow-delay="300ms">
-                            <a href="{{route('softwareP')}}">
-                            <img src="img/core-img/icon-2.png" alt="">
-                            <h5>Software - Equipos</h5></a>
-                        </div> 
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!-- About start -->
+<section id="aboutus" class="about-sec py-0">
     <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="service-content d-flex align-items-center justify-content-between">
-                        <!-- Single Service Area -->
-                        <div class="single-service--area mb-100 wow fadeInUp" data-wow-delay="300ms">
-                            <a href="{{route('horarioP')}}">
-                            <img src="img/core-img/icon-2.png" alt="">
-                            <h5>Gestión de horarios</h5></a>
-                        </div>
+        <div class="row padding-top">
+            
+        </div>
 
-                        <div class="single-service--area mb-100 wow fadeInUp" data-wow-delay="300ms">
-                            <a href="{{route('periodoP')}}">
-                            <img src="img/core-img/icon-2.png" alt="">
-                            <h5>Periodos</h5></a>
-                        </div>
-
+        <div class="row padding-top">
+            <div class="col-md-3 col-sm-12 mb-xs-2rem">
+            <a href="{{route('equiposP')}}">
+                <div class="about-box center-block wow zoomIn" data-wow-delay="600ms">
+                    <div class="about-opacity-icon"> <i class="las la-laptop"></i aria-hidden="true"></i> </div>
+                    <div class="about-main-icon pb-4">
+                        
+                        <i class="las la-laptop" aria-hidden="true"></i>
                     </div>
+                    <h5 class="mb-0">Equipos</h5>
+                    </a>    
                 </div>
             </div>
+            <div class="col-md-3 col-sm-12 mb-xs-2rem">
+            <a href="{{route('autoaccesoP')}}">
+                <div class="about-box center-block wow zoomIn" data-wow-delay="600ms">
+                    <div class="about-opacity-icon"> <i class="las la-user" aria-hidden="true"></i> </div>
+                    <div class="about-main-icon pb-4">
+                        <i class="las la-user" aria-hidden="true"></i>
+                    </div>
+                    <h5 class="mb-0">Alumnos</h5>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-12 mb-xs-2rem">
+            <a href="{{route('adeudoP')}}">
+                <div class="about-box center-block wow zoomIn" data-wow-delay="600ms">
+                    <div class="about-opacity-icon"> <i class="las la-exchange-alt" aria-hidden="true"></i> </div>
+                    <div class="about-main-icon pb-4">
+                        <i class="las la-exchange-alt" aria-hidden="true"></i>
+                    </div>
+                    <h5 class="mb-0">Adeudos</h5>
+                </a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-12">
+            <a href="{{route('fallaP')}}">
+                <div class="about-box center-block wow zoomIn" data-wow-delay="700ms">
+                    <div class="about-opacity-icon"> <i class="las la-exclamation-triangle" aria-hidden="true"></i> </div>
+                    <div class="about-main-icon pb-4">
+                        <i class="las la-exclamation-triangle" aria-hidden="true"></i>
+                    </div>
+                    <h5 class="mb-0">Fallas</h5>
+                </div>
+                </a>
+            </div>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <div class="col-md-3 col-sm-12">
+            <a href="{{route('faltaP')}}">
+                <div class="about-box center-block wow zoomIn" data-wow-delay="700ms">
+                    <div class="about-opacity-icon"> <i class="las la-stop-circle" aria-hidden="true"></i> </div>
+                    <div class="about-main-icon pb-4">
+                        <i class="las la-stop-circle" aria-hidden="true"></i>
+                    </div>
+                    <h5 class="mb-0">Faltantes</h5>
+                </div>
+            </a>
+            </div>
+            <div class="col-md-3 col-sm-12">
+            <a href="{{route('softwareP')}}">
+                <div class="about-box center-block wow zoomIn" data-wow-delay="700ms">
+                    <div class="about-opacity-icon"> <i class="las la-save" aria-hidden="true"></i> </div>
+                    <div class="about-main-icon pb-4">
+                        <i class="las la-save"  aria-hidden="true"></i>
+                    </div>
+                    <h5 class="mb-0">Software</h5>
+                </div>
+            </a>
+            </div>
+            <div class="col-md-3 col-sm-12">
+            <a href="{{route('horarioP')}}">
+                <div class="about-box center-block wow zoomIn" data-wow-delay="700ms">
+                    <div class="about-opacity-icon"> <i class="las la-clock" aria-hidden="true"></i> </div>
+                    <div class="about-main-icon pb-4">
+                        <i class="las la-clock" aria-hidden="true"></i>
+                    </div>
+                    <h5 class="mb-0">Horarios</h5>
+                </div>
+            </a>
+            </div>
+            <div class="col-md-3 col-sm-12">
+            <a href="{{route('periodoP')}}">
+                <div class="about-box center-block wow zoomIn" data-wow-delay="700ms">
+                    <div class="about-opacity-icon"> <i class="las la-calendar" aria-hidden="true"></i> </div>
+                    <div class="about-main-icon pb-4">
+                        <i class="las la-calendar aria-hidden="true"></i>
+                    </div>
+                    <h5 class="mb-0">Periodos</h5>
+                </div>
+            </div>
+            </a>
         </div>
     </div>
-    <!-- Service Area End -->
+</section>
+
 
     <!-- Partner Area Start -->
     <div class="partner-area">
@@ -259,16 +298,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="partner-logo-content d-flex align-items-center justify-content-between wow fadeInUp" data-wow-delay="300ms">
-                        <!-- Single Partner Logo -->
-                        <a href="#" class="partner-logo"><img src="img/core-img/p1.png" alt=""></a>
-                        <!-- Single Partner Logo -->
-                        <a href="#" class="partner-logo"><img src="img/core-img/p2.png" alt=""></a>
-                        <!-- Single Partner Logo -->
-                        <a href="#" class="partner-logo"><img src="img/core-img/p3.png" alt=""></a>
-                        <!-- Single Partner Logo -->
-                        <a href="#" class="partner-logo"><img src="img/core-img/p4.png" alt=""></a>
-                        <!-- Single Partner Logo -->
-                        <a href="#" class="partner-logo"><img src="img/core-img/p5.png" alt=""></a>
+                       
                     </div>
                 </div>
             </div>
