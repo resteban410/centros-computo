@@ -128,3 +128,7 @@ Route::delete('borrar_periodo', [PeriodoController::class, 'destroy'])->name('bo
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+
+

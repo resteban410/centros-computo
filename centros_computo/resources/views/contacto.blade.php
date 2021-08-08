@@ -11,10 +11,7 @@
     <title>Centros Computo - SJCH - Administrador</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="img/core-img/favicon.png">
-        <link href="../css/LineIcons.min.css" rel="stylesheet">
-    <link href="vendor/css/line-awesome.min.css" rel="stylesheet">
-    <link href="../css/line-awesome.min.css" rel="stylesheet">
+    <link rel="icon" href="./img/core-img/favicon.png">
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
@@ -28,9 +25,9 @@
     </div>
     -->
 
-    <!-- Header Area Start -->
+    <!-- Header -->
     <header class="header-area">
-        <!-- Search Form -->
+        <!-- Buscador -->
         <div class="search-form d-flex align-items-center">
             <div class="container">
                 <form action="index.php" method="get">
@@ -40,7 +37,7 @@
             </div>
         </div>
 
-        <!-- Top Header Area Start -->
+        <!-- Cintillo -->
         <div class="top-header-area">
             <div class="container">
                 <div class="row">
@@ -55,7 +52,7 @@
 
                     <div class="col-6">
                         <div class="top-header-content">
-                            <!-- Top Social Area -->
+                            <!-- Redes Sociales -->
                             <div class="top-social-area ml-auto">
                                 <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                                 <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
@@ -69,66 +66,64 @@
                 </div>
             </div>
         </div>
-        <!-- Top Header Area End -->
+        <!-- Fin del cintillo -->
 
-        <!-- Main Header Start -->
-        <div class="main-header-area">
-            <div class="classy-nav-container breakpoint-off">
-                <div class="container">
-                    <!-- Classy Menu -->
-                    <nav class="classy-navbar justify-content-between" id="robertoNav">
+      <!-- Header -->
+      <div class="main-header-area">
+        <div class="classy-nav-container breakpoint-off">
+            <div class="container">
+                <!-- Classy Menu -->
+                <nav class="classy-navbar justify-content-between" id="robertoNav">
 
-                        <!-- Logo -->
-                        <a class="nav-brand" href="index.php"><img src="img/core-img/logo-buap.png" alt=""></a>
+                    <!-- Logo -->
+                    <a class="nav-brand" href="index.php"><img src="img/core-img/logo-buap.png" alt=""></a>
 
-                        <!-- Navbar Toggler -->
-                        <div class="classy-navbar-toggler">
-                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                    <!-- Navbar Toggler -->
+                    <div class="classy-navbar-toggler">
+                        <span class="navbarToggler"><span></span><span></span><span></span></span>
+                    </div>
+
+                    <!-- Menu -->
+                    <div class="classy-menu">
+                        <!-- Menu Close Button -->
+                        <div class="classycloseIcon">
+                            <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
                         </div>
-
                         <!-- Menu -->
-                        <div class="classy-menu">
-                            <!-- Menu Close Button -->
-                            <div class="classycloseIcon">
-                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
-                            </div>
-                            <!-- Nav Start -->
-                            <div class="classynav">
-                                <ul id="nav">
-                                    <li class="active"><a href="{{route('index')}}">Inicio</a></li>
-                                    <li><a href="{{route('alumnosP')}}">Alumnos</a></li>
-                                    <li><a href="{{route('laboratoriosP')}}">Laboratorios</a></li>
-                                    <li><a href="{{route('usuariosP')}}">Usuarios</a></li>
-                                    <li><a href="{{route('login')}}">Ingresar</a></li>
-                                </ul>
+                        <div class="classynav">
+                            <ul id="nav">
+                                <li class="active"><a href="{{route('index')}}">Inicio</a></li>
+                                <li><a href="{{route('alumnosP')}}">Alumnos</a></li>
+                                <li><a href="{{route('laboratoriosP')}}">Laboratorios</a></li>
+                                <li><a href="{{route('usuariosP')}}">Usuarios</a></li>
+                                <li><a href="{{route('materiasP')}}">Materias</a></li>
+                            </ul>
 
-                                <!-- Search -->
-                                <div class="search-btn ml-4">
-                                    <i class="fa fa-search" aria-hidden="true"></i>
-                                </di>
-                            </div>
-                            <!-- Nav End -->
+                            <!-- Buscador -->
+                            <div class="search-btn ml-4">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </di>
                         </div>
-                    </nav>
-                </div>
+                        <!-- Fin del menu-->
+                    </div>
+                </nav>
             </div>
         </div>
-    </header>
-    <!-- Header Area End -->
-
-      <!-- Header Area End -->
+    </div>
+</header>
+  <!-- Fin del header -->
 
     <!-- Breadcrumb Area Start -->
-    <div class="breadcrumb-area bg-img bg-overlay jarallax" style="background-image: url(img/bg-img/62.png);">
-        <div class="container h-100">
-            <div class="row h-100 align-items-center">
+    <div class="breadcrumb-area contact-breadcrumb bg-img bg-overlay jarallax" style="background-image: url(img/bg-img/61.png);">
+        <div class="container">
+            <div class="row">
                 <div class="col-12">
-                    <div class="breadcrumb-content text-center">
-                        <h2 class="page-title">Administrador</h2>
+                    <div class="breadcrumb-content text-center mt-100">
+                        <h2 class="page-title">Contacto</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb justify-content-center">
-                                <li class="breadcrumb-item"><a href="index.php">Inicio</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Administrador</li>
+                                <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Contacto</li>
                             </ol>
                         </nav>
                     </div>
@@ -137,131 +132,116 @@
         </div>
     </div>
     <!-- Breadcrumb Area End -->
-    
 
-    <br></br>
-    <br></br>
+    <!-- Google Maps & Contact Info Area Start -->
+    <section class="google-maps-contact-info">
+        <div class="container-fluid">
+            <div class="google-maps-contact-content">
+                <div class="row">
+                    <!-- Single Contact Info -->
+                    <div class="col-6 col-lg-3">
+                        <div class="single-contact-info">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                            <h4>Telefono</h4>
+                            <p>222 229 5500</p>
+                        </div>
+                    </div>
+                    <!-- Single Contact Info -->
+                    <div class="col-6 col-lg-3">
+                        <div class="single-contact-info">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <h4>Direccion</h4>
+                            <p>IBlvd. Audi Sur, S/N San Jose Chiapa</p>
+                        </div>
+                    </div>
+                    <!-- Single Contact Info -->
+                    <div class="col-6 col-lg-3">
+                        <div class="single-contact-info">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                            <h4>Horarios</h4>
+                            <p>08:00 am to 15:00 pm</p>
+                        </div>
+                    </div>
+                    <!-- Single Contact Info -->
+                    <div class="col-6 col-lg-3">
+                        <div class="single-contact-info">
+                            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                            <h4>Correo</h4>
+                            <p>centros_com@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
 
-
-    <!-- About start -->
-<section id="aboutus" class="about-sec py-0">
-    <div class="container">
-        <div class="row padding-top">
-            
+                <!-- Google Maps -->
+                <div class="google-maps">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.626015172187!2d-97.77797348468559!3d19.211530252689727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c55802c0e06afb%3A0x80df5aad635a1943!2sComplejo%20Regional%20Centro%20sede%20San%20Jos%C3%A9%20Chiapa%20BUAP!5e0!3m2!1ses-419!2smx!4v1623717648064!5m2!1ses-419!2smx"  allowfullscreen></iframe>
+                </div>
+            </div>
         </div>
+    </section>
+    <!-- Google Maps & Contact Info Area End -->
 
-        <div class="row padding-top">
-            <div class="col-md-3 col-sm-12 mb-xs-2rem">
-            <a href="{{route('equiposP')}}">
-                <div class="about-box center-block wow zoomIn" data-wow-delay="600ms">
-                    <div class="about-opacity-icon"> <i class="las la-laptop"></i aria-hidden="true"></i> </div>
-                    <div class="about-main-icon pb-4">
-                        
-                        <i class="las la-laptop" aria-hidden="true"></i>
-                    </div>
-                    <h5 class="mb-0">Equipos</h5>
-                    </a>    
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-12 mb-xs-2rem">
-            <a href="{{route('autoaccesoP')}}">
-                <div class="about-box center-block wow zoomIn" data-wow-delay="600ms">
-                    <div class="about-opacity-icon"> <i class="las la-user" aria-hidden="true"></i> </div>
-                    <div class="about-main-icon pb-4">
-                        <i class="las la-user" aria-hidden="true"></i>
-                    </div>
-                    <h5 class="mb-0">Alumnos</h5>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-12 mb-xs-2rem">
-            <a href="{{route('adeudoP')}}">
-                <div class="about-box center-block wow zoomIn" data-wow-delay="600ms">
-                    <div class="about-opacity-icon"> <i class="las la-exchange-alt" aria-hidden="true"></i> </div>
-                    <div class="about-main-icon pb-4">
-                        <i class="las la-exchange-alt" aria-hidden="true"></i>
-                    </div>
-                    <h5 class="mb-0">Adeudos</h5>
-                </a>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-12">
-            <a href="{{route('fallaP')}}">
-                <div class="about-box center-block wow zoomIn" data-wow-delay="700ms">
-                    <div class="about-opacity-icon"> <i class="las la-exclamation-triangle" aria-hidden="true"></i> </div>
-                    <div class="about-main-icon pb-4">
-                        <i class="las la-exclamation-triangle" aria-hidden="true"></i>
-                    </div>
-                    <h5 class="mb-0">Fallas</h5>
-                </div>
-                </a>
-            </div>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            
-            <div class="col-md-3 col-sm-12">
-            <a href="{{route('faltaP')}}">
-                <div class="about-box center-block wow zoomIn" data-wow-delay="700ms">
-                    <div class="about-opacity-icon"> <i class="las la-stop-circle" aria-hidden="true"></i> </div>
-                    <div class="about-main-icon pb-4">
-                        <i class="las la-stop-circle" aria-hidden="true"></i>
-                    </div>
-                    <h5 class="mb-0">Faltantes</h5>
-                </div>
-            </a>
-            </div>
-            <div class="col-md-3 col-sm-12">
-            <a href="{{route('softwareP')}}">
-                <div class="about-box center-block wow zoomIn" data-wow-delay="700ms">
-                    <div class="about-opacity-icon"> <i class="las la-save" aria-hidden="true"></i> </div>
-                    <div class="about-main-icon pb-4">
-                        <i class="las la-save"  aria-hidden="true"></i>
-                    </div>
-                    <h5 class="mb-0">Software</h5>
-                </div>
-            </a>
-            </div>
-            <div class="col-md-3 col-sm-12">
-            <a href="{{route('horarioP')}}">
-                <div class="about-box center-block wow zoomIn" data-wow-delay="700ms">
-                    <div class="about-opacity-icon"> <i class="las la-clock" aria-hidden="true"></i> </div>
-                    <div class="about-main-icon pb-4">
-                        <i class="las la-clock" aria-hidden="true"></i>
-                    </div>
-                    <h5 class="mb-0">Horarios</h5>
-                </div>
-            </a>
-            </div>
-            <div class="col-md-3 col-sm-12">
-            <a href="{{route('periodoP')}}">
-                <div class="about-box center-block wow zoomIn" data-wow-delay="700ms">
-                    <div class="about-opacity-icon"> <i class="las la-calendar" aria-hidden="true"></i> </div>
-                    <div class="about-main-icon pb-4">
-                        <i class="las la-calendar aria-hidden="true"></i>
-                    </div>
-                    <h5 class="mb-0">Periodos</h5>
-                </div>
-            </div>
-            </a>
-        </div>
-    </div>
-</section>
-    <!-- Partner Area Start -->
-    <div class="partner-area">
+    <!-- Contact Form Area Start -->
+    <div class="roberto-contact-form-area section-padding-100">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="partner-logo-content d-flex align-items-center justify-content-between wow fadeInUp" data-wow-delay="300ms">
-                       
+                    <!-- Section Heading -->
+                    <div class="section-heading text-center wow fadeInUp" data-wow-delay="100ms">
+                        <h6>Contacta con nosotros</h6>
+                        <h2>Deja un mensaje</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <!-- Form -->
+                    <div class="roberto-contact-form">
+                        <form action="#" method="post">
+                            <div class="row">
+                                <div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
+                                    <input type="text" name="message-name" class="form-control mb-30" placeholder="Tu nombre">
+                                </div>
+                                <div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
+                                    <input type="email" name="message-email" class="form-control mb-30" placeholder="Tu correo electrónico">
+                                </div>
+                                <div class="col-12 wow fadeInUp" data-wow-delay="100ms">
+                                    <textarea name="message" class="form-control mb-30" placeholder="Tu mensaje"></textarea>
+                                </div>
+                                <div class="col-12 text-center wow fadeInUp" data-wow-delay="100ms">
+                                    <button type="submit" class="btn roberto-btn mt-15">Enviar mensaje</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Partner Area End -->
+    <!-- Contact Form Area End -->
+
+       <!-- Call To Action Area Start -->
+       <section class="roberto-cta-area">
+        <div class="container">
+            <div class="cta-content bg-img bg-overlay jarallax" style="background-image: url(img/bg-img/slider_3.png);">
+                <div class="row align-items-center">
+                    <div class="col-12 col-md-7">
+                        <div class="cta-text mb-50">
+                            <h2>¡Contacta con nosotros ahora!</h2>
+                            <h6>Comuniquese al 222 229 5500 para reservar directamente o para recibir asesoramiento</h6>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-5 text-right">
+                        <a href="#" class="btn roberto-btn mb-50">Contacto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Call To Action Area End -->
+
+
     <!-- Footer Area Start -->
     <footer class="footer-area section-padding-80-0">
         <!-- Main Footer Area -->
@@ -272,22 +252,26 @@
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="single-footer-widget mb-80">
                             <!-- Footer Logo -->
-                            <a href="#" class="footer-logo"><img src="../img/core-img/logo_buap.png" alt=""></a>
+                            <a href="#" class="footer-logo"><img src="img/core-img/logo_buap.png" alt=""></a>
+
                             <h4> 222 229 5500</h4>
                             <span>centros_com@gmail.com</span>
                             <span>Blvd. Audi Sur,  S/N San Jose Chiapa Puebla</span>
                         </div>
                     </div>
+
                     <!-- Single Footer Widget Area -->
                     <div class="col-12 col-sm-6 col-lg-2">
                         <div class="single-footer-widget mb-80">
                             <!-- Widget Title -->
                             <h5 class="widget-title">Horarios</h5>
+
                             <!-- Single Blog Area -->
                             <div class="latest-blog-area">
                                 <a href="#" class="post-title">Horario Matutino</a>
                                 <span class="post-date"><i class="fa fa-clock-o" aria-hidden="true"></i> 08:00 AM- 12:00 PM</span>
                             </div>
+
                             <!-- Single Blog Area -->
                             <div class="latest-blog-area">
                                 <a href="#" class="post-title">Horario Vespertinos</a>
@@ -295,11 +279,13 @@
                             </div>
                         </div>
                     </div>
+
                     <!-- Single Footer Widget Area -->
                     <div class="col-12 col-sm-4 col-lg-2">
                         <div class="single-footer-widget mb-80">
                             <!-- Widget Title -->
                             <h5 class="widget-title">Páginas</h5>
+
                             <!-- Footer Nav -->
                             <ul class="footer-nav">
                                 <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Equipo</a></li>
@@ -309,6 +295,7 @@
                             </ul>
                         </div>
                     </div>
+
                     <!-- Single Footer Widget Area -->
                     <div class="col-12 col-sm-8 col-lg-3">
                         <div class="single-footer-widget mb-80">
@@ -326,6 +313,7 @@
                 </div>
             </div>
         </div>
+
         <!-- Copywrite Area -->
         <div class="container">
             <div class="copywrite-content">
@@ -361,5 +349,7 @@
     <script src="js/roberto.bundle.js"></script>
     <!-- Active -->
     <script src="js/default-assets/active.js"></script>
+
 </body>
+
 </html>

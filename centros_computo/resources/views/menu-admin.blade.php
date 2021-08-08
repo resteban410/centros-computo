@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="">
@@ -7,37 +8,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Title -->
-    <title>Gestión de {{$nombrePag}}</title>
+    <title>Centros Computo - SJCH - Administrador</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="./img/core-img/favicon.png">
-    
+    <link rel="icon" href="img/core-img/favicon.png">
+        <link href="../css/LineIcons.min.css" rel="stylesheet">
+    <link href="vendor/css/line-awesome.min.css" rel="stylesheet">
+    <link href="../css/line-awesome.min.css" rel="stylesheet">
+
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link href='css/main.css' rel='stylesheet' />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src='js/main.js'></script>
-    <script src='js/locales/es.js'></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
-    <div class="container">
-        @yield('calendario')
-    </div>
-
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.6/css/responsive.bootstrap4.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
-    <link href="librerias/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
-   
-    
+
 </head>
 
 <body>
-       <!-- Header Area Start -->
-       <header class="header-area">
+    <!--
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+    -->
+
+    <!-- Header Area Start -->
+    <header class="header-area">
         <!-- Search Form -->
         <div class="search-form d-flex align-items-center">
             <div class="container">
@@ -87,7 +79,7 @@
                     <nav class="classy-navbar justify-content-between" id="robertoNav">
 
                         <!-- Logo -->
-                        <a class="nav-brand" href="index.html"><img src="./img/core-img/logo-buap.png" alt=""></a>
+                        <a class="nav-brand" href="index.php"><img src="img/core-img/logo-buap.png" alt=""></a>
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
@@ -113,7 +105,7 @@
                                 <!-- Search -->
                                 <div class="search-btn ml-4">
                                     <i class="fa fa-search" aria-hidden="true"></i>
-                                </div>
+                                </di>
                             </div>
                             <!-- Nav End -->
                         </div>
@@ -123,17 +115,20 @@
         </div>
     </header>
     <!-- Header Area End -->
-        <!-- Breadcrumb Area Start -->
-        <div class="breadcrumb-area bg-img bg-overlay jarallax" style="background-image: url(img/bg-img/62.png);">
+
+      <!-- Header Area End -->
+
+    <!-- Breadcrumb Area Start -->
+    <div class="breadcrumb-area bg-img bg-overlay jarallax" style="background-image: url(img/bg-img/62.png);">
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12">
                     <div class="breadcrumb-content text-center">
-                    <h2 class="page-title">{{$nombrePag}}</h2>
+                        <h2 class="page-title">Administrador</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb justify-content-center">
-                                <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">{{$nombrePag}}</li>
+                                <li class="breadcrumb-item"><a href="index.php">Inicio</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Administrador</li>
                             </ol>
                         </nav>
                     </div>
@@ -142,11 +137,118 @@
         </div>
     </div>
     <!-- Breadcrumb Area End -->
+    
 
+    <br></br>
+    <br></br>
+
+
+    <!-- About start -->
+<section id="aboutus" class="about-sec py-0">
     <div class="container">
-        @yield('contenido')
-    </div>
+        <div class="row padding-top">
+            
+        </div>
 
+        <div class="row padding-top">
+            <div class="col-md-3 col-sm-12 mb-xs-2rem">
+            <a href="{{route('equiposP')}}">
+                <div class="about-box center-block wow zoomIn" data-wow-delay="600ms">
+                    <div class="about-opacity-icon"> <i class="las la-laptop"></i aria-hidden="true"></i> </div>
+                    <div class="about-main-icon pb-4">
+                        
+                        <i class="las la-laptop" aria-hidden="true"></i>
+                    </div>
+                    <h5 class="mb-0">Equipos</h5>
+                    </a>    
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-12 mb-xs-2rem">
+            <a href="{{route('autoaccesoP')}}">
+                <div class="about-box center-block wow zoomIn" data-wow-delay="600ms">
+                    <div class="about-opacity-icon"> <i class="las la-user" aria-hidden="true"></i> </div>
+                    <div class="about-main-icon pb-4">
+                        <i class="las la-user" aria-hidden="true"></i>
+                    </div>
+                    <h5 class="mb-0">Alumnos</h5>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-12 mb-xs-2rem">
+            <a href="{{route('adeudoP')}}">
+                <div class="about-box center-block wow zoomIn" data-wow-delay="600ms">
+                    <div class="about-opacity-icon"> <i class="las la-exchange-alt" aria-hidden="true"></i> </div>
+                    <div class="about-main-icon pb-4">
+                        <i class="las la-exchange-alt" aria-hidden="true"></i>
+                    </div>
+                    <h5 class="mb-0">Adeudos</h5>
+                </a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-12">
+            <a href="{{route('fallaP')}}">
+                <div class="about-box center-block wow zoomIn" data-wow-delay="700ms">
+                    <div class="about-opacity-icon"> <i class="las la-exclamation-triangle" aria-hidden="true"></i> </div>
+                    <div class="about-main-icon pb-4">
+                        <i class="las la-exclamation-triangle" aria-hidden="true"></i>
+                    </div>
+                    <h5 class="mb-0">Fallas</h5>
+                </div>
+                </a>
+            </div>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            
+            <div class="col-md-3 col-sm-12">
+            <a href="{{route('faltaP')}}">
+                <div class="about-box center-block wow zoomIn" data-wow-delay="700ms">
+                    <div class="about-opacity-icon"> <i class="las la-stop-circle" aria-hidden="true"></i> </div>
+                    <div class="about-main-icon pb-4">
+                        <i class="las la-stop-circle" aria-hidden="true"></i>
+                    </div>
+                    <h5 class="mb-0">Faltantes</h5>
+                </div>
+            </a>
+            </div>
+            <div class="col-md-3 col-sm-12">
+            <a href="{{route('softwareP')}}">
+                <div class="about-box center-block wow zoomIn" data-wow-delay="700ms">
+                    <div class="about-opacity-icon"> <i class="las la-save" aria-hidden="true"></i> </div>
+                    <div class="about-main-icon pb-4">
+                        <i class="las la-save"  aria-hidden="true"></i>
+                    </div>
+                    <h5 class="mb-0">Software</h5>
+                </div>
+            </a>
+            </div>
+            <div class="col-md-3 col-sm-12">
+            <a href="{{route('horarioP')}}">
+                <div class="about-box center-block wow zoomIn" data-wow-delay="700ms">
+                    <div class="about-opacity-icon"> <i class="las la-clock" aria-hidden="true"></i> </div>
+                    <div class="about-main-icon pb-4">
+                        <i class="las la-clock" aria-hidden="true"></i>
+                    </div>
+                    <h5 class="mb-0">Horarios</h5>
+                </div>
+            </a>
+            </div>
+            <div class="col-md-3 col-sm-12">
+            <a href="{{route('periodoP')}}">
+                <div class="about-box center-block wow zoomIn" data-wow-delay="700ms">
+                    <div class="about-opacity-icon"> <i class="las la-calendar" aria-hidden="true"></i> </div>
+                    <div class="about-main-icon pb-4">
+                        <i class="las la-calendar aria-hidden="true"></i>
+                    </div>
+                    <h5 class="mb-0">Periodos</h5>
+                </div>
+            </div>
+            </a>
+        </div>
+    </div>
+</section>
     <!-- Partner Area Start -->
     <div class="partner-area">
         <div class="container">
@@ -160,9 +262,8 @@
         </div>
     </div>
     <!-- Partner Area End -->
-
-     <!-- Footer Area Start -->
-     <footer class="footer-area section-padding-80-0">
+    <!-- Footer Area Start -->
+    <footer class="footer-area section-padding-80-0">
         <!-- Main Footer Area -->
         <div class="main-footer-area">
             <div class="container">
@@ -172,25 +273,21 @@
                         <div class="single-footer-widget mb-80">
                             <!-- Footer Logo -->
                             <a href="#" class="footer-logo"><img src="../img/core-img/logo_buap.png" alt=""></a>
-
                             <h4> 222 229 5500</h4>
                             <span>centros_com@gmail.com</span>
                             <span>Blvd. Audi Sur,  S/N San Jose Chiapa Puebla</span>
                         </div>
                     </div>
-
                     <!-- Single Footer Widget Area -->
                     <div class="col-12 col-sm-6 col-lg-2">
                         <div class="single-footer-widget mb-80">
                             <!-- Widget Title -->
                             <h5 class="widget-title">Horarios</h5>
-
                             <!-- Single Blog Area -->
                             <div class="latest-blog-area">
                                 <a href="#" class="post-title">Horario Matutino</a>
                                 <span class="post-date"><i class="fa fa-clock-o" aria-hidden="true"></i> 08:00 AM- 12:00 PM</span>
                             </div>
-
                             <!-- Single Blog Area -->
                             <div class="latest-blog-area">
                                 <a href="#" class="post-title">Horario Vespertinos</a>
@@ -198,13 +295,11 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- Single Footer Widget Area -->
                     <div class="col-12 col-sm-4 col-lg-2">
                         <div class="single-footer-widget mb-80">
                             <!-- Widget Title -->
                             <h5 class="widget-title">Páginas</h5>
-
                             <!-- Footer Nav -->
                             <ul class="footer-nav">
                                 <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Equipo</a></li>
@@ -214,7 +309,6 @@
                             </ul>
                         </div>
                     </div>
-
                     <!-- Single Footer Widget Area -->
                     <div class="col-12 col-sm-8 col-lg-3">
                         <div class="single-footer-widget mb-80">
@@ -232,7 +326,6 @@
                 </div>
             </div>
         </div>
-
         <!-- Copywrite Area -->
         <div class="container">
             <div class="copywrite-content">
@@ -256,24 +349,17 @@
             </div>
         </div>
     </footer>
-    
-
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
-    
-    <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
-
-    </script>
-    <script src="https://cdn.datatables.net/responsive/2.2.6/js/dataTables.responsive.min.js"></script>
-    <script src="https://cdn.datatables.net/responsive/2.2.6/js/responsive.bootstrap4.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
-
-    <div class="container">
-        @yield('editarborrar')
-    </div>   
+    <!-- Footer Area End -->
+    <!-- **** All JS Files ***** -->
+    <!-- jQuery 2.2.4 -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Popper -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- All Plugins -->
+    <script src="js/roberto.bundle.js"></script>
+    <!-- Active -->
+    <script src="js/default-assets/active.js"></script>
 </body>
 </html>
