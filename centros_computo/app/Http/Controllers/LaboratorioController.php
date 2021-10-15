@@ -10,7 +10,7 @@ class LaboratorioController extends Controller
     public function index(){
     	$nombrePag =  "Laboratorios";
         $laboratorios = LaboratorioModel::all(); 
-        return view('laboratorios',compact('laboratorios', 'nombrePag')); 
+        return view('admin.laboratorios',compact('laboratorios', 'nombrePag')); 
         
     }
 
@@ -30,7 +30,8 @@ class LaboratorioController extends Controller
         
         
         $laboratorios->save(); 
-        return redirect('/laboratorios')->with('Exitoso', 'Datos guardados'); 
+        return redirect()->route('laboratoriosP');
+        //return redirect('/laboratorios')->with('Exitoso', 'Datos guardados'); 
     }
 
     public function edit(Request $request){ 
@@ -48,7 +49,9 @@ class LaboratorioController extends Controller
             'ubicacion' => $request->ubicacion,
             'nombre' => $request->nombre]
         );
-        return redirect('/laboratorios')->with('Exitoso', 'Datos actualizados'); 
+
+        return redirect()->route('laboratoriosP');
+        //return redirect('/laboratorios')->with('Exitoso', 'Datos actualizados'); 
     }
 
     public function destroy(Request $request){
@@ -60,7 +63,7 @@ class LaboratorioController extends Controller
         $lab_clave = $request->lab_clave;
    
         $laboratorios = DB::table('laboratorio')->where('lab_clave', $lab_clave)->delete();
-
-        return redirect('/laboratorios')->with('Exitoso', 'Datos eliminados'); 
+        return redirect()->route('laboratoriosP');
+        //return redirect('/laboratorios')->with('Exitoso', 'Datos eliminados'); 
     }
 }

@@ -19,7 +19,7 @@ class AutoaccesoController extends Controller
 
     	$nombrePag =  "Autoacceso";
         $autoaccesos = AutoaccesoModel::all(); 
-        return view('autoacceso',compact('autoaccesos', 'nombrePag', 'usuarios', 'equipos', 'alumnos'));
+        return view('admin.autoacceso',compact('autoaccesos', 'nombrePag', 'usuarios', 'equipos', 'alumnos'));
     }
 
     public function store(Request $request){
@@ -46,7 +46,8 @@ class AutoaccesoController extends Controller
         $autoacceso->matricula_alumno = $request->matricula_alumno;
 
         $autoacceso->save(); 
-        return redirect('/autoaccesos')->with('Exitoso', 'Datos guardados'); 
+        return redirect()->route('autoaccesoP');
+        //return redirect('/autoaccesos')->with('Exitoso', 'Datos guardados'); 
     }
 
     public function edit(Request $request){ 
@@ -74,7 +75,8 @@ class AutoaccesoController extends Controller
 			'usuario_id' => $request->usuario_id,
             'matricula_alumno' => $request->matricula_alumno]
         );
-        return redirect('/autoaccesos')->with('Exitoso', 'Datos actualizados'); 
+        return redirect()->route('autoaccesoP');
+        //return redirect('/autoaccesos')->with('Exitoso', 'Datos actualizados'); 
     }
 
     public function destroy(Request $request){
@@ -86,8 +88,8 @@ class AutoaccesoController extends Controller
         $folio = $request->folio;
    
         $autoacceso = DB::table('autoacceso')->where('folio', $folio)->delete();
-
-        return redirect('/autoaccesos')->with('Exitoso', 'Datos eliminados'); 
+        return redirect()->route('autoaccesoP');
+        //return redirect('/autoaccesos')->with('Exitoso', 'Datos eliminados'); 
     
     }
 

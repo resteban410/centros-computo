@@ -1,7 +1,10 @@
+<?php
+use Illuminate\Support\Facades\DB;
+?>
 @extends('layouts.plantillabase')
 @section('contenido')
-<br></br>
 
+<br> </br>
 <!-- Modal Crear nuevo alumno-->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -10,43 +13,49 @@
         <h5 class="modal-title" id="exampleModalLabel">Nuevo registro</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-    <form action="{{route('altaFalta')}}" method="post">
+    <form action="{{route('altaEqui')}}" method="post">
       <div class="modal-body">       
                 @csrf
             <div class="form-group">
-                <label>Folio:</label>
-                    <input type="text" name="clave" id="clave" class= "form-control" placeholder="Asignado automaticamente" readonly>
+                <label>Número de serie:</label>
+                    <input type="text" name="no_serie" class= "form-control" placeholder="Escriba el número de serie del equipo">
+                    {!! $errors->first('no_serie', '<small>:message</small><br>') !!}
             </div>
-
-      		<div class="form-group">
-      			<label>Fecha Perdida:</label>
-      			<input type="date" name="fecha_perdida" id="fecha_perdida" class= "form-control">
-                {!! $errors->first('fecha_perdida', '<small>:message</small><br>') !!}
-      		</div>
 
             <div class="form-group">
-      			<label>Hora Perdida:</label>
-      			<input type="time" name="hora_perdida" id="hora_perdida" class= "form-control">
-                {!! $errors->first('hora_perdida', '<small>:message</small><br>') !!}
-      		</div>
-
-			    <label>Observaciones:</label>
-            <div class="form-group">                
-                    <textarea name="observaciones" id="observaciones" rows="5" cols="40"></textarea>
-                    {!! $errors->first('observaciones', '<small>:message</small><br>') !!}
+                <label>Número de equipo:</label>
+                    <input type="text" name="num_equipo" class= "form-control" placeholder="Escriba el número del equipo">
+                    {!! $errors->first('num_equipo', '<small>:message</small><br>') !!}
             </div>
-
-            <label>Equipo:</label>
+            <div class="form-group">
+                <label>Modelo:</label>
+                    <input type="text" name="modelo" class= "form-control" placeholder="Escriba el modelo del equipo"> 
+                    {!! $errors->first('modelo', '<small>:message</small><br>') !!}
+            </div>
+            <label>Laboratorio:</label>
             <div class="form-group">
                 
-                       <select name="equipo_no_serie">
-                       	@foreach($equipos as $item)
-                       	  <option value="{{$item->no_serie}}">{{$item->no_serie}}
+                       <select name="laboratorio_clave">
+                       	@foreach($laboratorios as $item)
+                       	  <option value="{{$item->lab_clave}}">{{$item->nombre}}
                        	  </option>
                        	@endforeach 
-                        </select>   
-                        {!! $errors->first('equipo_no_serie', '<small>:message</small><br>') !!}                   
-            </div>    
+                        </select>
+                        {!! $errors->first('laboratorio_clave', '<small>:message</small><br>') !!}
+                                                 
+            </div>
+            <label>Marca:</label>
+            <div class="form-group">
+                
+                       <select name="marca_id">
+                       	@foreach($marcas as $item)
+                       	  <option value="{{$item->id_marca}}">{{$item->nombre}}
+                       	  </option>
+                       	@endforeach 
+                        </select>
+                        {!! $errors->first('marca_id', '<small>:message</small><br>') !!}
+                                                 
+            </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -66,44 +75,50 @@
         <h5 class="modal-title" id="exampleModalLabel2">Editar registro</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-    <form action="{{route('editarFalta')}}" method="post" id="editForm">
+    <form action="{{route('editarEqui')}}" method="post" id="editForm">
       <div class="modal-body">       
                 @csrf
                 @method('PUT')
             <div class="form-group">
-                <label>Folio:</label>
-                    <input type="text" name="clave" id="clave" class= "form-control" placeholder="Asignado automaticamente" readonly>
+                <label>Número de serie:</label>
+                    <input type="text" name="no_serie" id="no_serie" class= "form-control" placeholder="Escriba el número de serie del equipo">
+                    {!! $errors->first('no_serie', '<small>:message</small><br>') !!}
             </div>
-
-      		<div class="form-group">
-      			<label>Fecha Perdida:</label>
-      			<input type="date" name="fecha_perdida" id="fecha_perdida" class= "form-control">
-                {!! $errors->first('fecha_perdida', '<small>:message</small><br>') !!}
-      		</div>
 
             <div class="form-group">
-      			<label>Hora Perdida:</label>
-      			<input type="time" name="hora_perdida" id="hora_perdida" class= "form-control">
-                {!! $errors->first('hora_perdida', '<small>:message</small><br>') !!}
-      		</div>
-
-			    <label>Observaciones:</label>
-            <div class="form-group">                
-                    <textarea name="observaciones" id="observaciones" rows="5" cols="40"></textarea>
-                    {!! $errors->first('observaciones', '<small>:message</small><br>') !!}
+                <label>Número de equipo:</label>
+                    <input type="text" name="num_equipo" id="num_equipo" class= "form-control" placeholder="Escriba el número del equipo">
+                    {!! $errors->first('num_equipo', '<small>:message</small><br>') !!}
             </div>
-
-            <label>Equipo:</label>
+            <div class="form-group">
+                <label>Modelo:</label>
+                    <input type="text" name="modelo" id="modelo" class= "form-control" placeholder="Escriba el modelo del equipo"> 
+                    {!! $errors->first('modelo', '<small>:message</small><br>') !!}
+            </div>
+            <label>Laboratorio:</label>
             <div class="form-group">
                 
-                       <select name="equipo_no_serie">
-                       	@foreach($equipos as $item)
-                       	  <option value="{{$item->no_serie}}">{{$item->no_serie}}
+                       <select name="laboratorio_clave">
+                       	@foreach($laboratorios as $item)
+                       	  <option value="{{$item->lab_clave}}">{{$item->nombre}}
                        	  </option>
                        	@endforeach 
-                        </select>   
-                        {!! $errors->first('equipo_no_serie', '<small>:message</small><br>') !!}                   
-            </div>    
+                        </select>
+                        {!! $errors->first('laboratorio_clave', '<small>:message</small><br>') !!}
+                                                 
+            </div>
+            <label>Marca:</label>
+            <div class="form-group">
+                
+                       <select name="marca_id">
+                       	@foreach($marcas as $item)
+                       	  <option value="{{$item->id_marca}}">{{$item->nombre}}
+                       	  </option>
+                       	@endforeach 
+                        </select>
+                        {!! $errors->first('marca_id', '<small>:message</small><br>') !!}
+                                                 
+            </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -123,17 +138,17 @@
         <h5 class="modal-title" id="exampleModalLabel">Eliminar registro</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-    <form action="{{route('borrarFalta')}}" method="POST" id="deleteForm">
+    <form action="{{route('borrarEqui')}}" method="POST" id="deleteForm">
       @csrf
       @method('DELETE')
       <div class="modal-body">       
             <input type="hidden" name="_method" value="DELETE">
-        <p>¿Estas seguro de borrar este registro? Esta acción no puede revertirse. Para asegurarse, vuelva a escribir el número de folio del registro seleccionado. </p>
+        <p>¿Estas seguro de borrar este registro? Esta acción no puede revertirse. Para asegurarse, vuelva a escribir el número de serie del equipo. </p>
 
             <div class="form-group">
-                <label>Folio:</label>
-                    <input type="text" name="clave" id="clave" class= "form-control" placeholder="Escriba el numero de folio">
-                    {!! $errors->first('clave', '<small>:message</small><br>') !!}  
+                <label>Número de serie:</label>
+                    <input type="text" name="no_serie" id="no_serie" class= "form-control" placeholder="Escriba el número de serie del equipo">
+                    {!! $errors->first('no_serie', '<small>:message</small><br>') !!}
             </div>      
       </div>
       <div class="modal-footer">
@@ -171,28 +186,35 @@
 </div>
 
 <br></br>
-<div class="card"> 
+    <div class="card"> 
         <div class="card-body">
-        <h4> Historial de Faltas</h4>
-        <table id="faltas" class="table table-striped table-bordered" style="width:100%">
+        <h4> Equipos registrados</h4>
+        <table id="equipos" class="table table-striped table-bordered" style="width:100%">
             <thead>
             <tr>
-                <th>Folio</th>
-                <th>Fecha Perdida</th>
-                <th>Hora Perdida</th>
-                <th>Observaciones</th>
-                <th>No.Serie Equipo</th>
+                <th>Núm_Serie</th>
+                <th>Núm_Equipo</th>
+                <th>Modelo</th>
+                <th>Ubicación</th>
+                <th>Nombre del laboratorio</th>
+                <th>Marca</th>
                 <th>Acciones</th>
             </tr>   
             </thead> 
             <tbody>
-                @foreach($faltas as $falta)
+                @foreach($equipos as $equipo)
                 <tr>
-                    <td>{{$falta->clave}}</td>
-                    <td>{{$falta->fecha_perdida}}</td>
-                    <td>{{$falta->hora_perdida}}</td>
-                    <td>{{$falta->observaciones}}</td>
-					<td>{{$falta->equipo_noserie}}</td>
+                    <td>{{$equipo->no_serie}}</td>
+                    <td>{{$equipo->num_equipo}}</td>
+                    <td>{{$equipo->modelo}}</td>
+                    <td>{{$equipo->laboratorio_clave}}</td>
+                    <td>
+                      <?php
+                      $query = DB::table('laboratorio')->select('nombre')->where('lab_clave',$equipo->laboratorio_clave)->get();
+                      echo "$query";
+                      ?>
+                    </td>
+                    <td>{{$equipo->marca_id}}</td>
                     <td>
                         <a href="#" class="btn btn-success edit">Editar</a>
                         <a href="#" class="btn btn-danger delete">Borrar</a>
@@ -209,7 +231,7 @@
 <script type="text/javascript">
             $(document).ready(function() {
 
-                var table= $('#faltas').DataTable({
+                var table= $('#equipos').DataTable({
                     responsive: true,
                     autoWidth: false,
                     "language": {
@@ -234,14 +256,14 @@
                         var data = table.row($tr).data();
                         console.log(data);
 
-                        $('#clave').val(data[0]);
-                        $('#fecha_perdida').val(data[1]);
-                        $('#hora_perdida').val(data[2]);
-                        $('#observaciones').val(data[3]);
-                        $('#equipo_noserie').val(data[4]);
+                        $('#no_serie').val(data[0]);
+                        $('#num_equipo').val(data[1]);
+                        $('#modelo').val(data[2]);
+                        $('#laboratorio_clave').val(data[3]);
+                        $('#marca_id').val(data[5]);
 
                  
-                        $('#editForm').attr('route', 'editarFalta', + data[0]);
+                        $('#editForm').attr('route', 'editarEqui', + data[0]);
                         $('#editModal').modal('show');
                     });
 
@@ -257,9 +279,9 @@
                         var data = table.row($tr).data();
                         console.log(data);
 
-                        $('#clave').val(data[0]);
+                        $('#no_serie').val(data[0]);
 
-                        $('#deleteForm').attr('route', 'borrarFalta', + data[0]);
+                        $('#deleteForm').attr('route', 'borrarEqui', + data[0]);
                         $('#deleteModal').modal('show');
                     });
                     //end delete record 

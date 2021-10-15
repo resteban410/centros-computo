@@ -92,12 +92,7 @@
                             <!-- Nav Start -->
                             <div class="classynav">
                                 <ul id="nav">
-                                    <li class="active"><a href="{{route('index2')}}">Inicio</a></li>
-                                    <li><a href="{{route('fallaP')}}">Fallas</a></li>
-                                    <li><a href="{{route('faltaP')}}">Faltas</a></li>
-                                    <li><a href="{{route('usuariosP')}}">Prestamos</a></li>
-                                    <li><a href="{{route('materiasP')}}">Software</a></li>
-                                    <li><a href="{{route('materiasP')}}">Horarios</a></li>
+                                    <li class="active"><a href="{{route('indexGeneral')}}">Inicio</a></li>
                                 </ul>
 
                                 <!-- Search -->
@@ -172,37 +167,6 @@
             </div>
         </div>
     </section>  
-    <!--
-    <br></br>
-    <div class="roberto-service-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="service-content d-flex align-items-center justify-content-between">
-
-                        <div class="single-service--area mb-100 wow fadeInUp" data-wow-delay="100ms">
-                            <img src="img/core-img/icon-1.png" alt="">
-                            <a href="{{route('equiposP')}}">
-                                <h5>Registro de equipos</h5></a>
-                        </div>
-
- 
-                        <div class="single-service--area mb-100 wow fadeInUp" data-wow-delay="300ms">
-                            <a href="{{route('autoaccesoP')}}">
-                            <img src="img/core-img/icon-2.png" alt="">
-                            <h5>Autoacceso</h5></a>
-                        </div>
-                        <div class="single-service--area mb-100 wow fadeInUp" data-wow-delay="300ms">
-                            <a href="{{route('adeudoP')}}">
-                            <img src="img/core-img/icon-2.png" alt="">
-                            <h5>Adeudos</h5></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    Service Area End -->
 
     <!-- Partner Area Start -->
     <div class="partner-area">
@@ -210,16 +174,11 @@
             <div class="row">
                 <div class="col-12">
                     <div class="partner-logo-content d-flex align-items-center justify-content-between wow fadeInUp" data-wow-delay="300ms">
-                        <!-- Single Partner Logo -->
-                        <a href="#" class="partner-logo"><img src="img/core-img/p1.png" alt=""></a>
-                        <!-- Single Partner Logo -->
-                        <a href="#" class="partner-logo"><img src="img/core-img/p2.png" alt=""></a>
-                        <!-- Single Partner Logo -->
-                        <a href="#" class="partner-logo"><img src="img/core-img/p3.png" alt=""></a>
-                        <!-- Single Partner Logo -->
-                        <a href="#" class="partner-logo"><img src="img/core-img/p4.png" alt=""></a>
-                        <!-- Single Partner Logo -->
-                        <a href="#" class="partner-logo"><img src="img/core-img/p5.png" alt=""></a>
+                        <div class="single-service--area mb-100 wow fadeInUp" data-wow-delay="300ms">
+                            <a href="{{route('softwareG')}}">
+                            <img src="img/core-img/icon-2.png" alt="">
+                            <h5>Consulta de Software</h5></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -245,12 +204,7 @@
                         </div>
                     </div>
 
-                    <!-- Single Footer Widget Area -->
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <div class="single-footer-widget mb-80">
-                            <!-- Widget Title -->
-                            <h5 class="widget-title">Our Blog</h5>
-
+                    <!-- Single Footer Widget Area --> 
                             <!-- Single Blog Area -->
                             <div class="latest-blog-area">
                                 <a href="#" class="post-title">Freelance Design Tricks How</a>

@@ -10,7 +10,7 @@ class AlumnoController extends Controller
     public function alumShow(){
         $nombrePag = "Alumnos";       
         $alumnos = AlumnoModel::all(); //Recupera todos los registros de la tabla alumnos
-        return view('alumnos',compact('alumnos', 'nombrePag')); //Retorna la vista principal de alumnos y le pasa la variable 
+        return view('admin.alumnos',compact('alumnos', 'nombrePag')); //Retorna la vista principal de alumnos y le pasa la variable 
         //en la que estan los datos para mostrarla en la tabla
     }
     public function store(Request $request){
@@ -34,7 +34,9 @@ class AlumnoController extends Controller
         
         
         $alumno->save(); //Guarda los datos del formulario
-        return redirect('/alumnos')->with('Exitoso', 'Datos guardados'); //Mensajes de confirmacion
+
+        return redirect()->route('alumnosP');
+        //return redirect('alumnos')->with('Exitoso', 'Datos guardados'); //Mensajes de confirmacion
     }
 
     public function edit(Request $request){ 
@@ -55,7 +57,7 @@ class AlumnoController extends Controller
             'carrera' => $request->carrera,
             'correo_electronico' => $request->correo_electronico]
         );
-        return redirect('/alumnos')->with('Exitoso', 'Datos actualizados'); 
+        return redirect()->route('alumnosP');
     }
 
     public function destroy(Request $request){
@@ -68,7 +70,7 @@ class AlumnoController extends Controller
    
         $alumno = DB::table('alumno')->where('matricula', $matricula)->delete();
 
-        return redirect('/alumnos')->with('Exitoso', 'Datos eliminados'); 
+        return redirect()->route('alumnosP');
     }
 
 }

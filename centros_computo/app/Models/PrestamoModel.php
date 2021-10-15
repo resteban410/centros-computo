@@ -5,8 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class FaltaModel extends Model
+class PrestamoModel extends Model
 {
-    protected $table = 'faltas';
+    protected $table = 'prestamo';
     public $timestamps = false;
 }

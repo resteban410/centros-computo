@@ -12,7 +12,7 @@ class PeriodoController extends Controller
     	$nombrePag = "Periodos";
     	$periodos = PeriodoModel::all();
 
-    	return view('periodos', compact('nombrePag', 'periodos'));
+    	return view('admin.periodos', compact('nombrePag', 'periodos'));
     }
 
     public function store(Request $request){
@@ -29,7 +29,8 @@ class PeriodoController extends Controller
     	$periodos->fecha_termino = $request->fecha_termino;
 
     	$periodos->save();
-    	return redirect('/periodos')->with('Exitoso', 'Datos guardados');
+		return redirect()->route('periodoP');
+    	//return redirect('/periodos')->with('Exitoso', 'Datos guardados');
     }
 
     public function edit(Request $request){
@@ -46,8 +47,8 @@ class PeriodoController extends Controller
     		'fecha_inicio' => $request->fecha_inicio,
     		'fecha_termino' => $request->fecha_termino 
     	]);
-
-    	return redirect('/periodos')->with('Exitoso', 'Datos actualizados'); 
+		return redirect()->route('periodoP');
+    	//return redirect('/periodos')->with('Exitoso', 'Datos actualizados'); 
     }
 
     public function destroy(Request $request){
@@ -58,7 +59,7 @@ class PeriodoController extends Controller
         $id_periodo = $request->id_periodo;
 
         $periodos = DB::table('periodo')->where('id_periodo', $id_periodo)->delete();
-
-        return redirect('/periodos')->with('Exitoso', 'Datos eliminados'); 
+		return redirect()->route('periodoP');
+        //return redirect('/periodos')->with('Exitoso', 'Datos eliminados'); 
     }
 }

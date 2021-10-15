@@ -16,7 +16,7 @@ class MateriaController extends Controller
         $materias = MateriaModel::all(); 
         $matUso = MateriaUsuarioModel::all();
         $usuarios = UsuarioModel::all();
-        return view('materias',compact('materias', 'nombrePag', 'matUso', 'usuarios')); 
+        return view('admin.materias',compact('materias', 'nombrePag', 'matUso', 'usuarios')); 
     }
 
     public function store(Request $request){
@@ -35,7 +35,8 @@ class MateriaController extends Controller
         
         
         $materias->save(); 
-        return redirect('/materias')->with('Exitoso', 'Datos guardados'); 
+        return redirect()->route('materiasP');
+        //return redirect('/materias')->with('Exitoso', 'Datos guardados'); 
     }
 
     public function edit(Request $request){
@@ -53,7 +54,8 @@ class MateriaController extends Controller
             'nombre' => $request->nombre,
             'carrera' => $request->carrera]
         );
-        return redirect('/materias')->with('Exitoso', 'Datos actualizados'); 
+        return redirect()->route('materiasP');
+        //return redirect('/materias')->with('Exitoso', 'Datos actualizados'); 
     }
 
     public function destroy(Request $request){
@@ -65,7 +67,7 @@ class MateriaController extends Controller
         $nrc = $request->nrc;
    
         $materias = DB::table('materia')->where('nrc', $nrc)->delete();
-
-        return redirect('/materias')->with('Exitoso', 'Datos eliminados'); 
+        return redirect()->route('materiasP');
+        //return redirect('/materias')->with('Exitoso', 'Datos eliminados'); 
     }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\EquipoModel;
+use App\Models\MarcaModel;
 use App\Models\LaboratorioModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -11,10 +12,12 @@ class EquipoController extends Controller
 {
     public function index(){
     	$laboratorios = LaboratorioModel::all();
+        $marcas = MarcaModel::all();
 
     	$nombrePag =  "Equipos";
-        $equipos = EquipoModel::all(); 
-        return view('equipos',compact('equipos', 'nombrePag', 'laboratorios')); 
+        $equipos = EquipoModel::all();   
+
+        return view('admin.equipos',compact('equipos', 'nombrePag', 'laboratorios', 'marcas')); 
         
     }
 
@@ -23,9 +26,9 @@ class EquipoController extends Controller
         request()->validate([
             'no_serie' => 'required',
             'num_equipo' => 'required',
-            'marca' => 'required',
             'modelo' => 'required',
-            'laboratorio_clave' => 'required'
+            'laboratorio_clave' => 'required',
+            'marca_id' => 'required'
         ]);
 
     	$equipos = new EquipoModel(); 
@@ -33,12 +36,14 @@ class EquipoController extends Controller
         
         $equipos->no_serie = $request->no_serie;
         $equipos->num_equipo = $request->num_equipo;
-        $equipos->marca = $request->marca;
         $equipos->modelo = $request->modelo;
         $equipos->laboratorio_clave = $request->laboratorio_clave;
+        $equipos->marca_id = $request->marca_id;
 
-        $equipos->save(); 
-        return redirect('/equipos')->with('Exitoso', 'Datos guardados'); 
+
+        $equipos->save();
+        return redirect()->route('equiposP');
+        //return redirect('/equipos')->with('Exitoso', 'Datos guardados'); 
     }
 
     public function edit(Request $request){ 
@@ -46,9 +51,9 @@ class EquipoController extends Controller
         request()->validate([
             'no_serie' => 'required',
             'num_equipo' => 'required',
-            'marca' => 'required',
             'modelo' => 'required',
-            'laboratorio_clave' => 'required'
+            'laboratorio_clave' => 'required',
+            'marca_id' => 'required',
         ]);
 
         $no_serie = $request->no_serie;
@@ -56,11 +61,13 @@ class EquipoController extends Controller
         $equipos = DB::table('equipo')->where('no_serie', $no_serie)->update([
             'no_serie' => $request->no_serie, 
             'num_equipo' => $request->num_equipo,
-            'marca' => $request->marca,
             'modelo' => $request->modelo,
-            'laboratorio_clave' => $request->laboratorio_clave]
+            'laboratorio_clave' => $request->laboratorio_clave,
+            'marca_id' => $request->marca_id,
+            ]
         );
-        return redirect('/equipos')->with('Exitoso', 'Datos actualizados'); 
+        return redirect()->route('equiposP');
+        //return redirect('/equipos')->with('Exitoso', 'Datos actualizados'); 
     }
 
     public function destroy(Request $request){
@@ -72,8 +79,9 @@ class EquipoController extends Controller
         $no_serie = $request->no_serie;
    
         $equipo = DB::table('equipo')->where('no_serie', $no_serie)->delete();
-
-        return redirect('/equipos')->with('Exitoso', 'Datos eliminados'); 
+        
+        return redirect()->route('equiposP');
+        //return redirect('/equipos')->with('Exitoso', 'Datos eliminados'); 
     
     }
 }

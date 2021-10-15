@@ -19,7 +19,8 @@ class EquipoSoftwareController extends Controller
         $equiSoft->software_clave= $request->software_clave;
         
         $equiSoft->save(); 
-        return redirect('/software')->with('Exitoso', 'Datos guardados'); 
+        return redirect()->route('softwareP');
+        //return redirect('/software')->with('Exitoso', 'Datos guardados'); 
     }
 
     public function edit(Request $request){
@@ -35,7 +36,8 @@ class EquipoSoftwareController extends Controller
             ['equipo_no_serie' => $request->equipo_no_serie,
             'software_clave' => $request->software_clave]
         );
-        return redirect('/software')->with('Exitoso', 'Datos actualizados'); 
+        return redirect()->route('softwareP');
+        //return redirect('/software')->with('Exitoso', 'Datos actualizados'); 
     }
 
     public function destroy(Request $request){
@@ -47,7 +49,7 @@ class EquipoSoftwareController extends Controller
         $clave = $request->clave;
    
         $equiSoft = DB::table('equipo_software')->where('clave', $clave)->delete();
-
-        return redirect('/software')->with('Exitoso', 'Datos eliminados'); 
+        return redirect()->route('softwareP');
+        //return redirect('/software')->with('Exitoso', 'Datos eliminados'); 
     }
 }

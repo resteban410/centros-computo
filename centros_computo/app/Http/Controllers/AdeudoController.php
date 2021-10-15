@@ -15,7 +15,7 @@ class AdeudoController extends Controller
 
     	$nombrePag =  "Adeudos";
     	$adeudos = AdeudoModel::all();
-        return view('adeudos',compact('nombrePag','equipos','alumnos','adeudos'));
+        return view('admin.adeudos',compact('nombrePag','equipos','alumnos','adeudos'));
 	}
 
 	public function store(Request $request){
@@ -24,7 +24,7 @@ class AdeudoController extends Controller
         request()->validate([
             'fecha' => 'required',
             'descripcion' => 'required|min:10',
-            'estatus' => 'required',
+            'estado' => 'required',
             'matricula_alumno_alumno' => 'required',
             'noserie_equipo' => 'required',
         ]);
@@ -33,20 +33,21 @@ class AdeudoController extends Controller
         $adeudos->fecha = $request->fecha;        
         $adeudos->hora = $request->hora;
         $adeudos->descripcion = $request->descripcion;
-        $adeudos->estatus = $request->estatus;        
+        $adeudos->estado = $request->estado;        
         $adeudos->matricula_alumno_alumno = $request->matricula_alumno_alumno;
 		$adeudos->noserie_equipo = $request->noserie_equipo;
 
 
         $adeudos->save(); 
-        return redirect('/adeudos')->with('Exitoso', 'Datos guardados'); 
+        return redirect()->route('adeudoP');
+        //return redirect('/adeudos')->with('Exitoso', 'Datos guardados'); 
     }
 
     public function edit(Request $request){ 
         request()->validate([
             'fecha' => 'required',
             'descripcion' => 'required|min:10',
-            'estatus' => 'required',
+            'estado' => 'required',
             'matricula_alumno_alumno' => 'required',
             'noserie_equipo' => 'required',
         ]);
@@ -58,11 +59,12 @@ class AdeudoController extends Controller
             'fecha' => $request->fecha,
             'hora' => $request->hora,
             'descripcion' => $request->descripcion,
-        	'estatus' => $request->estatus,
+        	'estado' => $request->estado,
 			'matricula_alumno_alumno' => $request->matricula_alumno_alumno,
             'noserie_equipo' => $request->noserie_equipo]
         );
-        return redirect('/adeudos')->with('Exitoso', 'Datos actualizados'); 
+        return redirect()->route('adeudoP');
+        //return redirect('/adeudos')->with('Exitoso', 'Datos actualizados'); 
     }
 
     public function destroy(Request $request){
@@ -75,7 +77,8 @@ class AdeudoController extends Controller
    
         $adeudo = DB::table('adeudo')->where('folio', $folio)->delete();
 
-        return redirect('/adeudos')->with('Exitoso', 'Datos eliminados'); 
+        return redirect()->route('adeudoP');
+        //return redirect('/adeudos')->with('Exitoso', 'Datos eliminados'); 
     
     }
 }

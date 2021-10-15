@@ -10,7 +10,7 @@ class UsuarioController extends Controller
     public function index(){
     	$nombrePag =  "Usuarios";
         $usuarios = UsuarioModel::all(); 
-        return view('usuarios',compact('usuarios', 'nombrePag')); 
+        return view('admin.usuarios',compact('usuarios', 'nombrePag')); 
         
     }
 
@@ -39,8 +39,9 @@ class UsuarioController extends Controller
         $usuarios->telefono = $request->telefono;
         $usuarios->tipo = $request->tipo;
 
-        $usuarios->save(); 
-        return redirect('/usuarios')->with('Exitoso', 'Datos guardados'); 
+        $usuarios->save();
+        return redirect()->route('usuariosP');
+        //return redirect('/usuarios')->with('Exitoso', 'Datos guardados'); 
     }
 
     public function edit(Request $request){ 
@@ -69,7 +70,8 @@ class UsuarioController extends Controller
         	'telefono' => $request->telefono,
         	'tipo' => $request->tipo]
         );
-        return redirect('/usuarios')->with('Exitoso', 'Datos actualizados'); 
+        return redirect()->route('usuariosP');
+        //return redirect('/usuarios')->with('Exitoso', 'Datos actualizados'); 
     }
 
     public function destroy(Request $request){
@@ -82,7 +84,7 @@ class UsuarioController extends Controller
         $id = $request->id;
    
         $usuario = DB::table('usuario')->where('id', $id)->delete();
-
-        return redirect('/usuarios')->with('Exitoso', 'Datos eliminados'); 
+        return redirect()->route('usuariosP');
+        //return redirect('/usuarios')->with('Exitoso', 'Datos eliminados'); 
     }
 }

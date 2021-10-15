@@ -15,7 +15,8 @@ class FallaController extends Controller
 
     	$nombrePag =  "Fallas";
     	$fallas = FallaModel::all();
-        return view('fallas',compact('nombrePag','equipos','usuarios','fallas'));
+
+        return view('admin.fallas',compact('nombrePag','equipos','usuarios','fallas'));
 	}
 
 	public function store(Request $request){
@@ -36,7 +37,8 @@ class FallaController extends Controller
         $fallas->usuario_id = $request->usuario_id;
 
         $fallas->save(); 
-        return redirect('/fallas')->with('Exitoso', 'Datos guardados'); 
+        return redirect()->route('fallaP');
+        //return redirect('/fallas')->with('Exitoso', 'Datos guardados'); 
     }
 
 
@@ -58,7 +60,8 @@ class FallaController extends Controller
         	'equipo_noserie' => $request->equipo_noserie,
 			'usuario_id' => $request->usuario_id
 		]);
-        return redirect('/fallas')->with('Exitoso', 'Datos actualizados'); 
+        return redirect()->route('fallaP');
+        //return redirect('/fallas')->with('Exitoso', 'Datos actualizados'); 
     }
 
     public function destroy(Request $request){
@@ -70,8 +73,8 @@ class FallaController extends Controller
         $clave_fallas = $request->clave_fallas;
    
         $fallas = DB::table('fallas')->where('clave_fallas', $clave_fallas)->delete();
-
-        return redirect('/fallas')->with('Exitoso', 'Datos eliminados'); 
+        return redirect()->route('fallaP');
+        //return redirect('/fallas')->with('Exitoso', 'Datos eliminados'); 
     
     }
 }

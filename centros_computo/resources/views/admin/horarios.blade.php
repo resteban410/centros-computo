@@ -211,16 +211,7 @@
                     {!! $errors->first('num_horario_fk', '<small>:message</small><br>') !!}
             </div>
 
-            <div class="form-group">
-                <label>Usuario:</label>
-                        <select name="id_usuario_fk">
-                            @foreach($usuarios as $item)
-                              <option value="{{$item->id}}">{{$item->id}}
-                              </option>
-                            @endforeach 
-                        </select>
-                    {!! $errors->first('id_usuario_fk', '<small>:message</small><br>') !!}
-            </div>
+            
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>

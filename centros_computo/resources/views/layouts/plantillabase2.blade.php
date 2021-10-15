@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Title -->
-    <title>Gestión de {{$nombrePag}}</title>
+    <title>{{$nombrePag}}</title>
 
     <!-- Favicon -->
     <link rel="icon" href="./img/core-img/favicon.png">
@@ -92,12 +92,7 @@
                             <!-- Nav Start -->
                             <div class="classynav">
                                 <ul id="nav">
-                                    <li class="active"><a href="{{route('index')}}">Inicio</a></li>
-                                    <li><a href="{{route('fallaP')}}">Fallas</a></li>
-                                    <li><a href="{{route('faltaP')}}">Faltas</a></li>
-                                    <li><a href="{{route('usuariosP')}}">Prestamos</a></li>
-                                    <li><a href="{{route('materiasP')}}">Software</a></li>
-                                    <li><a href="{{route('materiasP')}}">Horarios</a></li>
+                                    <li class="active"><a href="{{route('indexGeneral')}}">Inicio</a></li>
                                 </ul>
 
                                 <!-- Search -->

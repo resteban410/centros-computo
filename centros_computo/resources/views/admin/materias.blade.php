@@ -29,7 +29,7 @@
                 <label>Carrera:</label>
                     <select name="carrera">
                        	<option value="General">Generales</option>
-                        <option value="ISTII">Ingeniería en Sistemas y Tecnología de la Información Industrial</option>
+                        <option value="ISTII">Ingeniería en Sistemas y Tecnologías de la Información Industrial</option>
                         <option value="IPGI">Ingeniería en Procesos y Gestión Industrial</option>
                         <option value="IAA">Ingeniería en Automatización y Autotrónica </option>
                     </select>    
@@ -108,7 +108,7 @@
 
             <div class="form-group">
                 <label>NRC:</label>
-                    <input type="text" name="nrc" id="nrc" class= "form-control" placeholder="Escriba la clave">
+                    <input type="text" name="nrc" id="nrc" class= "form-control" placeholder="Escriba el NRC">
                     {!! $errors->first('nrc', '<small>:message</small><br>') !!}
             </div>     
       </div>

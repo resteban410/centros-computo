@@ -19,7 +19,8 @@ class MateriaUsuarioController extends Controller
         $matUsu->usu_id_usu= $request->usu_id_usu;
         
         $matUsu->save(); 
-        return redirect('/materias')->with('Exitoso', 'Datos guardados'); 
+        return redirect()->route('materiasP');
+        //return redirect('/materias')->with('Exitoso', 'Datos guardados'); 
     }
 
     public function edit(Request $request){
@@ -35,7 +36,8 @@ class MateriaUsuarioController extends Controller
             ['materia_nrc' => $request->materia_nrc,
             'usu_id_usu' => $request->usu_id_usu]
         );
-        return redirect('/materias')->with('Exitoso', 'Datos actualizados'); 
+        return redirect()->route('materiasP');
+        //return redirect('/materias')->with('Exitoso', 'Datos actualizados'); 
     }
 
     public function destroy(Request $request){
@@ -47,8 +49,8 @@ class MateriaUsuarioController extends Controller
         $clave = $request->clave;
    
         $equiSoft = DB::table('materia_usuario')->where('clave', $clave)->delete();
-
-        return redirect('/materias')->with('Exitoso', 'Datos eliminados'); 
+        return redirect()->route('materiasP');
+        //return redirect('/materias')->with('Exitoso', 'Datos eliminados'); 
     }
 
 }

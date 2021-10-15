@@ -16,7 +16,7 @@ class SoftwareController extends Controller
         $equipos = EquipoModel::all();
         $EquiSoft = EquipoSoftwareModel::all();
 
-        return view('softwares',compact('equipos','softwareS', 'EquiSoft','nombrePag')); 
+        return view('admin.softwares',compact('equipos','softwareS', 'EquiSoft','nombrePag')); 
         
     }
 
@@ -35,8 +35,9 @@ class SoftwareController extends Controller
         $softwareS->descripcion= $request->descripcion;
         
         
-        $softwareS->save(); 
-        return redirect('/software')->with('Exitoso', 'Datos guardados'); 
+        $softwareS->save();
+        return redirect()->route('softwareP');
+        //return redirect('/software')->with('Exitoso', 'Datos guardados'); 
     }
 
     public function edit(Request $request){
@@ -54,7 +55,8 @@ class SoftwareController extends Controller
             'nombre' => $request->nombre,
             'descripcion' => $request->descripcion]
         );
-        return redirect('/software')->with('Exitoso', 'Datos actualizados'); 
+        return redirect()->route('softwareP');
+        //return redirect('/software')->with('Exitoso', 'Datos actualizados'); 
     }
 
     public function destroy(Request $request){
@@ -64,9 +66,8 @@ class SoftwareController extends Controller
         ]);
 
         $clave = $request->clave;
-   
         $softwareS = DB::table('software')->where('clave', $clave)->delete();
-
-        return redirect('/software')->with('Exitoso', 'Datos eliminados'); 
+        return redirect()->route('softwareP');
+        //return redirect('/software')->with('Exitoso', 'Datos eliminados'); 
     }
 }

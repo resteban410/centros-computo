@@ -1,6 +1,5 @@
 @extends('layouts.plantillabase')
 @section('contenido')
-
 <br></br>
 
 <!-- Modal Crear nuevo alumno-->
@@ -11,66 +10,43 @@
         <h5 class="modal-title" id="exampleModalLabel">Nuevo registro</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-    <form action="{{route('altaAde')}}" method="post">
+    <form action="{{route('altaPerdida')}}" method="post">
       <div class="modal-body">       
                 @csrf
             <div class="form-group">
                 <label>Folio:</label>
-                    <input type="text" name="folio" class= "form-control" placeholder="Asignado automaticamente" readonly>
+                    <input type="text" name="clave" id="clave" class= "form-control" placeholder="Asignado automaticamente" readonly>
             </div>
 
-      			<div class="form-group">
-                <label>Fecha:</label>
-                    <input type="text" name="fecha "id="fecha"></p>
-                    {!! $errors->first('fecha', '<small>:message</small><br>') !!}
-            </div>
+      		<div class="form-group">
+      			<label>Fecha Perdida:</label>
+      			<input type="date" name="fecha_perdida" id="fecha_perdida" class= "form-control">
+                {!! $errors->first('fecha_perdida', '<small>:message</small><br>') !!}
+      		</div>
 
             <div class="form-group">
-                <label>Hora:</label>
-                    <input type="time" name="hora" class= "form-control">
-            </div>
+      			<label>Hora Perdida:</label>
+      			<input type="time" name="hora_perdida" id="hora_perdida" class= "form-control">
+                {!! $errors->first('hora_perdida', '<small>:message</small><br>') !!}
+      		</div>
 
-			      <label>Descripcion:</label>
+			    <label>Observaciones:</label>
             <div class="form-group">                
-                    <textarea name="descripcion" rows="5" cols="40"></textarea>
-                    {!! $errors->first('descripcion', '<small>:message</small><br>') !!}
-            </div>
-
-
-            <label>Estatus:</label>
-            <div class="form-group">
-                
-                       <select name="estatus">
-                       	  <option value="resuelto">Resuelto</option>
-                       	  <option value="espera">En espera</option>
-                        </select>
-                        {!! $errors->first('estatus', '<small>:message</small><br>') !!}                      
+                    <textarea name="observaciones" id="observaciones" rows="5" cols="40"></textarea>
+                    {!! $errors->first('observaciones', '<small>:message</small><br>') !!}
             </div>
 
             <label>Equipo:</label>
             <div class="form-group">
                 
-                       <select name="noserie_equipo">
+                       <select name="equipo_no_serie">
                        	@foreach($equipos as $item)
                        	  <option value="{{$item->no_serie}}">{{$item->no_serie}}
                        	  </option>
                        	@endforeach 
                         </select>   
-                        {!! $errors->first('noserie_equipo', '<small>:message</small><br>') !!}                   
-            </div>
-
-            <label>Alumno:</label>
-            <div class="form-group">
-                
-                       <select name="matricula_alumno_alumno">
-                       	@foreach($alumnos as $item)
-                       	  <option value="{{$item->matricula}}">{{$item->nombre, $item->apellido}}
-                       	  </option>
-                       	@endforeach 
-                        </select>
-                        {!! $errors->first('matricula_alumno_alumno', '<small>:message</small><br>') !!}                      
-            </div>
-
+                        {!! $errors->first('equipo_no_serie', '<small>:message</small><br>') !!}                   
+            </div>    
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -90,67 +66,44 @@
         <h5 class="modal-title" id="exampleModalLabel2">Editar registro</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-    <form action="{{route('editarAde')}}" method="post" id="editForm">
+    <form action="{{route('editarPerdida')}}" method="post" id="editForm">
       <div class="modal-body">       
                 @csrf
                 @method('PUT')
             <div class="form-group">
                 <label>Folio:</label>
-                    <input type="text" name="folio" id="folio" class= "form-control" placeholder="Asignado automaticamente" readonly>
+                    <input type="text" name="clave" id="clave" class= "form-control" placeholder="Asignado automaticamente" readonly>
             </div>
+
+      		<div class="form-group">
+      			<label>Fecha Perdida:</label>
+      			<input type="date" name="fecha_perdida" id="fecha_perdida" class= "form-control">
+                {!! $errors->first('fecha_perdida', '<small>:message</small><br>') !!}
+      		</div>
 
             <div class="form-group">
-                <label>Fecha:</label>
-                    <input type="text" name="fecha "id="fecha"></p>
-                    {!! $errors->first('fecha', '<small>:message</small><br>') !!}
-            </div>
+      			<label>Hora Perdida:</label>
+      			<input type="time" name="hora_perdida" id="hora_perdida" class= "form-control">
+                {!! $errors->first('hora_perdida', '<small>:message</small><br>') !!}
+      		</div>
 
-            <div class="form-group">
-                <label>Hora:</label>
-                    <input type="time" name="hora" id="hora" class= "form-control">
-                    {!! $errors->first('hora', '<small>:message</small><br>') !!}
-            </div>
-
-            <label>Descripcion:</label>
+			    <label>Observaciones:</label>
             <div class="form-group">                
-                    <textarea name="descripcion" id="descripcion" rows="5" cols="40"></textarea>
-                    {!! $errors->first('descripcion', '<small>:message</small><br>') !!}
-            </div>
-
-
-            <label>Estatus:</label>
-            <div class="form-group">
-                
-                       <select name="estatus">
-                       	  <option value="resuelto">Resuelto</option>
-                       	  <option value="espera">En espera</option>
-                        </select>
-                        {!! $errors->first('estatus', '<small>:message</small><br>') !!}                      
+                    <textarea name="observaciones" id="observaciones" rows="5" cols="40"></textarea>
+                    {!! $errors->first('observaciones', '<small>:message</small><br>') !!}
             </div>
 
             <label>Equipo:</label>
             <div class="form-group">
                 
-                       <select name="noserie_equipo">
+                       <select name="equipo_no_serie">
                        	@foreach($equipos as $item)
                        	  <option value="{{$item->no_serie}}">{{$item->no_serie}}
                        	  </option>
                        	@endforeach 
-                        </select> 
-                        {!! $errors->first('noserie_equipo', '<small>:message</small><br>') !!}                     
-            </div>
-
-            <label>Alumno:</label>
-            <div class="form-group">
-                
-                       <select name="matricula_alumno_alumno">
-                       	@foreach($alumnos as $item)
-                       	  <option value="{{$item->matricula}}">{{$item->nombre, $item->apellido}}
-                       	  </option>
-                       	@endforeach 
-                        </select>    
-                        {!! $errors->first('matricula_alumno_alumno', '<small>:message</small><br>') !!}                   
-            </div>
+                        </select>   
+                        {!! $errors->first('equipo_no_serie', '<small>:message</small><br>') !!}                   
+            </div>    
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -170,7 +123,7 @@
         <h5 class="modal-title" id="exampleModalLabel">Eliminar registro</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-    <form action="{{route('borrarAde')}}" method="POST" id="deleteForm">
+    <form action="{{route('borrarPerdida')}}" method="POST" id="deleteForm">
       @csrf
       @method('DELETE')
       <div class="modal-body">       
@@ -179,8 +132,8 @@
 
             <div class="form-group">
                 <label>Folio:</label>
-                    <input type="text" name="folio" id="folio" class= "form-control" placeholder="Escriba el número de folio">
-                    {!! $errors->first('folio', '<small>:message</small><br>') !!}  
+                    <input type="text" name="clave" id="clave" class= "form-control" placeholder="Escriba el numero de folio">
+                    {!! $errors->first('clave', '<small>:message</small><br>') !!}  
             </div>      
       </div>
       <div class="modal-footer">
@@ -220,30 +173,26 @@
 <br></br>
 <div class="card"> 
         <div class="card-body">
-        <h4> Historial de Adeudos</h4>
-        <table id="adeudos" class="table table-striped table-bordered" style="width:100%">
+        <h4> Historial de Perdidas</h4>
+        <table id="faltas" class="table table-striped table-bordered" style="width:100%">
             <thead>
             <tr>
                 <th>Folio</th>
-                <th>Fecha</th>
-                <th>Hora</th>
-                <th>Descripcion</th>
-                <th>Estatus</th>
-                <th>Matricula Alumno</th>
+                <th>Fecha Perdida</th>
+                <th>Hora Perdida</th>
+                <th>Observaciones</th>
                 <th>No.Serie Equipo</th>
                 <th>Acciones</th>
             </tr>   
             </thead> 
             <tbody>
-                @foreach($adeudos as $adeudo)
+                @foreach($perdidas as $perdida)
                 <tr>
-                    <td>{{$adeudo->folio}}</td>
-                    <td>{{$adeudo->fecha}}</td>
-                    <td>{{$adeudo->hora}}</td>
-                    <td>{{$adeudo->descripcion}}</td>
-                    <td>{{$adeudo->estatus}}</td>
-					<td>{{$adeudo->matricula_alumno_alumno}}</td>
-					<td>{{$adeudo->noserie_equipo}}</td>
+                    <td>{{$perdida->clave}}</td>
+                    <td>{{$perdida->fecha_perdida}}</td>
+                    <td>{{$perdida->hora_perdida}}</td>
+                    <td>{{$perdida->observaciones}}</td>
+					          <td>{{$perdida->equipo_noserie}}</td>
                     <td>
                         <a href="#" class="btn btn-success edit">Editar</a>
                         <a href="#" class="btn btn-danger delete">Borrar</a>
@@ -260,7 +209,7 @@
 <script type="text/javascript">
             $(document).ready(function() {
 
-                var table= $('#adeudos').DataTable({
+                var table= $('#faltas').DataTable({
                     responsive: true,
                     autoWidth: false,
                     "language": {
@@ -285,15 +234,14 @@
                         var data = table.row($tr).data();
                         console.log(data);
 
-                        $('#folio').val(data[0]);
-                        $('#fecha').val(data[1]);
-                        $('#hora').val(data[2]);
-                        $('#descripcion').val(data[3]);
-                        $('#estatus').val(data[4]);
-                        $('#matricula_alumno_alumno').val(data[5]);
-                        $('#noserie_equipo').val(data[6]);
+                        $('#clave').val(data[0]);
+                        $('#fecha_perdida').val(data[1]);
+                        $('#hora_perdida').val(data[2]);
+                        $('#observaciones').val(data[3]);
+                        $('#equipo_noserie').val(data[4]);
+
                  
-                        $('#editForm').attr('route', 'editarAde', + data[0]);
+                        $('#editForm').attr('route', 'editarPerdida', + data[0]);
                         $('#editModal').modal('show');
                     });
 
@@ -309,25 +257,12 @@
                         var data = table.row($tr).data();
                         console.log(data);
 
-                        $('#folio').val(data[0]);
+                        $('#clave').val(data[0]);
 
-                        $('#deleteForm').attr('route', 'borrarAde', + data[0]);
+                        $('#deleteForm').attr('route', 'borrarPerdida', + data[0]);
                         $('#deleteModal').modal('show');
                     });
                     //end delete record 
                 });
-        </script>
-        <script type="text/javascript">
-          $(function(){
-            $("#fecha").datepicker({
-              firstDay: 1,
-              dateFormat: 'yy-mm-dd', 
-              changeMonth:true, 
-              changeYear:true,
-              monthNames: ['Enero', 'Febrero', 'Marzo','Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre','Octubre', 'Noviembre', 'Diciembre'],
-              dayNamesMin: ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'],
-              beforeShowDay: $.datepicker.noWeekends
-            }); 
-          });
         </script>
 @endsection

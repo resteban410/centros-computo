@@ -2,23 +2,23 @@
 
 namespace App\Http\Controllers;
 use App\Models\EquipoModel;
-use App\Models\FaltaModel;
+use App\Models\PerdidaModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 
-class FaltaController extends Controller
+class PerdidaController extends Controller
 {
     public function index(){
     	$equipos = EquipoModel::all(); 
 
-    	$nombrePag =  "Faltas";
-    	$faltas = FaltaModel::all();
-        return view('faltas',compact('nombrePag','equipos','faltas'));
+    	$nombrePag =  "Perdidas";
+    	$perdidas = PerdidaModel::all();
+        return view('admin.perdidas',compact('nombrePag','equipos','perdidas'));
 	}
 
 	public function store(Request $request){
-    	$faltas = new FaltaModel(); 
+    	$perdidas = new PerdidaModel(); 
 
         request()->validate([
             'fecha_perdida' => 'required',
@@ -27,14 +27,15 @@ class FaltaController extends Controller
             'equipo_no_serie' => 'required',
         ]);
 
-        $faltas->clave = $request->clave;
-        $faltas->fecha_perdida = $request->fecha_reporte;        
-        $faltas->hora_perdida = $request->hora_perdida;
-        $faltas->observaciones = $request->observaciones;
-        $faltas->equipo_no_serie = $request->equipo_no_serie;
+        $perdidas->clave = $request->clave;
+        $perdidas->fecha_perdida = $request->fecha_reporte;        
+        $perdidas->hora_perdida = $request->hora_perdida;
+        $perdidas->observaciones = $request->observaciones;
+        $perdidas->equipo_no_serie = $request->equipo_no_serie;
 
-        $faltas->save(); 
-        return redirect('/faltas')->with('Exitoso', 'Datos guardados'); 
+        $perdidas->save(); 
+        return redirect()->route('perdidaP');
+        //return redirect('/perdidas')->with('Exitoso', 'Datos guardados'); 
     }
 
     public function edit(Request $request){ 
@@ -48,14 +49,15 @@ class FaltaController extends Controller
 
         $clave = $request->clave;
 
-        $faltas = DB::table('faltas')->where('clave', $clave)->update(
+        $perdidas = DB::table('perdida')->where('clave', $clave)->update(
             ['clave' => $request->clave, 
             'fecha_perdida' => $request->fecha_perdida,
             'hora_perdida' => $request->hora_perdida,
             'observaciones' => $request->observaciones,
         	'equipo_no_serie' => $request->equipo_no_serie
 		]);
-        return redirect('/faltas')->with('Exitoso', 'Datos actualizados'); 
+        return redirect()->route('perdidaP');
+        //return redirect('/perdidas')->with('Exitoso', 'Datos actualizados'); 
     }
 
     public function destroy(Request $request){
@@ -66,9 +68,9 @@ class FaltaController extends Controller
 
         $clave = $request->clave;
    
-        $faltas = DB::table('faltas')->where('clave', $clave)->delete();
-
-        return redirect('/faltas')->with('Exitoso', 'Datos eliminados'); 
+        $perdidas = DB::table('perdida')->where('clave', $clave)->delete();
+        return redirect()->route('perdidaP');
+        //return redirect('/perdidas')->with('Exitoso', 'Datos eliminados'); 
     
     }
 }
