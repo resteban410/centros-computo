@@ -1,2 +1,0 @@
-@extends('layouts.plantillabase2')
-
