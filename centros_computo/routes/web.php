@@ -24,7 +24,7 @@ use App\Http\Controllers\HomeGenController;
 use App\Http\Controllers\SoftwareGenController;
 
 
-Route::get('/', HomeController::class) ->name('index');
+Route::get('/admin', HomeController::class) ->name('index');
 Route::get('/general', HomeGenController::class) ->name('indexGeneral');
 
 Route::get('/consulta_de_software', [SoftwareGenController::class,'index'])->name('softwareG');
