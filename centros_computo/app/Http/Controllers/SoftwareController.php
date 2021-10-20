@@ -23,11 +23,7 @@ class SoftwareController extends Controller
 
         $EquiSoft = EquipoSoftwareModel::all();
 
-<<<<<<< HEAD
         return view('admin.softwares',compact('equipos','softwareS', 'data','nombrePag')); 
-=======
-        return view('admin.softwares',compact('equipos','softwareS', 'EquiSoft','nombrePag')); 
->>>>>>> origin/master
         
     }
 

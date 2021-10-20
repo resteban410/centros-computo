@@ -170,7 +170,7 @@
                     <div class="about-main-icon pb-4">
                         <i class="las la-user" aria-hidden="true"></i>
                     </div>
-                    <h5 class="mb-0">Alumnos</h5>
+                    <h5 class="mb-0">Autoacceso</h5>
                     </a>
                 </div>
             </div>
@@ -231,7 +231,7 @@
                     <div class="about-main-icon pb-4">
                         <i class="las la-clock" aria-hidden="true"></i>
                     </div>
-                    <h5 class="mb-0">Horarios</h5>
+                    <h5 class="mb-0">Asignaciones</h5>
                 </div>
             </a>
             </div>
@@ -240,7 +240,7 @@
                 <div class="about-box center-block wow zoomIn" data-wow-delay="700ms">
                     <div class="about-opacity-icon"> <i class="las la-calendar" aria-hidden="true"></i> </div>
                     <div class="about-main-icon pb-4">
-                        <i class="las la-calendar aria-hidden="true"></i>
+                        <i class="las la-calendar" aria-hidden="true"></i>
                     </div>
                     <h5 class="mb-0">Periodos</h5>
                 </div>
