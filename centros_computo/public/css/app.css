@@ -4338,6 +4338,7 @@ input[type=button].btn-block {
 }
 
 .card {
+  margin-bottom: 10%;
   position: relative;
   display: flex;
   flex-direction: column;
