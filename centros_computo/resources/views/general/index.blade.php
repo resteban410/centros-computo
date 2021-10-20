@@ -202,11 +202,16 @@
                             <span>Blvd. Audi Sur,  S/N San Jose Chiapa Puebla</span>
                         </div>
                     </div>
+<<<<<<< HEAD
+
+                    <!-- Single Footer Widget Area --> 
+=======
                     <!-- Single Footer Widget Area -->
                     <div class="col-12 col-sm-6 col-lg-2">
                         <div class="single-footer-widget mb-80">
                             <!-- Widget Title -->
                             <h5 class="widget-title">Horarios</h5>
+>>>>>>> origin/master
                             <!-- Single Blog Area -->
                             <div class="latest-blog-area">
                                 <a href="#" class="post-title">Horario Matutino</a>

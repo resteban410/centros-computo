@@ -21,8 +21,8 @@
 
             <div class="form-group">
                 <label>Nombre:</label>
-                    <input type="text" name="nombre" class= "form-control" placeholder="Escriba el nombre">
-                    {!! $errors->first('nombre', '<small>:message</small><br>') !!}
+                    <input type="text" name="nombre_marca" class= "form-control" placeholder="Escriba el nombre">
+                    {!! $errors->first('nombre_marca', '<small>:message</small><br>') !!}
             </div>
       </div>
       <div class="modal-footer">
@@ -55,8 +55,8 @@
 
             <div class="form-group">
                 <label>Nombre:</label>
-                    <input type="text" name="nombre" id="nombre" class= "form-control" placeholder="Escriba el nombre">
-                    {!! $errors->first('nombre', '<small>:message</small><br>') !!}
+                    <input type="text" name="nombre_marca" id="nombre_marca" class= "form-control" placeholder="Escriba el nombre">
+                    {!! $errors->first('nombre_marca', '<small>:message</small><br>') !!}
             </div>
       </div>
       <div class="modal-footer">
@@ -138,7 +138,7 @@
                     @foreach($marcas as $marca)
                     <tr>
                         <td>{{$marca->id_marca}}</td>
-                        <td>{{$marca->nombre}}</td>
+                        <td>{{$marca->nombre_marca}}</td>
                         <td>
                             <a href="#" class="btn btn-success edit">Editar</a>
                             <a href="#" class="btn btn-danger delete">Borrar</a>
@@ -181,7 +181,7 @@
                         console.log(data);
 
                         $('#id_marca').val(data[0]);
-                        $('#nombre').val(data[1]);
+                        $('#nombre_marca').val(data[1]);
                  
                         $('#editForm').attr('route', 'editarMarca', + data[0]);
                         $('#editModal').modal('show');

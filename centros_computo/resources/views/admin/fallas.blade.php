@@ -218,8 +218,8 @@
                     <td>{{$falla->fecha_reporte}}</td>
                     <td>{{$falla->fecha_atencion}}</td>
                     <td>{{$falla->descripcion}}</td>
-					<td>{{$falla->equipo_noserie}}</td>
-					<td>{{$falla->usuario_id}}</td>
+                    <td>{{$falla->equipo_noserie}}</td>
+                    <td>{{$falla->usuario_id}}</td>
                     <td>
                         <a href="#" class="btn btn-success edit">Editar</a>
                         <a href="#" class="btn btn-danger delete">Borrar</a>

@@ -14,9 +14,20 @@ class SoftwareController extends Controller
         $nombrePag =  "Software - Equipo";
         $softwareS = SoftwareModel::all(); 
         $equipos = EquipoModel::all();
+
+        $data = DB::table('equipo_software')
+                ->join('equipo', 'equipo_software.equipo_no_serie', '=', 'equipo.no_serie')
+                ->join('software', 'equipo_software.software_clave', '=', 'software.clave')
+                ->select('equipo_software.clave', 'equipo.no_serie', 'software.nombre')
+                ->get();
+
         $EquiSoft = EquipoSoftwareModel::all();
 
+<<<<<<< HEAD
+        return view('admin.softwares',compact('equipos','softwareS', 'data','nombrePag')); 
+=======
         return view('admin.softwares',compact('equipos','softwareS', 'EquiSoft','nombrePag')); 
+>>>>>>> origin/master
         
     }
 

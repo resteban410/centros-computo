@@ -17,11 +17,11 @@ class MarcaController extends Controller
 
     public function store(Request $request){
         request()->validate([
-            'nombre' => 'required'
+            'nombre_marca' => 'required'
         ]);
 
         $marcas = new MarcaModel();
-        $marcas->nombre = $request->nombre;
+        $marcas->nombre_marca = $request->nombre_marca;
         $marcas->save();
         return redirect()->route('marcaP');
         //return redirect('/marcas')->with('Exitoso', 'Datos guardados');
@@ -29,13 +29,13 @@ class MarcaController extends Controller
 
     public function edit(Request $request){
         request()->validate([
-            'nombre' => 'required'
+            'nombre_marca' => 'required'
         ]);
 
         $id_marca = $request->id_marca;
 
         $marcas = DB::table('marca')->where('id_marca', $id_marca)->update([
-            'nombre' => $request->nombre
+            'nombre_marca' => $request->nombre_marca
         ]);
         return redirect()->route('marcaP');
         //return redirect('/marcas')->with('Exitoso', 'Datos actualizados');

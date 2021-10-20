@@ -49,7 +49,7 @@ use Illuminate\Support\Facades\DB;
                 
                        <select name="marca_id">
                        	@foreach($marcas as $item)
-                       	  <option value="{{$item->id_marca}}">{{$item->nombre}}
+                       	  <option value="{{$item->id_marca}}">{{$item->nombre_marca}}
                        	  </option>
                        	@endforeach 
                         </select>
@@ -112,7 +112,7 @@ use Illuminate\Support\Facades\DB;
                 
                        <select name="marca_id">
                        	@foreach($marcas as $item)
-                       	  <option value="{{$item->id_marca}}">{{$item->nombre}}
+                       	  <option value="{{$item->id_marca}}">{{$item->nombre_marca}}
                        	  </option>
                        	@endforeach 
                         </select>
@@ -195,7 +195,6 @@ use Illuminate\Support\Facades\DB;
                 <th>Núm_Serie</th>
                 <th>Núm_Equipo</th>
                 <th>Modelo</th>
-                <th>Ubicación</th>
                 <th>Nombre del laboratorio</th>
                 <th>Marca</th>
                 <th>Acciones</th>
@@ -207,14 +206,8 @@ use Illuminate\Support\Facades\DB;
                     <td>{{$equipo->no_serie}}</td>
                     <td>{{$equipo->num_equipo}}</td>
                     <td>{{$equipo->modelo}}</td>
-                    <td>{{$equipo->laboratorio_clave}}</td>
-                    <td>
-                      <?php
-                      $query = DB::table('laboratorio')->select('nombre')->where('lab_clave',$equipo->laboratorio_clave)->get();
-                      echo "$query";
-                      ?>
-                    </td>
-                    <td>{{$equipo->marca_id}}</td>
+                    <td>{{$equipo->nombre}}</td>
+                    <td>{{$equipo->nombre_marca}}</td>
                     <td>
                         <a href="#" class="btn btn-success edit">Editar</a>
                         <a href="#" class="btn btn-danger delete">Borrar</a>
@@ -259,10 +252,7 @@ use Illuminate\Support\Facades\DB;
                         $('#no_serie').val(data[0]);
                         $('#num_equipo').val(data[1]);
                         $('#modelo').val(data[2]);
-                        $('#laboratorio_clave').val(data[3]);
-                        $('#marca_id').val(data[5]);
 
-                 
                         $('#editForm').attr('route', 'editarEqui', + data[0]);
                         $('#editModal').modal('show');
                     });

@@ -251,20 +251,16 @@
             <tr>
                 <th>Clave</th>
                 <th>No. Serie Equipo</th>
-                <th>Clave de producto</th>
+                <th>Nombre del producto</th>
                 <th>Acciones</th>
             </tr>   
             </thead> 
             <tbody>
-                @foreach($EquiSoft as $equisoft)
+                @foreach($data as $dat)
                 <tr>
-                    <td>{{$equisoft->clave}}</td>
-                    <td>
-                    	{{$query = DB::table('equipo')->select('no_serie')->where('no_serie', '=', $equisoft->equipo_no_serie)->get()}}
-                    </td>
-                    <td>
-                    	{{$query = DB::table('software')->select('clave')->where('clave', '=', $equisoft->software_clave)->get()}}
-                    </td>
+                    <td>{{$dat->clave}}</td>
+                    <td>{{$dat->no_serie}}</td>
+                    <td>{{$dat->nombre}}</td>
                     <td>
                         <a href="#" class="btn btn-danger delete1">Borrar</a>
                     </td>
