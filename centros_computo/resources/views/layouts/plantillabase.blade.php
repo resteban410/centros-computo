@@ -88,7 +88,7 @@
                     <nav class="classy-navbar justify-content-between" id="robertoNav">
 
                         <!-- Logo -->
-                        <a class="nav-brand" href="index.html"><img src="./img/core-img/logo-buap.png" alt=""></a>
+                        <a class="nav-brand" href="http://127.0.0.1:8000/admin"><img src="./img/core-img/logo-buap.png" alt=""></a>
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
