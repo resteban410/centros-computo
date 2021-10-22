@@ -181,6 +181,15 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-12">
+                    <div class="partner-logo-content d-flex align-items-center justify-content-between wow fadeInUp" data-wow-delay="300ms">
+                        <div class="single-service--area mb-100 wow fadeInUp" data-wow-delay="300ms">
+                            <a href="{{route('FallaPerdida')}}">
+                            <img src="img/core-img/icon-2.png" alt="">
+                            <h5>Fallas y perdidas</h5></a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -202,16 +211,11 @@
                             <span>Blvd. Audi Sur,  S/N San Jose Chiapa Puebla</span>
                         </div>
                     </div>
-<<<<<<< HEAD
-
-                    <!-- Single Footer Widget Area --> 
-=======
                     <!-- Single Footer Widget Area -->
                     <div class="col-12 col-sm-6 col-lg-2">
                         <div class="single-footer-widget mb-80">
                             <!-- Widget Title -->
                             <h5 class="widget-title">Horarios</h5>
->>>>>>> origin/master
                             <!-- Single Blog Area -->
                             <div class="latest-blog-area">
                                 <a href="#" class="post-title">Horario Matutino</a>

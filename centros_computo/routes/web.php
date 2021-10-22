@@ -21,13 +21,15 @@ use App\Http\Controllers\AsignacionController;
 use App\Http\Controllers\PrestamoController;
 
 use App\Http\Controllers\HomeGenController;
+use App\Http\Controllers\PerdidaFallaController;
 use App\Http\Controllers\SoftwareGenController;
 
+//INDEX
 
 Route::get('/admin', HomeController::class) ->name('index');
 Route::get('/general', HomeGenController::class) ->name('indexGeneral');
 
-Route::get('/consulta_de_software', [SoftwareGenController::class,'index'])->name('softwareG');
+//PAGINAS ADMINISTRADOR
 
 //Rutas de la pagina alumnos
 Route::get('/alumnos',[AlumnoController::class,'alumShow'])->name('alumnosP'); // metodo de select 
@@ -122,10 +124,20 @@ Route::post('alta_marca', [MarcaController::class, 'store'])->name('altaMarca');
 Route::put('editar_marca', [MarcaController::class, 'edit'])->name('editarMarca'); 
 Route::delete('borrar_marca', [MarcaController::class, 'destroy'])->name('borrarMarca');
 
+//PAGINAS GENERAL
+
+//Pagina de software
+Route::get('/consulta_de_software', [SoftwareGenController::class,'index'])->name('softwareG');
+//Pagina de perdida y falla
+Route::get('/perdidas_fallas', [PerdidaFallaController::class,'index'])->name('FallaPerdida');
+Route::post('/fallas_alta', [PerdidaFallaController::class,'storeFalla'])->name('FallaA');
+Route::post('/perdidas_alta', [PerdidaFallaController::class,'storePerdida'])->name('PerdidaA');
+Route::put('/fallas_editar', [PerdidaFallaController::class,'editFalla'])->name('FallaB');
+Route::put('/perdidas_editar', [PerdidaFallaController::class,'editPerdida'])->name('PerdidaB');
+Route::delete('/fallas_borrar', [PerdidaFallaController::class, 'destroyFalla'])->name('FallaC');
+Route::delete('/perdidas_borrar', [PerdidaFallaController::class, 'destroyPerdida'])->name('PerdidaC');
 
 //PAGINAS PENDIENTES
-
-
 //Rutas de la pagina asignacion
 
 Route::get('asignaciones', [AsignacionController::class,'index'])->name('asignacionP');

@@ -12,32 +12,34 @@ use Illuminate\Support\Facades\DB;
 class PerdidaFallaController extends Controller
 {
     public function index(){
-        $nombrePag =  "Fallas y Perdidas";
+        $nombrePag = "Fallas y perdidas";
         $equipos = EquipoModel::all(); 
-    	$fallas = FallaModel::all();
+        $usuarios = UsuarioModel::all(); 
+        $fallas = FallaModel::all();
         $perdidas = PerdidaModel::all();
-
-        return view('general.perdidafalla', compact('nombrePag', 'equipos', 'fallas', 'perdidas'));
+        return view('general.perdidafalla', compact('nombrePag', 'fallas', 'perdidas', 'equipos', 'usuarios'));
     }
 
+
     public function storeFalla(Request $request){
-        $fallas = new FallaModel();
+        $fallas = new FallaModel(); 
 
         request()->validate([
-            'fecha_reporte' => 'required',
+            'fecha_perdida' => 'required',
             'descripcion' => 'required|min:10',
             'equipo_noserie' => 'required',
             'usuario_id' => 'required',
         ]);
+
         $fallas->clave_fallas = $request->clave_fallas;
-        $fallas->fecha_reporte = $request->fecha_reporte;        
-        $fallas->fecha_atención = $request->fecha_atención;
+        $fallas->fecha_perdida = $request->fecha_perdida;        
+        $fallas->fecha_atencion = $request->fecha_atencion;
         $fallas->descripcion = $request->descripcion;
         $fallas->equipo_noserie = $request->equipo_noserie;
         $fallas->usuario_id = $request->usuario_id;
 
         $fallas->save();
-        return redirect()->route('FallaPerdidaG');
+        return redirect()->route('FallaPerdida');
     }
 
     public function storePerdida(Request $request){
@@ -51,12 +53,71 @@ class PerdidaFallaController extends Controller
         ]);
 
         $perdidas->clave = $request->clave;
-        $perdidas->fecha_perdida = $request->fecha_reporte;        
+        $perdidas->fecha_perdida = $request->fecha_perdida;        
         $perdidas->hora_perdida = $request->hora_perdida;
         $perdidas->observaciones = $request->observaciones;
         $perdidas->equipo_no_serie = $request->equipo_no_serie;
 
-        $perdidas->save(); 
-        return redirect()->route('FallaPerdidaG');
+        $perdidas->save();
+        return redirect()->route('FallaPerdida');
+    }
+
+    public function editFalla(Request $request){
+        request()->validate([
+            'fecha_perdida' => 'required',
+            'descripcion' => 'required|min:10',
+            'equipo_noserie' => 'required',
+            'usuario_id' => 'required',
+        ]);
+
+        $clave_fallas = $request->clave_fallas;
+
+        $fallas = DB::table('fallas')->where('clave_fallas', $clave_fallas)->update(
+            ['clave_fallas' => $request->clave_fallas, 
+            'fecha_perdida' => $request->fecha_perdida,
+            'fecha_atencion' => $request->fecha_atencion,
+            'descripcion' => $request->descripcion,
+        	'equipo_noserie' => $request->equipo_noserie,
+			'usuario_id' => $request->usuario_id
+		]);
+        return redirect()->route('FallaPerdida');
+    }
+
+    public function editPerdida(Request $request){
+        request()->validate([
+            'fecha_perdida' => 'required',
+            'hora_perdida' => 'required',
+            'observaciones' => 'required|min:10',
+            'equipo_no_serie' => 'required',
+        ]);
+
+        $clave = $request->clave;
+
+        $perdidas = DB::table('perdida')->where('clave', $clave)->update(
+            ['clave' => $request->clave, 
+            'fecha_perdida' => $request->fecha_perdida,
+            'hora_perdida' => $request->hora_perdida,
+            'observaciones' => $request->observaciones,
+        	'equipo_no_serie' => $request->equipo_no_serie
+		]);
+        return redirect()->route('FallaPerdida');
+    }
+
+    public function destroyFalla(Request $request){
+        request()->validate([
+            'clave_fallas' => 'required'
+        ]);
+        $clave_fallas = $request->clave_fallas;
+        $fallas = DB::table('fallas')->where('clave_fallas', $clave_fallas)->delete();
+        return redirect()->route('FallaPerdida');
+    }
+
+    public function destroyPerdida(Request $request){
+        request()->validate([
+            'clave' => 'required'
+        ]);
+        $clave = $request->clave;
+        $perdidas = DB::table('perdida')->where('clave', $clave)->delete();
+        return redirect()->route('FallaPerdida');
     }
 }
