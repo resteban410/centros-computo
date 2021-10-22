@@ -146,3 +146,6 @@ Route::put('editar_asignacion', [AsignacionController::class, 'edit'])->name('ed
 Route::delete('borrar_asignacion', [AsignacionController::class, 'destroy'])->name('borrarAsignacion');
 
 Route::get('/prestamos', [PrestamoController::class,'index'])->name('prestamosP');
+
+
+

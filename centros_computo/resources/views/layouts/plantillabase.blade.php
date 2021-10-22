@@ -32,20 +32,18 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.6/css/responsive.bootstrap4.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet" type="text/css" href=" https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
-
    
     
 </head>
 
 <body>
-    <!-- Header Area Start -->
-    <header class="header-area">
+  <!-- Header Area Start -->
+  <header class="header-area">
         <!-- Search Form -->
         <div class="search-form d-flex align-items-center">
             <div class="container">
-                <form action="index.html" method="get">
-                    <input type="search" name="search-form-input" id="searchFormInput" placeholder="Type your keyword ...">
+                <form action="index.php" method="get">
+                    <input type="search" name="search-form-input" id="searchFormInput" placeholder="Escriba que desea buscar ...">
                     <button type="submit"><i class="icon_search"></i></button>
                 </form>
             </div>
@@ -58,8 +56,9 @@
 
                     <div class="col-6">
                         <div class="top-header-content">
-                            <a href="#"><i class="icon_phone"></i> <span>(123) 456-789-1230</span></a>
-                            <a href="#"><i class="icon_mail"></i> <span>info.colorlib@gmail.com</span></a>
+                            <a href="#"><i class="icon_phone"></i> <span> 222 229 5500 ext. 1510</span></a>
+                            <a href="#"><span>Autoservicios</span></a>
+                            <a href="#"><span>Correo BUAP</span></a>
                         </div>
                     </div>
 
@@ -69,8 +68,9 @@
                             <div class="top-social-area ml-auto">
                                 <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                                 <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-tripadvisor" aria-hidden="true"></i></a>
                                 <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+
                             </div>
                         </div>
                     </div>
@@ -88,7 +88,7 @@
                     <nav class="classy-navbar justify-content-between" id="robertoNav">
 
                         <!-- Logo -->
-                        <a class="nav-brand" href="index.html"><img src="./img/core-img/logo-buap.png" alt=""></a>
+                        <a class="nav-brand" href="http://127.0.0.1:8000/admin"><img src="./img/core-img/logo-buap.png" alt=""></a>
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
@@ -126,7 +126,7 @@
     <!-- Header Area End -->
 
     <!-- Breadcrumb Area Start -->
-    <div class="breadcrumb-area bg-img bg-overlay jarallax" style="background-image: url(img/bg-img/17.jpg)">
+    <div class="breadcrumb-area bg-img bg-overlay jarallax" style="background-image: url(img/bg-img/62.png)">
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12">
@@ -147,29 +147,7 @@
         @yield('contenido')
     </div>
 
-    <!-- Partner Area Start -->
-    <div class="partner-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="partner-logo-content d-flex align-items-center justify-content-between wow fadeInUp" data-wow-delay="300ms">
-                        <!-- Single Partner Logo -->
-                        <a href="#" class="partner-logo"><img src="img/core-img/p1.png" alt=""></a>
-                        <!-- Single Partner Logo -->
-                        <a href="#" class="partner-logo"><img src="img/core-img/p2.png" alt=""></a>
-                        <!-- Single Partner Logo -->
-                        <a href="#" class="partner-logo"><img src="img/core-img/p3.png" alt=""></a>
-                        <!-- Single Partner Logo -->
-                        <a href="#" class="partner-logo"><img src="img/core-img/p4.png" alt=""></a>
-                        <!-- Single Partner Logo -->
-                        <a href="#" class="partner-logo"><img src="img/core-img/p5.png" alt=""></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Partner Area End -->
-
+   
        <!-- Footer Area Start -->
        <footer class="footer-area section-padding-80-0">
         <!-- Main Footer Area -->
