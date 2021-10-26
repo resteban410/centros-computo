@@ -21,13 +21,14 @@
 
       			<div class="form-group">
                 <label>Fecha:</label>
-                    <input type="text" name="fecha "id="fecha"></p>
+                    <input type="date" name="fecha" id="fecha" class= "form-control">
                     {!! $errors->first('fecha', '<small>:message</small><br>') !!}
             </div>
 
             <div class="form-group">
                 <label>Hora:</label>
                     <input type="time" name="hora" class= "form-control">
+                    {!! $errors->first('hora', '<small>:message</small><br>') !!}
             </div>
 
 			      <label>Descripcion:</label>
@@ -62,13 +63,13 @@
             <label>Alumno:</label>
             <div class="form-group">
                 
-                       <select name="matricula_alumno_alumno">
+                       <select name="matricula_alumno_matricula">
                        	@foreach($alumnos as $item)
                        	  <option value="{{$item->matricula}}">{{$item->nombre, $item->apellido}}
                        	  </option>
                        	@endforeach 
                         </select>
-                        {!! $errors->first('matricula_alumno_alumno', '<small>:message</small><br>') !!}                      
+                        {!! $errors->first('matricula_alumno_matricula', '<small>:message</small><br>') !!}                      
             </div>
 
       </div>
@@ -143,13 +144,13 @@
             <label>Alumno:</label>
             <div class="form-group">
                 
-                       <select name="matricula_alumno_alumno">
+                       <select name="matricula_alumno_matricula">
                        	@foreach($alumnos as $item)
                        	  <option value="{{$item->matricula}}">{{$item->nombre, $item->apellido}}
                        	  </option>
                        	@endforeach 
                         </select>    
-                        {!! $errors->first('matricula_alumno_alumno', '<small>:message</small><br>') !!}                   
+                        {!! $errors->first('matricula_alumno_matricula', '<small>:message</small><br>') !!}                   
             </div>
       </div>
       <div class="modal-footer">
@@ -242,7 +243,7 @@
                     <td>{{$adeudo->hora}}</td>
                     <td>{{$adeudo->descripcion}}</td>
                     <td>{{$adeudo->estado}}</td>
-                    <td>{{$adeudo->matricula_alumno_alumno}}</td>
+                    <td>{{$adeudo->matricula_alumno_matricula}}</td>
                     <td>{{$adeudo->noserie_equipo}}</td>
                     <td>
                         <a href="#" class="btn btn-success edit">Editar</a>
@@ -290,7 +291,7 @@
                         $('#hora').val(data[2]);
                         $('#descripcion').val(data[3]);
                         $('#estado').val(data[4]);
-                        $('#matricula_alumno_alumno').val(data[5]);
+                        $('#matricula_alumno_matricula').val(data[5]);
                         $('#noserie_equipo').val(data[6]);
                  
                         $('#editForm').attr('route', 'editarAde', + data[0]);
@@ -316,18 +317,5 @@
                     });
                     //end delete record 
                 });
-        </script>
-        <script type="text/javascript">
-          $(function(){
-            $("#fecha").datepicker({
-              firstDay: 1,
-              dateFormat: 'yy-mm-dd', 
-              changeMonth:true, 
-              changeYear:true,
-              monthNames: ['Enero', 'Febrero', 'Marzo','Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre','Octubre', 'Noviembre', 'Diciembre'],
-              dayNamesMin: ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'],
-              beforeShowDay: $.datepicker.noWeekends
-            }); 
-          });
         </script>
 @endsection

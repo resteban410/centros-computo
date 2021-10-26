@@ -23,11 +23,13 @@ use App\Http\Controllers\PrestamoController;
 use App\Http\Controllers\HomeGenController;
 use App\Http\Controllers\PerdidaFallaController;
 use App\Http\Controllers\SoftwareGenController;
+use App\Http\Controllers\AdeudoGenController;
 
 //INDEX
 
 Route::get('/admin', HomeController::class) ->name('index');
 Route::get('/general', HomeGenController::class) ->name('indexGeneral');
+Route::get('/', [AdeudoGenController::class, 'index']) ->name('indexPrincipal');
 
 //PAGINAS ADMINISTRADOR
 

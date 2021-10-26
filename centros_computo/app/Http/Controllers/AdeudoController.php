@@ -23,9 +23,10 @@ class AdeudoController extends Controller
 
         request()->validate([
             'fecha' => 'required',
+            'hora' => 'required',
             'descripcion' => 'required|min:10',
             'estado' => 'required',
-            'matricula_alumno_alumno' => 'required',
+            'matricula_alumno_matricula' => 'required',
             'noserie_equipo' => 'required',
         ]);
 
@@ -34,7 +35,7 @@ class AdeudoController extends Controller
         $adeudos->hora = $request->hora;
         $adeudos->descripcion = $request->descripcion;
         $adeudos->estado = $request->estado;        
-        $adeudos->matricula_alumno_alumno = $request->matricula_alumno_alumno;
+        $adeudos->matricula_alumno_matricula = $request->matricula_alumno_matricula;
 		$adeudos->noserie_equipo = $request->noserie_equipo;
 
 
@@ -46,9 +47,10 @@ class AdeudoController extends Controller
     public function edit(Request $request){ 
         request()->validate([
             'fecha' => 'required',
+            'hora' => 'required',
             'descripcion' => 'required|min:10',
             'estado' => 'required',
-            'matricula_alumno_alumno' => 'required',
+            'matricula_alumno_matricula' => 'required',
             'noserie_equipo' => 'required',
         ]);
 
@@ -60,7 +62,7 @@ class AdeudoController extends Controller
             'hora' => $request->hora,
             'descripcion' => $request->descripcion,
         	'estado' => $request->estado,
-			'matricula_alumno_alumno' => $request->matricula_alumno_alumno,
+			'matricula_alumno_matricula' => $request->matricula_alumno_matricula,
             'noserie_equipo' => $request->noserie_equipo]
         );
         return redirect()->route('adeudoP');
