@@ -8,13 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Title -->
-    <title>Centros Computo - SJCH - Administrador</title>
+    <title>Centros Computo - SJCH</title>
 
     <!-- Favicon -->
     <link rel="icon" href="img/core-img/favicon.png">
-        <link href="../css/LineIcons.min.css" rel="stylesheet">
-    <link href="vendor/css/line-awesome.min.css" rel="stylesheet">
-    <link href="../css/line-awesome.min.css" rel="stylesheet">
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
@@ -95,12 +92,7 @@
                             <!-- Nav Start -->
                             <div class="classynav">
                                 <ul id="nav">
-                                    <li class="active"><a href="{{route('index')}}">Inicio</a></li>
-                                    <li><a href="{{route('alumnosP')}}">Alumnos</a></li>
-                                    <li><a href="{{route('laboratoriosP')}}">Laboratorios</a></li>
-                                    <li><a href="{{route('usuariosP')}}">Usuarios</a></li>
-                                    <li><a href="{{route('materiasP')}}">Materias</a></li>
-                                </ul>
+                                    <li class="active"><a href="{{route('indexGeneral')}}">Inicio</a></li>                                </ul>
 
                                 <!-- Search -->
                                 <div class="search-btn ml-4">
@@ -116,79 +108,92 @@
     </header>
     <!-- Header Area End -->
 
-      <!-- Header Area End -->
+    <!-- Welcome Area Start -->
+    <section class="welcome-area">
+        <div class="welcome-slides owl-carousel">
+            <!-- Single Welcome Slide -->
+            <div class="single-welcome-slide bg-img bg-overlay" style="background-image: url(img/bg-img/62.png);" data-img-url="img/bg-img/62.png">
+                <!-- Welcome Content -->
+                <div class="welcome-content h-100">
+                    <div class="container h-100">
+                        <div class="row h-100 align-items-center">
+                            <!-- Welcome Text -->
+                            <div class="col-12">
+                                <div class="welcome-text text-center">
+                                    <h6 data-animation="fadeInLeft" data-delay="200ms">BUAP SAN JOSE CHIAPA</h6>
+                                    <h2 data-animation="fadeInLeft" data-delay="500ms">CENTROS DE COMPUTO</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    <!-- Breadcrumb Area Start -->
-    <div class="breadcrumb-area bg-img bg-overlay jarallax" style="background-image: url(img/bg-img/60.png);">
-        <div class="container h-100">
-            <div class="row h-100 align-items-center">
-                <div class="col-12">
-                    <div class="breadcrumb-content text-center">
-                        <h2 class="page-title">Menu General</h2>
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb justify-content-center">
-                                <li class="breadcrumb-item"><a href="index.php">Inicio</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Administrador</li>
-                            </ol>
-                        </nav>
+            <!-- Single Welcome Slide -->
+            <div class="single-welcome-slide bg-img bg-overlay" style="background-image: url(img/bg-img/60.png);" data-img-url="img/bg-img/60.png">
+                <!-- Welcome Content -->
+                <div class="welcome-content h-100">
+                    <div class="container h-100">
+                        <div class="row h-100 align-items-center">
+                            <!-- Welcome Text -->
+                            <div class="col-12">
+                                <div class="welcome-text text-center">
+                                    <h6 data-animation="fadeInUp" data-delay="200ms">BUAP SAN JOSE CHIAPA</h6>
+                                    <h2 data-animation="fadeInUp" data-delay="500ms">CENTROS DE COMPUTO</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Single Welcome Slide -->
+            <div class="single-welcome-slide bg-img bg-overlay" style="background-image: url(img/bg-img/61.png);" data-img-url="img/bg-img/61.png">
+                <!-- Welcome Content -->
+                <div class="welcome-content h-100">
+                    <div class="container h-100">
+                        <div class="row h-100 align-items-center">
+                            <!-- Welcome Text -->
+                            <div class="col-12">
+                                <div class="welcome-text text-center">
+                                    <h6 data-animation="fadeInDown" data-delay="200ms">BUAP SAN JOSE CHIAPA</h6>
+                                    <h2 data-animation="fadeInDown" data-delay="500ms">CENTROS DE COMPUTO</h2>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Breadcrumb Area End -->
-    
+    </section>  
 
-    <br></br>
-    <br></br>
-
-
-    <!-- About start -->
-<section id="aboutus" class="about-sec py-0">
-    <div class="container">
-        <div class="row padding-top">
-            
-        </div>
-
-        <div class="row padding-top">
-            <div class="col-md-3 col-sm-12 mb-xs-2rem">
-            <a href="{{route('softwareG')}}">
-                <div class="about-box center-block wow zoomIn" data-wow-delay="600ms">
-                    <div class="about-opacity-icon"> <i class="las la-save"></i aria-hidden="true"></i> </div>
-                    <div class="about-main-icon pb-4">
-                        
-                        <i class="las la-save" aria-hidden="true"></i>
-                    </div>
-                    <h5 class="mb-0">Consulta Software</h5>
-                    </a>    
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-12 mb-xs-2rem">
-            <a href="{{route('FallaPerdida')}}">
-                <div class="about-box center-block wow zoomIn" data-wow-delay="600ms">
-                    <div class="about-opacity-icon"> <i class="las la-exclamation-circle" aria-hidden="true"></i> </div>
-                    <div class="about-main-icon pb-4">
-                    <i class="las la-exclamation-circle" aria-hidden="true"></i>
-                    </div>
-                    <h5 class="mb-0">Fallas y perdidas</h5>
-                    </a>
-                </div>
-            </div>
-    </div>
-</section>
     <!-- Partner Area Start -->
     <div class="partner-area">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="partner-logo-content d-flex align-items-center justify-content-between wow fadeInUp" data-wow-delay="300ms">
-                       
+                        <div class="single-service--area mb-100 wow fadeInUp" data-wow-delay="300ms">
+                            <a href="{{route('softwareG')}}">
+                            <img src="img/core-img/icon-2.png" alt="">
+                            <h5>Consulta de Software</h5></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="partner-logo-content d-flex align-items-center justify-content-between wow fadeInUp" data-wow-delay="300ms">
+                        <div class="single-service--area mb-100 wow fadeInUp" data-wow-delay="300ms">
+                            <a href="{{route('FallaPerdida')}}">
+                            <img src="img/core-img/icon-2.png" alt="">
+                            <h5>Fallas y perdidas</h5></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Partner Area End -->
+
     <!-- Footer Area Start -->
     <footer class="footer-area section-padding-80-0">
         <!-- Main Footer Area -->
@@ -277,6 +282,7 @@
         </div>
     </footer>
     <!-- Footer Area End -->
+
     <!-- **** All JS Files ***** -->
     <!-- jQuery 2.2.4 -->
     <script src="js/jquery.min.js"></script>
@@ -288,5 +294,7 @@
     <script src="js/roberto.bundle.js"></script>
     <!-- Active -->
     <script src="js/default-assets/active.js"></script>
+
 </body>
+
 </html>
