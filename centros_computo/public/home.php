@@ -92,7 +92,11 @@
                             <!-- Nav Start -->
                             <div class="classynav">
                                 <ul id="nav">
-                                    <li class="active"><a href="{{route('indexGeneral')}}">Inicio</a></li>                                </ul>
+                                <li class="active"><a href="{{route('index')}}">Inicio</a></li>
+                                <li><a href="{{route('alumnosP')}}">Alumnos</a></li>
+                                <li><a href="{{route('laboratoriosP')}}">Laboratorios</a></li>
+                                <li><a href="{{route('usuariosP')}}">Usuarios</a></li>
+                                <li><a href="{{route('materiasP')}}">Materias</a></li>                             </ul>
 
                                 <!-- Search -->
                                 <div class="search-btn ml-4">
@@ -167,32 +171,118 @@
         </div>
     </section>  
 
-    <!-- Partner Area Start -->
-    <div class="partner-area">
+   <!-- About Us Area Start -->
+   <section class="roberto-about-us-area section-padding-100-0">
         <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="partner-logo-content d-flex align-items-center justify-content-between wow fadeInUp" data-wow-delay="300ms">
-                        <div class="single-service--area mb-100 wow fadeInUp" data-wow-delay="300ms">
-                            <a href="{{route('softwareG')}}">
-                            <img src="img/core-img/icon-2.png" alt="">
-                            <h5>Consulta de Software</h5></a>
-                        </div>
+            <div class="row align-items-center">
+                <div class="col-12 col-lg-6">
+                    <div class="about-thumbnail pr-lg-5 mb-100 wow fadeInUp" data-wow-delay="100ms">
+                        <img src="img/bg-img/11.png" alt="">
                     </div>
                 </div>
-                <div class="col-12">
-                    <div class="partner-logo-content d-flex align-items-center justify-content-between wow fadeInUp" data-wow-delay="300ms">
-                        <div class="single-service--area mb-100 wow fadeInUp" data-wow-delay="300ms">
-                            <a href="{{route('FallaPerdida')}}">
-                            <img src="img/core-img/icon-2.png" alt="">
-                            <h5>Fallas y perdidas</h5></a>
-                        </div>
+                <div class="col-12 col-lg-6">
+                    <!-- Section Heading -->
+                    <div class="section-heading wow fadeInUp" data-wow-delay="300ms">
+                        <h6>Testimonials</h6>
+                        <h2>20 Years Of Experience</h2>
+                    </div>
+                    <div class="about-content mb-100 wow fadeInUp" data-wow-delay="500ms">
+                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia dese mollit anim id est laborum. Sed ut perspiciatis unde omnis iste.</p>
+                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia dese mollit anim id est laborum. Sed ut perspiciatis unde omnis iste. Lorem Ipsum available.</p>
+                        <img src="img/core-img/signature.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Us Area End -->
+
+    <!-- Video Area Start -->
+    <div class="roberto--video--area bg-img bg-overlay jarallax section-padding-0-100" style="background-image: url(img/bg-img/65.png);">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center justify-content-center">
+                <div class="col-12 col-md-6">
+                    <!-- Section Heading -->
+                    <div class="section-heading text-center white wow fadeInUp" data-wow-delay="100ms">
+                        <h6>Ultimate Solutions</h6>
+                        <h2>Our Hotel &amp; Room</h2>
+                    </div>
+                    <div class="video-content-area mt-100 wow fadeInUp" data-wow-delay="500ms">
+                        <a href="https://www.youtube.com/watch?v=dvZOJSBX8Oo" class="video-play-btn"><i class="fa fa-play"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Partner Area End -->
+    <!-- Video Area End -->
+
+    <!-- Service Area Start -->
+    <section class="roberto-service-area section-padding-100-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Section Heading -->
+                    <div class="section-heading text-center wow fadeInUp" data-wow-delay="100ms">
+                        <h6>Ultimate Solutions</h6>
+                        <h2>Our Hotel &amp; Room</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Single Service Area -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-service-area mb-100 wow fadeInUp" data-wow-delay="300ms">
+                        <img src="img/bg-img/21.jpg" alt="">
+                        <div class="service-title d-flex align-items-center justify-content-center">
+                            <h5>Restaurant &amp; Bar</h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Service Area -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-service-area mb-100 wow fadeInUp" data-wow-delay="500ms">
+                        <img src="img/bg-img/22.jpg" alt="">
+                        <div class="service-title d-flex align-items-center justify-content-center">
+                            <h5>Spa &amp; Fitness</h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Service Area -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-service-area mb-100 wow fadeInUp" data-wow-delay="700ms">
+                        <img src="img/bg-img/23.jpg" alt="">
+                        <div class="service-title d-flex align-items-center justify-content-center">
+                            <h5>Pool &amp; Party</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Service Area End -->
+
+
+       <!-- Call To Action Area Start -->
+       <section class="roberto-cta-area">
+        <div class="container">
+            <div class="cta-content bg-img bg-overlay jarallax" style="background-image: url(img/bg-img/slider_3.png);">
+                <div class="row align-items-center">
+                    <div class="col-12 col-md-7">
+                        <div class="cta-text mb-50">
+                            <h2>¡Contacta con nosotros ahora!</h2>
+                            <h6>Comuniquese al 222 229 5500 para reservar directamente o para recibir asesoramiento</h6>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-5 text-right">
+                        <a href="#" class="btn roberto-btn mb-50">Contacto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Call To Action Area End -->
+
 
     <!-- Footer Area Start -->
     <footer class="footer-area section-padding-80-0">
