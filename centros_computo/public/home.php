@@ -183,13 +183,12 @@
                 <div class="col-12 col-lg-6">
                     <!-- Section Heading -->
                     <div class="section-heading wow fadeInUp" data-wow-delay="300ms">
-                        <h6>Testimonials</h6>
-                        <h2>20 Years Of Experience</h2>
+                        <h6>Centros de computo</h6>
+                        <h2>Sistema reservaciones</h2>
                     </div>
                     <div class="about-content mb-100 wow fadeInUp" data-wow-delay="500ms">
                         <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia dese mollit anim id est laborum. Sed ut perspiciatis unde omnis iste.</p>
                         <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia dese mollit anim id est laborum. Sed ut perspiciatis unde omnis iste. Lorem Ipsum available.</p>
-                        <img src="img/core-img/signature.png" alt="">
                     </div>
                 </div>
             </div>
@@ -204,8 +203,8 @@
                 <div class="col-12 col-md-6">
                     <!-- Section Heading -->
                     <div class="section-heading text-center white wow fadeInUp" data-wow-delay="100ms">
-                        <h6>Ultimate Solutions</h6>
-                        <h2>Our Hotel &amp; Room</h2>
+                        <h6>Siempre disponible para ti</h6>
+                        <h2>Conoce San Jose Chiapa</h2>
                     </div>
                     <div class="video-content-area mt-100 wow fadeInUp" data-wow-delay="500ms">
                         <a href="https://www.youtube.com/watch?v=dvZOJSBX8Oo" class="video-play-btn"><i class="fa fa-play"></i></a>
@@ -223,8 +222,8 @@
                 <div class="col-12">
                     <!-- Section Heading -->
                     <div class="section-heading text-center wow fadeInUp" data-wow-delay="100ms">
-                        <h6>Ultimate Solutions</h6>
-                        <h2>Our Hotel &amp; Room</h2>
+                        <h6>Soluciones eficientes </h6>
+                        <h2>Eficacia en los procesos </h2>
                     </div>
                 </div>
             </div>
@@ -233,27 +232,27 @@
                 <!-- Single Service Area -->
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="single-service-area mb-100 wow fadeInUp" data-wow-delay="300ms">
-                        <img src="img/bg-img/21.jpg" alt="">
+                        <img src="img/bg-img/home1.png" alt="">
                         <div class="service-title d-flex align-items-center justify-content-center">
-                            <h5>Restaurant &amp; Bar</h5>
+                            <h5>Software</h5>
                         </div>
                     </div>
                 </div>
                 <!-- Single Service Area -->
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="single-service-area mb-100 wow fadeInUp" data-wow-delay="500ms">
-                        <img src="img/bg-img/22.jpg" alt="">
+                        <img src="img/bg-img/home2.png" alt="">
                         <div class="service-title d-flex align-items-center justify-content-center">
-                            <h5>Spa &amp; Fitness</h5>
+                            <h5>Prestamos</h5>
                         </div>
                     </div>
                 </div>
                 <!-- Single Service Area -->
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="single-service-area mb-100 wow fadeInUp" data-wow-delay="700ms">
-                        <img src="img/bg-img/23.jpg" alt="">
+                        <img src="img/bg-img/home3.png" alt="">
                         <div class="service-title d-flex align-items-center justify-content-center">
-                            <h5>Pool &amp; Party</h5>
+                            <h5>Reservaciones</h5>
                         </div>
                     </div>
                 </div>
