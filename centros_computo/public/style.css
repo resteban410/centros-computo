@@ -2443,3 +2443,53 @@ html .ui-button.ui-state-disabled:active {
 
 /*# sourceMappingURL=style.css.map */
 
+.container-fluid {
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 5%;
+}
+.container-fluid {
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 5%;
+}
+
+
+
+.container-fluid h5{
+ width: 23rem;
+ font-size: 18px;
+ padding: 3px 0px 50px 40px;
+}
+
+.accordion {
+  width: 100%;
+  padding: 5px 20px 5px 5px;
+  border: 2px solid rgb(187, 17, 17);
+  cursor: pointer;
+  border-radius: 50px;
+  display: flex;
+  margin: 10px 0;
+  align-items: center;
+}
+
+.accordion .icon{
+  margin: 2 10px 0 0;
+  width: 30px;
+  height: 30px;
+  background: url(../public/img/core-img/mas.png) no-repeat 8px 7px #6db5ff;
+  border-radius: 50px;
+  float: left;
+  transition: all .5s ease-in;
+}
+
+.panel{
+  padding: 15px;
+  border-left: 1px solid #6db5ff;
+  margin-left: 25px;
+  font-size: 14px;
+  text-align: justify;
+  overflow: hidden;
+  max-height: 300px;
+  transition: all .5s ease-in;
+}

@@ -171,7 +171,7 @@
         </div>
     </section>  
 
-   <!-- About Us Area Start -->
+   <!-- Centro Us Area Start -->
    <section class="roberto-about-us-area section-padding-100-0">
         <div class="container">
             <div class="row align-items-center">
