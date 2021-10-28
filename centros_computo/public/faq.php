@@ -178,13 +178,6 @@
             Dentro de este espacio se colocara el texto esta parte esta pendiente</p>
         </div>
     </div>
-
-
-
-
-
-
-
        <!-- Call To Action Area Start -->
        <section class="roberto-cta-area">
         <div class="container">
@@ -314,6 +307,9 @@
     <!-- Active -->
     <script src="js/default-assets/active.js"></script>
 
+    <script src="js/app.js"></script>
+
+    
 </body>
 
 </html>
