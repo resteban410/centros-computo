@@ -187,8 +187,8 @@
                         <h2>Sistema reservaciones</h2>
                     </div>
                     <div class="about-content mb-100 wow fadeInUp" data-wow-delay="500ms">
-                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia dese mollit anim id est laborum. Sed ut perspiciatis unde omnis iste.</p>
-                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia dese mollit anim id est laborum. Sed ut perspiciatis unde omnis iste. Lorem Ipsum available.</p>
+                        <p>Innovamos nuestro sistema de reservaciones para los centros de cómputo mejorando los procesos para que todas las personas del complejo puedan tener un mejor acceso a los laboratorios de nuestra unidad. </p>
+                        <p>Contamos con laboratorios con el mejor equipamiento para que toda nuestra comunidad universitaria tenga la mejor experiencia.</p>
                     </div>
                 </div>
             </div>
