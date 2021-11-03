@@ -18,7 +18,7 @@ class UsuarioController extends Controller
 
         request()->validate([
             'id' => 'required',
-            'nombre' => 'required',
+            'nombre_usuario' => 'required',
             'apellido' => 'required',
             'contraseña' => 'required',
             'correo_electronico' => 'required|email',
@@ -31,7 +31,7 @@ class UsuarioController extends Controller
         
         
         $usuarios->id = $request->id;
-        $usuarios->nombre = $request->nombre;
+        $usuarios->nombre_usuario = $request->nombre_usuario;
         $usuarios->apellido = $request->apellido;
         $usuarios->contraseña = $request->contraseña;
         $usuarios->correo_electronico = $request->correo_electronico;
@@ -48,7 +48,7 @@ class UsuarioController extends Controller
 
         request()->validate([
             'id' => 'required',
-            'nombre' => 'required',
+            'nombre_usuario' => 'required',
             'apellido' => 'required',
             'contraseña' => 'required',
             'correo_electronico' => 'required|email',
@@ -62,7 +62,7 @@ class UsuarioController extends Controller
 
         $usuarios = DB::table('usuario')->where('id', $id)->update(
             ['id' => $request->id, 
-            'nombre' => $request->nombre,
+            'nombre_usuario' => $request->nombre_usuario,
             'apellido' => $request->apellido,
             'contraseña' => $request->contraseña,
             'correo_electronico' => $request->correo_electronico,

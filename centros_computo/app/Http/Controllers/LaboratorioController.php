@@ -18,7 +18,7 @@ class LaboratorioController extends Controller
         request()->validate([
             'lab_clave'=>'required',
             'ubicacion'=>'required',
-            'nombre'=>'required'
+            'nombre_laboratorio'=>'required'
         ]);
 
         $laboratorios = new LaboratorioModel(); 
@@ -26,7 +26,7 @@ class LaboratorioController extends Controller
         
         $laboratorios->lab_clave = $request->lab_clave;
         $laboratorios->ubicacion = $request->ubicacion;
-        $laboratorios->nombre = $request->nombre;
+        $laboratorios->nombre_laboratorio = $request->nombre_laboratorio;
         
         
         $laboratorios->save(); 
@@ -39,7 +39,7 @@ class LaboratorioController extends Controller
         request()->validate([
             'lab_clave'=>'required',
             'ubicacion'=>'required',
-            'nombre'=>'required'
+            'nombre_laboratorio'=>'required'
         ]);
 
         $lab_clave = $request->lab_clave;
@@ -47,7 +47,7 @@ class LaboratorioController extends Controller
         $laboratorios = DB::table('laboratorio')->where('lab_clave', $lab_clave)->update(
             ['lab_clave' => $request->lab_clave, 
             'ubicacion' => $request->ubicacion,
-            'nombre' => $request->nombre]
+            'nombre_laboratorio' => $request->nombre_laboratorio]
         );
 
         return redirect()->route('laboratoriosP');

@@ -21,8 +21,8 @@
 
             <div class="form-group">
                 <label>Nombre:</label>
-                    <input type="text" name="nombre" class= "form-control" placeholder="Escriba el nombre"> 
-                    {!! $errors->first('nombre', '<small>:message</small><br>') !!}
+                    <input type="text" name="nombre_usuario" class= "form-control" placeholder="Escriba el nombre"> 
+                    {!! $errors->first('nombre_usuario', '<small>:message</small><br>') !!}
             </div>
 
             <div class="form-group">
@@ -94,8 +94,8 @@
 
             <div class="form-group">
                 <label>Nombre:</label>
-                    <input type="text" name="nombre" id="nombre" class= "form-control" placeholder="Escriba el nombre"> 
-                    {!! $errors->first('nombre', '<small>:message</small><br>') !!}
+                    <input type="text" name="nombre_usuario" id="nombre_usuario" class= "form-control" placeholder="Escriba el nombre"> 
+                    {!! $errors->first('nombre_usuario', '<small>:message</small><br>') !!}
             </div>
 
             <div class="form-group">
@@ -229,7 +229,7 @@
                         <a href="#" class="btn btn-danger delete">Borrar</a>
                     </td>
                     <td>{{$usuario->id}}</td>
-                    <td>{{$usuario->nombre}}</td>
+                    <td>{{$usuario->nombre_usuario}}</td>
                     <td>{{$usuario->apellido}}</td>
                    	<td>{{$usuario->contraseña}}</td>	
                     <td>{{$usuario->correo_electronico}}</td>
@@ -275,7 +275,7 @@
                         console.log(data);
 
                         $('#id').val(data[1]);
-                        $('#nombre').val(data[2]);
+                        $('#nombre_usuario').val(data[2]);
                         $('#apellido').val(data[3]);
                         $('#contraseña').val(data[4]);
                         $('#correo_electronico').val(data[5]);

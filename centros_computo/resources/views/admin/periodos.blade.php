@@ -21,8 +21,8 @@
 
             <div class="form-group">
                 <label>Nombre:</label>
-                    <input type="text" name="nombre" class= "form-control" placeholder="Escriba el nombre">
-                    {!! $errors->first('nombre', '<small>:message</small><br>') !!}
+                    <input type="text" name="nombre_periodo" class= "form-control" placeholder="Escriba el nombre">
+                    {!! $errors->first('nombre_periodo', '<small>:message</small><br>') !!}
             </div>
             <div class="form-group">
                 <label>Fecha de Inicio:</label>
@@ -65,8 +65,8 @@
 
             <div class="form-group">
                 <label>Nombre:</label>
-                    <input type="text" name="nombre" id="nombre" class= "form-control" placeholder="Escriba el nombre">
-                    {!! $errors->first('nombre', '<small>:message</small><br>') !!}
+                    <input type="text" name="nombre_periodo" id="nombre_periodo" class= "form-control" placeholder="Escriba el nombre">
+                    {!! $errors->first('nombre_periodo', '<small>:message</small><br>') !!}
             </div>
             <div class="form-group">
                 <label>Fecha de Inicio:</label>
@@ -160,7 +160,7 @@
                     @foreach($periodos as $periodo)
                     <tr>
                         <td>{{$periodo->id_periodo}}</td>
-                        <td>{{$periodo->nombre}}</td>
+                        <td>{{$periodo->nombre_periodo}}</td>
                         <td>{{$periodo->fecha_inicio}}</td>
                         <td>{{$periodo->fecha_termino}}</td>
                         <td>
@@ -205,7 +205,7 @@
                         console.log(data);
 
                         $('#id_periodo').val(data[0]);
-                        $('#nombre').val(data[1]);
+                        $('#nombre_periodo').val(data[1]);
                         $('#fecha_inicio').val(data[2]);
                         $('#fecha_termino').val(data[3]);
                  
