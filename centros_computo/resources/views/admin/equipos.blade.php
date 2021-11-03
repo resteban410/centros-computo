@@ -1,6 +1,3 @@
-<?php
-use Illuminate\Support\Facades\DB;
-?>
 @extends('layouts.plantillabase')
 @section('contenido')
 
@@ -37,7 +34,7 @@ use Illuminate\Support\Facades\DB;
                 
                        <select name="laboratorio_clave">
                        	@foreach($laboratorios as $item)
-                       	  <option value="{{$item->lab_clave}}">{{$item->nombre}}
+                       	  <option value="{{$item->lab_clave}}">{{$item->nombre_laboratorio}}
                        	  </option>
                        	@endforeach 
                         </select>
@@ -100,7 +97,7 @@ use Illuminate\Support\Facades\DB;
                 
                        <select name="laboratorio_clave">
                        	@foreach($laboratorios as $item)
-                       	  <option value="{{$item->lab_clave}}">{{$item->nombre}}
+                       	  <option value="{{$item->lab_clave}}">{{$item->nombre_nombre}}
                        	  </option>
                        	@endforeach 
                         </select>
@@ -206,7 +203,7 @@ use Illuminate\Support\Facades\DB;
                     <td>{{$equipo->no_serie}}</td>
                     <td>{{$equipo->num_equipo}}</td>
                     <td>{{$equipo->modelo}}</td>
-                    <td>{{$equipo->nombre}}</td>
+                    <td>{{$equipo->nombre_laboratorio}}</td>
                     <td>{{$equipo->nombre_marca}}</td>
                     <td>
                         <a href="#" class="btn btn-success edit">Editar</a>

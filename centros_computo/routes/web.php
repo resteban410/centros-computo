@@ -144,8 +144,9 @@ Route::delete('/perdidas_borrar', [PerdidaFallaController::class, 'destroyPerdid
 
 Route::get('asignaciones', [AsignacionController::class,'index'])->name('asignacionP');
 Route::post('alta_asignacion', [AsignacionController::class, 'store'])->name('altaAsignacion'); 
-Route::put('editar_asignacion', [AsignacionController::class, 'edit'])->name('editarAsignacion'); 
 Route::delete('borrar_asignacion', [AsignacionController::class, 'destroy'])->name('borrarAsignacion');
+
+
 
 Route::get('/prestamos', [PrestamoController::class,'index'])->name('prestamosP');
 

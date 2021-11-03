@@ -17,14 +17,14 @@ class PeriodoController extends Controller
 
     public function store(Request $request){
     	request()->validate([
-    		'nombre' => 'required',
+    		'nombre_periodo' => 'required',
     		'fecha_inicio' => 'required',
     		'fecha_termino' => 'required'
     	]);
 
     	$periodos = new PeriodoModel();
 
-    	$periodos->nombre = $request->nombre;
+    	$periodos->nombre_periodo = $request->nombre_periodo;
     	$periodos->fecha_inicio = $request->fecha_inicio;
     	$periodos->fecha_termino = $request->fecha_termino;
 
@@ -35,7 +35,7 @@ class PeriodoController extends Controller
 
     public function edit(Request $request){
     	request()->validate([
-    		'nombre' => 'required',
+    		'nombre_periodo' => 'required',
     		'fecha_inicio' => 'required',
     		'fecha_termino' => 'required'
     	]);
@@ -43,7 +43,7 @@ class PeriodoController extends Controller
     	$id_periodo = $request->id_periodo;
 
     	$periodos = DB::table('periodo')->where('id_periodo', $id_periodo)->update([
-    		'nombre' => $request->nombre,
+    		'nombre_periodo' => $request->nombre_periodo,
     		'fecha_inicio' => $request->fecha_inicio,
     		'fecha_termino' => $request->fecha_termino 
     	]);

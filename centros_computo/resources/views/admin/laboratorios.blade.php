@@ -27,8 +27,8 @@
 
             <div class="form-group">
                 <label>Nombre:</label>
-                    <input type="text" name="nombre" class= "form-control" placeholder="Escriba el nombre"> 
-                    {!! $errors->first('nombre', '<small>:message</small><br>') !!}
+                    <input type="text" name="nombre_laboratorio" class= "form-control" placeholder="Escriba el nombre"> 
+                    {!! $errors->first('nombre_laboratorio', '<small>:message</small><br>') !!}
             </div>
       </div>
       <div class="modal-footer">
@@ -67,8 +67,8 @@
 
             <div class="form-group">
                 <label>Nombre:</label>
-                    <input type="text" name="nombre" id="nombre" class= "form-control" placeholder="Escriba el nombre">
-                    {!! $errors->first('nombre', '<small>:message</small><br>') !!} 
+                    <input type="text" name="nombre_laboratorio" id="nombre_laboratorio" class= "form-control" placeholder="Escriba el nombre">
+                    {!! $errors->first('nombre_laboratorio', '<small>:message</small><br>') !!} 
             </div>
       </div>
       <div class="modal-footer">
@@ -154,7 +154,7 @@
                 <tr>
                     <td>{{$laboratorio->lab_clave}}</td>
                     <td>{{$laboratorio->ubicacion}}</td>
-                    <td>{{$laboratorio->nombre}}</td>
+                    <td>{{$laboratorio->nombre_laboratorio}}</td>
                     <td>
                         <a href="#" class="btn btn-success edit">Editar</a>
                         <a href="#" class="btn btn-danger delete">Borrar</a>
@@ -198,7 +198,7 @@
 
                         $('#lab_clave').val(data[0]);
                         $('#ubicacion').val(data[1]);
-                        $('#nombre').val(data[2]);
+                        $('#nombre_laboratorio').val(data[2]);
                  
                         $('#editForm').attr('route', 'editarLab', + data[0]);
                         $('#editModal').modal('show');
