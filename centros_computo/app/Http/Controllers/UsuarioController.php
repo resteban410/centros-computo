@@ -9,7 +9,9 @@ class UsuarioController extends Controller
 {
     public function index(){
     	$nombrePag =  "Usuarios";
-        $usuarios = UsuarioModel::all(); 
+        $usuarios = DB::table('usuario')
+            ->select('usuario.*')
+            ->get();
         return view('admin.usuarios',compact('usuarios', 'nombrePag')); 
         
     }

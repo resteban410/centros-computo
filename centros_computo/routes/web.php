@@ -91,7 +91,7 @@ Route::delete('borrar_falla', [FallaController::class, 'destroy'])->name('borrar
 //Rutas de la pagina de perdidas
 
 Route::get('perdidas', [PerdidaController::class,'index'])->name('perdidaP');
-Route::post('alta_perdida', [Perdidaontroller::class, 'store'])->name('altaPerdida'); 
+Route::post('alta_perdida', [PerdidaController::class, 'store'])->name('altaPerdida'); 
 Route::put('editar_perdida', [PerdidaController::class, 'edit'])->name('editarPerdida'); 
 Route::delete('borrar_perdida', [PerdidaController::class, 'destroy'])->name('borrarPerdida');
 

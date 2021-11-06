@@ -14,6 +14,11 @@
       <div class="modal-body">       
                 @csrf
             <div class="form-group">
+                <label>Clave:</label>
+                    <input type="text" name="clave" class= "form-control" placeholder="Escriba la clave">
+                    {!! $errors->first('clave', '<small>:message</small><br>') !!}
+            </div>
+            <div class="form-group">
                 <label>NRC:</label>
                     <input type="text" name="nrc" class= "form-control" placeholder="Escriba el nrc">
                     {!! $errors->first('nrc', '<small>:message</small><br>') !!}
@@ -59,8 +64,13 @@
                 @csrf
                 @method('PUT')
             <div class="form-group">
+                <label>Clave:</label>
+                    <input type="text" name="clave" id="clave" class= "form-control" readonly>
+                    {!! $errors->first('clave', '<small>:message</small><br>') !!}
+            </div>
+            <div class="form-group">
                 <label>NRC:</label>
-                    <input type="text" name="nrc" id="nrc" class= "form-control" readonly>
+                    <input type="text" name="nrc" id="nrc" class= "form-control" >
                     {!! $errors->first('nrc', '<small>:message</small><br>') !!}
             </div>
 
@@ -107,9 +117,9 @@
         <p>¿Estas seguro de borrar este registro? Esta acción no puede revertirse. Para asegurarse, vuelva a escribir el NRC de la materia. </p>
 
             <div class="form-group">
-                <label>NRC:</label>
-                    <input type="text" name="nrc" id="nrc" class= "form-control" placeholder="Escriba el NRC">
-                    {!! $errors->first('nrc', '<small>:message</small><br>') !!}
+                <label>Clave:</label>
+                    <input type="text" name="clave" id="clave" class= "form-control" placeholder="Escriba la clave">
+                    {!! $errors->first('clave', '<small>:message</small><br>') !!}
             </div>     
       </div>
       <div class="modal-footer">
@@ -141,22 +151,22 @@
 
             <div class="form-group">
                 <label>Materia:</label>
-                        <select name="materia_nrc">
-                            @foreach($materias as $item)
-                              <option value="{{$item->nrc}}">{{$item->nrc}}
-                              </option>
-                            @endforeach 
-                        </select>
-                    {!! $errors->first('materia_nrc', '<small>:message</small><br>') !!}
+                    <select name="materia_clave">
+                        @foreach($materias as $item)
+                          <option value="{{$item->clave}}">{{$item->clave}}
+                          </option>
+                        @endforeach 
+                    </select>
+                    {!! $errors->first('materia_clave', '<small>:message</small><br>') !!}
             </div>
             <div class="form-group">
                 <label>Usuario:</label>
-                        <select name="usu_id_usu">
-                            @foreach($usuarios as $item)
-                              <option value="{{$item->id}}">{{$item->id}}
-                              </option>
-                            @endforeach 
-                        </select>
+                    <select name="usu_id_usu">
+                        @foreach($usuarios as $usu)
+                          <option value="{{$usu->id}}">{{$usu->nombre_usuario}} - {{$usu->apellido}}
+                          </option>
+                        @endforeach 
+                    </select>
                     {!! $errors->first('usu_id_usu', '<small>:message</small><br>') !!}
             </div>
       </div>
@@ -230,6 +240,7 @@
             <table id="materias" class="table table-striped table-bordered" style="width:100%">
                 <thead>
                 <tr>
+                    <th>Clave</th>
                     <th>NRC</th>
                     <th>Nombre</th>
                     <th>Carrera</th>
@@ -239,6 +250,7 @@
                 <tbody>
                     @foreach($materias as $materia)
                     <tr>
+                        <td>{{$materia->clave}}</td>
                         <td>{{$materia->nrc}}</td>
                         <td>{{$materia->nombre}}</td>
                         <td>{{$materia->carrera}}</td>
@@ -269,8 +281,8 @@
                 <tbody>
                     @foreach($matUso as $MatUso)
                     <tr>
-                        <td>{{$MatUso->clave}}</td>
-                        <td>{{$MatUso->materia_nrc}}</td>
+                        <td>{{$MatUso->id_mat_uso}}</td>
+                        <td>{{$MatUso->materia_clave}}</td>
                         <td>{{$MatUso->usu_id_usu}}</td>
                         <td>
                             <a href="#" class="btn btn-danger delete1">Borrar</a>
@@ -312,9 +324,10 @@
                         var data = table.row($tr).data();
                         console.log(data);
 
-                        $('#nrc').val(data[0]);
-                        $('#nombre').val(data[1]);
-                        $('#carrera').val(data[2]);
+                        $('#clave').val(data[0]);
+                        $('#nrc').val(data[1]);
+                        $('#nombre').val(data[2]);
+                        $('#carrera').val(data[3]);
                  
                         $('#editForm').attr('route', 'editarMat', + data[0]);
                         $('#editModal').modal('show');
@@ -332,7 +345,7 @@
                         var data = table.row($tr).data();
                         console.log(data);
 
-                        $('#nrc').val(data[0]);
+                        $('#clave').val(data[0]);
 
                         $('#deleteForm').attr('route', 'borrarMat', + data[0]);
                         $('#deleteModal').modal('show');

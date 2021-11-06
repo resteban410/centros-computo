@@ -14,7 +14,7 @@ class SoftwareGenController extends Controller
                 ->join('equipo', 'equipo_software.equipo_no_serie', '=', 'equipo.no_serie')
                 ->join('software', 'equipo_software.software_clave', '=', 'software.clave')
                 ->join('laboratorio', 'equipo.laboratorio_clave', '=', 'laboratorio.lab_clave')
-                ->select('equipo_software.*', 'equipo.no_serie', 'software.nombre', 'laboratorio.lab_clave')
+                ->select('equipo_software.*', 'equipo.no_serie', 'software.nombre', 'laboratorio.nombre_laboratorio')
                 ->get();
 
         return view('general.software',compact('nombrePag', 'data')); 

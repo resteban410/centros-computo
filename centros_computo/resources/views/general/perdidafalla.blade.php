@@ -19,8 +19,8 @@
             </div>
       		<div class="form-group">
       			<label>Fecha Reporte:</label>
-      			<input type="date" name="fecha_perdida" id="fecha_perdida" class= "form-control">
-                {!! $errors->first('fecha_perdida', '<small>:message</small><br>') !!}
+      			<input type="date" name="fecha_reporte" id="fecha_reporte" class= "form-control">
+                {!! $errors->first('fecha_reporte', '<small>:message</small><br>') !!}
       		</div>
             <div class="form-group">
       			<label>Fecha Atención:</label>
@@ -34,21 +34,22 @@
             </div>
             <label>Equipo:</label>
             <div class="form-group">
-                <select name="equipo_noserie">
+                <select name="equipo_noserie_equipo">
                 @foreach($equipos as $item)
                     <option value="{{$item->no_serie}}">{{$item->no_serie}}</option>
                 @endforeach 
                 </select>   
-                {!! $errors->first('equipo_noserie', '<small>:message</small><br>') !!}                   
+                {!! $errors->first('equipo_noserie_equipo', '<small>:message</small><br>') !!}                   
             </div>
             <label>Usuario:</label>
             <div class="form-group">
-                <select name="usuario_id">
+                <select name="usuario_id_usuario">
                 @foreach($usuarios as $item)
-                <option value="{{$item->id}}">{{$item->id}}</option>
+                    <option value="{{$item->id}}">{{$item->nombre_usuario}} - {{$item->apellido}}
+                    </option>
                 @endforeach 
                 </select>
-                {!! $errors->first('usuario_id', '<small>:message</small><br>') !!}                      
+                {!! $errors->first('usuario_id_usuario', '<small>:message</small><br>') !!}                      
             </div>
         </div>
         <div class="modal-footer">
@@ -77,8 +78,8 @@
             </div>
       		<div class="form-group">
       			<label>Fecha perdida:</label>
-      			<input type="date" name="fecha_perdida" id="fecha_perdida" class= "form-control">
-                {!! $errors->first('fecha_perdida', '<small>:message</small><br>') !!}
+      			<input type="date" name="fecha_reporte" id="fecha_reporte" class= "form-control">
+                {!! $errors->first('fecha_reporte', '<small>:message</small><br>') !!}
       		</div>
             <div class="form-group">
       			<label>Fecha Atención:</label>
@@ -92,21 +93,22 @@
             </div>
             <div class="form-group">
                 <label>Equipo:</label>
-                <select name="equipo_noserie">
+                <select name="equipo_noserie_equipo">
                 @foreach($equipos as $item)
                     <option value="{{$item->no_serie}}">{{$item->no_serie}}</option>
                 @endforeach 
                 </select>   
-                {!! $errors->first('equipo_noserie', '<small>:message</small><br>') !!}                   
+                {!! $errors->first('equipo_noserie_equipo', '<small>:message</small><br>') !!}                   
             </div>
             <div class="form-group">
                 <label>Usuario:</label>
-                <select name="usuario_id">
+                <select name="usuario_id_usuario">
                 @foreach($usuarios as $item)
-                    <option value="{{$item->id}}">{{$item->id}}</option>
+                    <option value="{{$item->id}}">{{$item->nombre_usuario}} - {{$item->apellido}}
+                    </option>
                 @endforeach 
                 </select>
-                {!! $errors->first('usuario_id', '<small>:message</small><br>') !!}                      
+                {!! $errors->first('usuario_id_usuario', '<small>:message</small><br>') !!}                      
             </div>
         </div>
         <div class="modal-footer">
@@ -190,11 +192,11 @@
                 @foreach($fallas as $falla)
                 <tr>
                     <td>{{$falla->clave_fallas}}</td>
-                    <td>{{$falla->fecha_perdida}}</td>
+                    <td>{{$falla->fecha_reporte}}</td>
                     <td>{{$falla->fecha_atencion}}</td>
                     <td>{{$falla->descripcion}}</td>
-                    <td>{{$falla->equipo_noserie}}</td>
-                    <td>{{$falla->usuario_id}}</td>
+                    <td>{{$falla->equipo_noserie_equipo}}</td>
+                    <td>{{$falla->usuario_id_usuario}}</td>
                     <td>
                         <a href="#" class="btn btn-success edit">Editar</a>
                         <a href="#" class="btn btn-danger delete">Borrar</a>
@@ -243,13 +245,13 @@
             <label>Equipo:</label>
             <div class="form-group">
                 
-                       <select name="equipo_no_serie">
+                       <select name="equipo_no_serie_equipo">
                        	@foreach($equipos as $item)
                        	  <option value="{{$item->no_serie}}">{{$item->no_serie}}
                        	  </option>
                        	@endforeach 
                         </select>   
-                        {!! $errors->first('equipo_no_serie', '<small>:message</small><br>') !!}                   
+                        {!! $errors->first('equipo_no_serie_equipo', '<small>:message</small><br>') !!}                   
             </div>    
       </div>
       <div class="modal-footer">
@@ -300,13 +302,13 @@
             <label>Equipo:</label>
             <div class="form-group">
                 
-                       <select name="equipo_no_serie">
+                       <select name="equipo_no_serie_equipo">
                        	@foreach($equipos as $item)
                        	  <option value="{{$item->no_serie}}">{{$item->no_serie}}
                        	  </option>
                        	@endforeach 
                         </select>   
-                        {!! $errors->first('equipo_no_serie', '<small>:message</small><br>') !!}                   
+                        {!! $errors->first('equipo_no_serie_equipo', '<small>:message</small><br>') !!}                   
             </div>    
       </div>
       <div class="modal-footer">
@@ -394,7 +396,7 @@
                     <td>{{$perdida->fecha_perdida}}</td>
                     <td>{{$perdida->hora_perdida}}</td>
                     <td>{{$perdida->observaciones}}</td>
-					<td>{{$perdida->equipo_no_serie}}</td>
+					<td>{{$perdida->equipo_no_serie_equipo}}</td>
                     <td>
                         <a href="#" class="btn btn-success edit">Editar</a>
                         <a href="#" class="btn btn-danger delete">Borrar</a>
@@ -440,7 +442,7 @@
                         $('#fecha_perdida').val(data[1]);
                         $('#hora_perdida').val(data[2]);
                         $('#observaciones').val(data[3]);
-                        $('#equipo_noserie').val(data[4]);
+                        $('#equipo_no_serie_equipo').val(data[4]);
 
                  
                         $('#editForm2').attr('route', 'editarPerdida', + data[0]);
@@ -497,11 +499,11 @@
                         console.log(data);
 
                         $('#clave_fallas').val(data[0]);
-                        $('#fecha_perdida').val(data[1]);
+                        $('#fecha_reporte').val(data[1]);
                         $('#fecha_atencion').val(data[2]);
                         $('#descripcion').val(data[3]);
-                        $('#equipo_noserie').val(data[4]);
-                        $('#usuario_id').val(data[5]);
+                        $('#equipo_noserie_equipo').val(data[4]);
+                        $('#usuario_id_usuario').val(data[5]);
                  
                         $('#editForm').attr('route', 'FallaB', + data[0]);
                         $('#editModal').modal('show');

@@ -14,7 +14,9 @@ class PerdidaFallaController extends Controller
     public function index(){
         $nombrePag = "Fallas y perdidas";
         $equipos = EquipoModel::all(); 
-        $usuarios = UsuarioModel::all(); 
+        $usuarios = DB::table('usuario')
+            ->select('usuario.*')
+            ->get();
         $fallas = FallaModel::all();
         $perdidas = PerdidaModel::all();
         return view('general.perdidafalla', compact('nombrePag', 'fallas', 'perdidas', 'equipos', 'usuarios'));
@@ -25,18 +27,18 @@ class PerdidaFallaController extends Controller
         $fallas = new FallaModel(); 
 
         request()->validate([
-            'fecha_perdida' => 'required',
+            'fecha_reporte' => 'required',
             'descripcion' => 'required|min:10',
-            'equipo_noserie' => 'required',
-            'usuario_id' => 'required',
+            'equipo_noserie_equipo' => 'required',
+            'usuario_id_usuario' => 'required',
         ]);
 
         $fallas->clave_fallas = $request->clave_fallas;
-        $fallas->fecha_perdida = $request->fecha_perdida;        
+        $fallas->fecha_reporte = $request->fecha_reporte;        
         $fallas->fecha_atencion = $request->fecha_atencion;
         $fallas->descripcion = $request->descripcion;
-        $fallas->equipo_noserie = $request->equipo_noserie;
-        $fallas->usuario_id = $request->usuario_id;
+        $fallas->equipo_noserie_equipo = $request->equipo_noserie_equipo;
+        $fallas->usuario_id_usuario = $request->usuario_id_usuario;
 
         $fallas->save();
         return redirect()->route('FallaPerdida');
@@ -49,14 +51,14 @@ class PerdidaFallaController extends Controller
             'fecha_perdida' => 'required',
             'hora_perdida' => 'required',
             'observaciones' => 'required|min:10',
-            'equipo_no_serie' => 'required',
+            'equipo_no_serie_equipo' => 'required',
         ]);
 
         $perdidas->clave = $request->clave;
         $perdidas->fecha_perdida = $request->fecha_perdida;        
         $perdidas->hora_perdida = $request->hora_perdida;
         $perdidas->observaciones = $request->observaciones;
-        $perdidas->equipo_no_serie = $request->equipo_no_serie;
+        $perdidas->equipo_no_serie_equipo = $request->equipo_no_serie_equipo;
 
         $perdidas->save();
         return redirect()->route('FallaPerdida');
@@ -64,21 +66,21 @@ class PerdidaFallaController extends Controller
 
     public function editFalla(Request $request){
         request()->validate([
-            'fecha_perdida' => 'required',
+            'fecha_reporte' => 'required',
             'descripcion' => 'required|min:10',
-            'equipo_noserie' => 'required',
-            'usuario_id' => 'required',
+            'equipo_noserie_equipo' => 'required',
+            'usuario_id_usuario' => 'required',
         ]);
 
         $clave_fallas = $request->clave_fallas;
 
         $fallas = DB::table('fallas')->where('clave_fallas', $clave_fallas)->update(
             ['clave_fallas' => $request->clave_fallas, 
-            'fecha_perdida' => $request->fecha_perdida,
+            'fecha_reporte' => $request->fecha_reporte,
             'fecha_atencion' => $request->fecha_atencion,
             'descripcion' => $request->descripcion,
-        	'equipo_noserie' => $request->equipo_noserie,
-			'usuario_id' => $request->usuario_id
+        	'equipo_noserie_equipo' => $request->equipo_noserie_equipo,
+			'usuario_id_usuario' => $request->usuario_id_usuario
 		]);
         return redirect()->route('FallaPerdida');
     }
@@ -88,7 +90,7 @@ class PerdidaFallaController extends Controller
             'fecha_perdida' => 'required',
             'hora_perdida' => 'required',
             'observaciones' => 'required|min:10',
-            'equipo_no_serie' => 'required',
+            'equipo_no_serie_equipo' => 'required',
         ]);
 
         $clave = $request->clave;
@@ -98,7 +100,7 @@ class PerdidaFallaController extends Controller
             'fecha_perdida' => $request->fecha_perdida,
             'hora_perdida' => $request->hora_perdida,
             'observaciones' => $request->observaciones,
-        	'equipo_no_serie' => $request->equipo_no_serie
+        	'equipo_no_serie_equipo' => $request->equipo_no_serie_equipo
 		]);
         return redirect()->route('FallaPerdida');
     }
