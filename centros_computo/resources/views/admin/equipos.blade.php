@@ -97,7 +97,7 @@
                 
                        <select name="laboratorio_clave">
                        	@foreach($laboratorios as $item)
-                       	  <option value="{{$item->lab_clave}}">{{$item->nombre_nombre}}
+                       	  <option value="{{$item->lab_clave}}">{{$item->nombre_laboratorio}}
                        	  </option>
                        	@endforeach 
                         </select>

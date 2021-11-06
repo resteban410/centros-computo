@@ -12,7 +12,9 @@ use Illuminate\Support\Facades\DB;
 class AutoaccesoController extends Controller
 {
     public function index(){
-    	$usuarios = UsuarioModel::all();
+        $usuarios = DB::table('usuario')
+            ->select('usuario.*')
+            ->get();
     	$equipos = EquipoModel::all(); 
         $alumnos = AlumnoModel::all(); 
 

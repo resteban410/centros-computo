@@ -15,12 +15,17 @@ class MateriaController extends Controller
         $nombrePag =  "Materias";
         $materias = MateriaModel::all(); 
         $matUso = MateriaUsuarioModel::all();
-        $usuarios = UsuarioModel::all();
+        //$usuarios = UsuarioModel::all();
+
+        $usuarios = DB::table('usuario')
+            ->select('usuario.*')
+            ->get();
         return view('admin.materias',compact('materias', 'nombrePag', 'matUso', 'usuarios')); 
     }
 
     public function store(Request $request){
         request()->validate([
+            'clave' => 'required',
             'nrc' => 'required',
             'nombre' => 'required',
             'carrera' => 'required'
@@ -28,7 +33,7 @@ class MateriaController extends Controller
 
         $materias = new MateriaModel(); 
         
-        
+        $materias->clave = $request->clave;
         $materias->nrc = $request->nrc;
         $materias->nombre = $request->nombre;
         $materias->carrera= $request->carrera;
@@ -42,6 +47,7 @@ class MateriaController extends Controller
     public function edit(Request $request){
 
         request()->validate([
+            'clave' => 'required',
             'nrc' => 'required',
             'nombre' => 'required',
             'carrera' => 'required'
@@ -50,7 +56,8 @@ class MateriaController extends Controller
         $nrc = $request->nrc;
 
         $materias = DB::table('materia')->where('nrc', $nrc)->update(
-            ['nrc' => $request->nrc, 
+            ['clave' => $request->clave,
+            'nrc' => $request->nrc, 
             'nombre' => $request->nombre,
             'carrera' => $request->carrera]
         );
@@ -61,12 +68,12 @@ class MateriaController extends Controller
     public function destroy(Request $request){
 
         request()->validate([
-            'nrc' => 'required'
+            'clave' => 'required'
         ]);
 
-        $nrc = $request->nrc;
+        $clave = $request->clave;
    
-        $materias = DB::table('materia')->where('nrc', $nrc)->delete();
+        $materias = DB::table('materia')->where('clave', $clave)->delete();
         return redirect()->route('materiasP');
         //return redirect('/materias')->with('Exitoso', 'Datos eliminados'); 
     }

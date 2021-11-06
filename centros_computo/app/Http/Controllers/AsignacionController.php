@@ -16,9 +16,10 @@ class AsignacionController extends Controller
     	$periodos = PeriodoModel::all();
     	$laboratorios = LaboratorioModel::all();
     	$asignaciones = AsignacionModel::all();
-    	$usuarios = UsuarioModel::all();
     	$usoHora = UsuHoraModel::all();
-
+		$usuarios = DB::table('usuario')
+            ->select('usuario.*')
+            ->get();
 		$data = DB::table('usuario_asignacion')
 			->join('asignacion', 'usuario_asignacion.id_asignacion', '=', 'asignacion.num_asignacion')
 			->join('usuario', 'usuario_asignacion.id_usuario', '=', 'usuario.id')

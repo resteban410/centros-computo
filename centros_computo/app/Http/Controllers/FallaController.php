@@ -11,8 +11,9 @@ class FallaController extends Controller
 {
     public function index(){
     	$equipos = EquipoModel::all(); 
-        $usuarios = UsuarioModel::all(); 
-
+        $usuarios = DB::table('usuario')
+            ->select('usuario.*')
+            ->get();
     	$nombrePag =  "Fallas";
     	$fallas = FallaModel::all();
 
@@ -25,16 +26,16 @@ class FallaController extends Controller
         request()->validate([
             'fecha_reporte' => 'required',
             'descripcion' => 'required|min:10',
-            'equipo_noserie' => 'required',
-            'usuario_id' => 'required',
+            'equipo_noserie_equipo' => 'required',
+            'usuario_id_usuario' => 'required',
         ]);
 
         $fallas->clave_fallas = $request->clave_fallas;
         $fallas->fecha_reporte = $request->fecha_reporte;        
-        $fallas->fecha_atención = $request->fecha_atención;
+        $fallas->fecha_atencion = $request->fecha_atencion;
         $fallas->descripcion = $request->descripcion;
-        $fallas->equipo_noserie = $request->equipo_noserie;
-        $fallas->usuario_id = $request->usuario_id;
+        $fallas->equipo_noserie_equipo = $request->equipo_noserie_equipo;
+        $fallas->usuario_id_usuario = $request->usuario_id_usuario;
 
         $fallas->save(); 
         return redirect()->route('fallaP');
@@ -46,8 +47,8 @@ class FallaController extends Controller
         request()->validate([
             'fecha_reporte' => 'required',
             'descripcion' => 'required|min:10',
-            'equipo_noserie' => 'required',
-            'usuario_id' => 'required',
+            'equipo_noserie_equipo' => 'required',
+            'usuario_id_usuario' => 'required',
         ]);
 
         $clave_fallas = $request->clave_fallas;
@@ -55,10 +56,10 @@ class FallaController extends Controller
         $fallas = DB::table('fallas')->where('clave_fallas', $clave_fallas)->update(
             ['clave_fallas' => $request->clave_fallas, 
             'fecha_reporte' => $request->fecha_reporte,
-            'fecha_atención' => $request->fecha_atención,
+            'fecha_atencion' => $request->fecha_atencion,
             'descripcion' => $request->descripcion,
-        	'equipo_noserie' => $request->equipo_noserie,
-			'usuario_id' => $request->usuario_id
+        	'equipo_noserie_equipo' => $request->equipo_noserie_equipo,
+			'usuario_id_usuario' => $request->usuario_id_usuario
 		]);
         return redirect()->route('fallaP');
         //return redirect('/fallas')->with('Exitoso', 'Datos actualizados'); 

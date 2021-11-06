@@ -39,25 +39,25 @@
             <label>Equipo:</label>
             <div class="form-group">
                 
-                       <select name="equipo_noserie">
+                       <select name="equipo_noserie_equipo">
                        	@foreach($equipos as $item)
                        	  <option value="{{$item->no_serie}}">{{$item->no_serie}}
                        	  </option>
                        	@endforeach 
                         </select>   
-                        {!! $errors->first('equipo_noserie', '<small>:message</small><br>') !!}                   
+                        {!! $errors->first('equipo_noserie_equipo', '<small>:message</small><br>') !!}                   
             </div>
 
             <label>Usuario:</label>
             <div class="form-group">
                 
-                       <select name="usuario_id">
+                       <select name="usuario_id_usuario">
                        	@foreach($usuarios as $item)
-                       	  <option value="{{$item->id}}">{{$item->id}}
+                       	  <option value="{{$item->id}}">{{$item->nombre_usuario}} - {{$item->apellido}}
                        	  </option>
                        	@endforeach 
                         </select>
-                        {!! $errors->first('usuario_id', '<small>:message</small><br>') !!}                      
+                        {!! $errors->first('usuario_id_usuario', '<small>:message</small><br>') !!}                      
             </div>
 
       </div>
@@ -109,25 +109,25 @@
             <label>Equipo:</label>
             <div class="form-group">
                 
-                       <select name="equipo_noserie">
+                       <select name="equipo_noserie_equipo">
                        	@foreach($equipos as $item)
                        	  <option value="{{$item->no_serie}}">{{$item->no_serie}}
                        	  </option>
                        	@endforeach 
                         </select>   
-                        {!! $errors->first('equipo_noserie', '<small>:message</small><br>') !!}                   
+                        {!! $errors->first('equipo_noserie_equipo', '<small>:message</small><br>') !!}                   
             </div>
 
             <label>Usuario:</label>
             <div class="form-group">
                 
-                       <select name="usuario_id">
+                       <select name="usuario_id_usuario">
                        	@foreach($usuarios as $item)
-                       	  <option value="{{$item->id}}">{{$item->id}}
+                       	  <option value="{{$item->id}}">{{$item->nombre_usuario}} - {{$item->apellido}}
                        	  </option>
                        	@endforeach 
                         </select>
-                        {!! $errors->first('usuario_id', '<small>:message</small><br>') !!}                      
+                        {!! $errors->first('usuario_id_usuario', '<small>:message</small><br>') !!}                      
             </div>
       </div>
       <div class="modal-footer">
@@ -218,8 +218,8 @@
                     <td>{{$falla->fecha_reporte}}</td>
                     <td>{{$falla->fecha_atencion}}</td>
                     <td>{{$falla->descripcion}}</td>
-                    <td>{{$falla->equipo_noserie}}</td>
-                    <td>{{$falla->usuario_id}}</td>
+                    <td>{{$falla->equipo_noserie_equipo}}</td>
+                    <td>{{$falla->usuario_id_usuario}}</td>
                     <td>
                         <a href="#" class="btn btn-success edit">Editar</a>
                         <a href="#" class="btn btn-danger delete">Borrar</a>
@@ -265,8 +265,8 @@
                         $('#fecha_reporte').val(data[1]);
                         $('#fecha_atencion').val(data[2]);
                         $('#descripcion').val(data[3]);
-                        $('#equipo_noserie').val(data[4]);
-                        $('#usuario_id').val(data[5]);
+                        $('#equipo_noserie_equipo').val(data[4]);
+                        $('#usuario_id_usuario').val(data[5]);
                  
                         $('#editForm').attr('route', 'editarFalla', + data[0]);
                         $('#editModal').modal('show');

@@ -39,13 +39,13 @@
             <label>Equipo:</label>
             <div class="form-group">
                 
-                       <select name="equipo_no_serie">
+                       <select name="equipo_no_serie_equipo">
                        	@foreach($equipos as $item)
                        	  <option value="{{$item->no_serie}}">{{$item->no_serie}}
                        	  </option>
                        	@endforeach 
                         </select>   
-                        {!! $errors->first('equipo_no_serie', '<small>:message</small><br>') !!}                   
+                        {!! $errors->first('equipo_no_serie_equipo', '<small>:message</small><br>') !!}                   
             </div>    
       </div>
       <div class="modal-footer">
@@ -96,13 +96,13 @@
             <label>Equipo:</label>
             <div class="form-group">
                 
-                       <select name="equipo_no_serie">
+                       <select name="equipo_no_serie_equipo">
                        	@foreach($equipos as $item)
                        	  <option value="{{$item->no_serie}}">{{$item->no_serie}}
                        	  </option>
                        	@endforeach 
                         </select>   
-                        {!! $errors->first('equipo_no_serie', '<small>:message</small><br>') !!}                   
+                        {!! $errors->first('equipo_no_serie_equipo', '<small>:message</small><br>') !!}                   
             </div>    
       </div>
       <div class="modal-footer">
@@ -192,7 +192,7 @@
                     <td>{{$perdida->fecha_perdida}}</td>
                     <td>{{$perdida->hora_perdida}}</td>
                     <td>{{$perdida->observaciones}}</td>
-					          <td>{{$perdida->equipo_noserie}}</td>
+					          <td>{{$perdida->equipo_no_serie_equipo}}</td>
                     <td>
                         <a href="#" class="btn btn-success edit">Editar</a>
                         <a href="#" class="btn btn-danger delete">Borrar</a>

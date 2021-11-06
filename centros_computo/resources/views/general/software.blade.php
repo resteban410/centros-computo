@@ -24,12 +24,11 @@
 
 <div class="card"> 
         <div class="card-body">
-        	<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Agregar nuevo software</button>
         	<br></br>
             <table id="equisoft" class="table table-striped table-bordered" style="width:100%">
                 <thead>
                 <tr>
-                    <th>Equipo</th>
+                    <th>No.Serie Equipo</th>
                     <th>Software</th>
                     <th>Laboratorio</th>
                 </tr>   
@@ -39,7 +38,7 @@
                     <tr>
                         <td>{{$dat->no_serie}}</td>
                         <td>{{$dat->nombre}}</td>
-                        <td>{{$dat->lab_clave}}</td>
+                        <td>{{$dat->nombre_laboratorio}}</td>
                     </tr>
                     @endforeach
                 </tbody>

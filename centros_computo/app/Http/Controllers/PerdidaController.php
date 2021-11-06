@@ -24,14 +24,14 @@ class PerdidaController extends Controller
             'fecha_perdida' => 'required',
             'hora_perdida' => 'required',
             'observaciones' => 'required|min:10',
-            'equipo_no_serie' => 'required',
+            'equipo_no_serie_equipo' => 'required',
         ]);
 
         $perdidas->clave = $request->clave;
-        $perdidas->fecha_perdida = $request->fecha_reporte;        
+        $perdidas->fecha_perdida = $request->fecha_perdida;        
         $perdidas->hora_perdida = $request->hora_perdida;
         $perdidas->observaciones = $request->observaciones;
-        $perdidas->equipo_no_serie = $request->equipo_no_serie;
+        $perdidas->equipo_no_serie_equipo = $request->equipo_no_serie_equipo;
 
         $perdidas->save(); 
         return redirect()->route('perdidaP');
@@ -44,7 +44,7 @@ class PerdidaController extends Controller
             'fecha_perdida' => 'required',
             'hora_perdida' => 'required',
             'observaciones' => 'required|min:10',
-            'equipo_no_serie' => 'required',
+            'equipo_no_serie_equipo' => 'required',
         ]);
 
         $clave = $request->clave;
@@ -54,7 +54,7 @@ class PerdidaController extends Controller
             'fecha_perdida' => $request->fecha_perdida,
             'hora_perdida' => $request->hora_perdida,
             'observaciones' => $request->observaciones,
-        	'equipo_no_serie' => $request->equipo_no_serie
+        	'equipo_no_serie_equipo' => $request->equipo_no_serie_equipo
 		]);
         return redirect()->route('perdidaP');
         //return redirect('/perdidas')->with('Exitoso', 'Datos actualizados'); 

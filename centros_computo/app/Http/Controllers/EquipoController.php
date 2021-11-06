@@ -18,7 +18,7 @@ class EquipoController extends Controller
         $equipos = DB::table('equipo')
             ->join('laboratorio', 'equipo.laboratorio_clave', '=', 'laboratorio.lab_clave')
             ->join('marca', 'equipo.marca_id', '=', 'marca.id_marca')
-            ->select('equipo.*', 'laboratorio.nombre', 'marca.nombre_marca')
+            ->select('equipo.*', 'laboratorio.nombre_laboratorio', 'marca.nombre_marca')
             ->get();
 
         return view('admin.equipos',compact('equipos', 'nombrePag', 'laboratorios', 'marcas')); 

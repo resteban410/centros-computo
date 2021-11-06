@@ -9,13 +9,13 @@ class MateriaUsuarioController extends Controller
 {
     public function store(Request $request){
         request()->validate([
-            'materia_nrc' => 'required',
+            'materia_clave' => 'required',
             'usu_id_usu' => 'required'
         ]);
 
         $matUsu = new MateriaUsuarioModel(); 
         
-        $matUsu->materia_nrc = $request->materia_nrc;
+        $matUsu->materia_clave= $request->materia_clave;
         $matUsu->usu_id_usu= $request->usu_id_usu;
         
         $matUsu->save(); 
@@ -26,14 +26,14 @@ class MateriaUsuarioController extends Controller
     public function edit(Request $request){
 
         request()->validate([
-            'materia_nrc' => 'required',
+            'materia_clave' => 'required',
             'usu_id_usu' => 'required'
         ]);
 
         $clave = $request->clave;
 
         $equiSoft = DB::table('materia_usuario')->where('clave', $clave)->update(
-            ['materia_nrc' => $request->materia_nrc,
+            ['materia_clave' => $request->materia_clave,
             'usu_id_usu' => $request->usu_id_usu]
         );
         return redirect()->route('materiasP');
