@@ -29,7 +29,7 @@ use App\Http\Controllers\AdeudoGenController;
 
 Route::get('/admin', HomeController::class) ->name('index');
 Route::get('/general', HomeGenController::class) ->name('indexGeneral');
-Route::get('/', [AdeudoGenController::class, 'index']) ->name('indexPrincipal');
+Route::get('/index', [AdeudoGenController::class, 'index']) ->name('indexPrincipal');
 
 //PAGINAS ADMINISTRADOR
 
@@ -146,9 +146,12 @@ Route::get('asignaciones', [AsignacionController::class,'index'])->name('asignac
 Route::post('alta_asignacion', [AsignacionController::class, 'store'])->name('altaAsignacion'); 
 Route::delete('borrar_asignacion', [AsignacionController::class, 'destroy'])->name('borrarAsignacion');
 
-
-
 Route::get('/prestamos', [PrestamoController::class,'index'])->name('prestamosP');
+Route::get('prestamos/show', [PrestamoController::class, 'show'])->name('showPrestamos');
 
+Route::post('alta_prestamo', [PrestamoController::class, 'store'])->name('altaPrestamo'); 
+Route::post('editar_prestamo/{id}', [PrestamoController::class, 'edit'])->name('editarPrestamo');
+Route::post('actualizar_prestamo', [PrestamoController::class, 'update'])->name('actualizarPrestamo'); 
+Route::post('borrar_prestamo/{id}', [PrestamoController::class, 'destroy'])->name('borrarPrestamo');
 
 

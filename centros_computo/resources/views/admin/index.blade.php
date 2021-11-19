@@ -263,6 +263,17 @@
                 </div>
             </a>
             </div>
+            <div class="col-md-3 col-sm-12">
+            <a href="{{route('prestamosP')}}">
+                <div class="about-box center-block wow zoomIn" data-wow-delay="700ms">
+                    <div class="about-opacity-icon"> <i class="las la-registered" aria-hidden="true"></i> </div>
+                    <div class="about-main-icon pb-4">
+                        <i class="las la-registered" aria-hidden="true"></i>
+                    </div>
+                    <h5 class="mb-0">prestamos</h5>
+                </div>
+            </a>
+            </div>
         </div>
     </div>
 </section>
