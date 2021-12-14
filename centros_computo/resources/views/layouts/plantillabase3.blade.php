@@ -23,7 +23,7 @@
     <link rel="stylesheet" type="text/css" href=" https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
-   
+
 </head>
 
 <body>
@@ -95,10 +95,7 @@
                                     <li class="active"><a href="{{route('indexPrincipal')}}">Inicio</a></li>
                                 </ul>
 
-                                <!-- Search -->
-                                <div class="search-btn ml-4">
-                                    <i class="fa fa-search" aria-hidden="true"></i>
-                                </div>
+
                             </div>
                             <!-- Nav End -->
                         </div>
@@ -116,7 +113,7 @@
                 <div class="col-12">
                     <div class="breadcrumb-content text-center">
                         <h2 class="page-title">{{$nombrePag}}</h2>
-                        
+
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb justify-content-center">
                             </ol>
@@ -265,6 +262,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
     <div class="container">
         @yield('editarborrar')
-    </div>   
+    </div>
 </body>
 </html>

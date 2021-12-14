@@ -50,7 +50,9 @@
                         </div>
                     </div>
 
-                    <div class="col-6">
+                    <div class="col-6" style="
+    padding-right: 36px;"
+>
                         <div class="top-header-content">
                             <!-- Top Social Area -->
                             <div class="top-social-area ml-auto">
@@ -94,14 +96,9 @@
                                 <ul id="nav">
                                 <li class="active"><a href="{{route('index')}}">Inicio</a></li>
                                 <li><a href="{{route('alumnosP')}}">Alumnos</a></li>
-                                <li><a href="{{route('laboratoriosP')}}">Laboratorios</a></li>
-                                <li><a href="{{route('usuariosP')}}">Usuarios</a></li>
-                                <li><a href="{{route('materiasP')}}">Materias</a></li>                             </ul>
-
-                                <!-- Search -->
-                                <div class="search-btn ml-4">
-                                    <i class="fa fa-search" aria-hidden="true"></i>
-                                </di>
+                                <li><a href="/contacto.php">Contacto</a></li>
+                                <li><a href="{{route('login')}}">Ingresar</a></li>
+                                </ul>
                             </div>
                             <!-- Nav End -->
                         </div>
@@ -169,7 +166,7 @@
                 </div>
             </div>
         </div>
-    </section>  
+    </section>
 
    <!-- Centro Us Area Start -->
    <section class="roberto-about-us-area section-padding-100-0">
@@ -274,7 +271,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-md-5 text-right">
-                        <a href="#" class="btn roberto-btn mb-50">Contacto</a>
+                        <a href="/contacto.php" class="btn roberto-btn mb-50">Contacto</a>
                     </div>
                 </div>
             </div>
@@ -334,14 +331,14 @@
                     <div class="col-12 col-sm-8 col-lg-3">
                         <div class="single-footer-widget mb-80">
                             <!-- Widget Title -->
-                            <h5 class="widget-title">BUAP</h5> 
+                            <h5 class="widget-title">BUAP</h5>
                             <!-- Footer Nav -->
                             <ul class="footer-nav">
                                 <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Calendario Escolar </a></li>
                                 <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Correo BUAP</a></li>
                                 <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Identidad Gráfica</a></li>
                                 <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Directorio</a></li>
-                            </ul> 
+                            </ul>
                         </div>
                     </div>
                 </div>

@@ -2493,3 +2493,17 @@ html .ui-button.ui-state-disabled:active {
   transition: all .5s ease-in;
 }
 
+.img-fluid{
+max-width: 102.8%;
+height: auto;
+}
+.container-fluid {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 5%;
+}
+
+.menu{
+    margin-top: 0;
+ margin-bottom: 0rem;
+}

@@ -99,11 +99,6 @@
                                 <li><a href="{{route('usuariosP')}}">Usuarios</a></li>
                                 <li><a href="{{route('materiasP')}}">Materias</a></li>
                             </ul>
-
-                            <!-- Buscador -->
-                            <div class="search-btn ml-4">
-                                <i class="fa fa-search" aria-hidden="true"></i>
-                            </di>
                         </div>
                         <!-- Fin del menu-->
                     </div>
@@ -134,9 +129,9 @@
     </div>
     <!-- Breadcrumb Area End -->
 
-    
+
     <div class="container-fluid">
-        <h2>Frequently Asked Questions</h2> 
+        <h2>Frequently Asked Questions</h2>
         <div class="accordion">
              <div class="icon">
                 <h5>What is Loren Ipsum?</h5>
@@ -257,14 +252,14 @@
                     <div class="col-12 col-sm-8 col-lg-3">
                         <div class="single-footer-widget mb-80">
                             <!-- Widget Title -->
-                            <h5 class="widget-title">BUAP</h5> 
+                            <h5 class="widget-title">BUAP</h5>
                             <!-- Footer Nav -->
                             <ul class="footer-nav">
                                 <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Calendario Escolar </a></li>
                                 <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Correo BUAP</a></li>
                                 <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Identidad Gráfica</a></li>
                                 <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Directorio</a></li>
-                            </ul> 
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -309,7 +304,7 @@
 
     <script src="js/app.js"></script>
 
-    
+
 </body>
 
 </html>

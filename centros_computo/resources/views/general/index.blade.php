@@ -96,12 +96,25 @@
                             <div class="classynav">
                                 <ul id="nav">
                                     <li class="active"><a href="{{route('indexGeneral')}}">Inicio</a></li>
+                                    <div class="btn-group">
+                                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Mi cuenta
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Restablecer Contraseña</a>
+                                        <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Salir') }}
+                                    </a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                    </div>
+                                    </div>
                                 </ul>
 
-                                <!-- Search -->
-                                <div class="search-btn ml-4">
-                                    <i class="fa fa-search" aria-hidden="true"></i>
-                                </di>
+
                             </div>
                             <!-- Nav End -->
                         </div>
@@ -124,7 +137,7 @@
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb justify-content-center">
                                 <li class="breadcrumb-item"><a href="index.php">Inicio</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Administrador</li>
+                                <li class="breadcrumb-item active" aria-current="page">Docente</li>
                             </ol>
                         </nav>
                     </div>
@@ -133,7 +146,7 @@
         </div>
     </div>
     <!-- Breadcrumb Area End -->
-    
+
 
     <br></br>
     <br></br>
@@ -143,7 +156,7 @@
 <section id="aboutus" class="about-sec py-0">
     <div class="container">
         <div class="row padding-top">
-            
+
         </div>
 
         <div class="row padding-top">
@@ -152,11 +165,11 @@
                 <div class="about-box center-block wow zoomIn" data-wow-delay="600ms">
                     <div class="about-opacity-icon"> <i class="las la-save"></i aria-hidden="true"></i> </div>
                     <div class="about-main-icon pb-4">
-                        
+
                         <i class="las la-save" aria-hidden="true"></i>
                     </div>
                     <h5 class="mb-0">Consulta Software</h5>
-                    </a>    
+                    </a>
                 </div>
             </div>
             <div class="col-md-3 col-sm-12 mb-xs-2rem">
@@ -178,7 +191,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="partner-logo-content d-flex align-items-center justify-content-between wow fadeInUp" data-wow-delay="300ms">
-                       
+
                     </div>
                 </div>
             </div>
@@ -236,14 +249,14 @@
                     <div class="col-12 col-sm-8 col-lg-3">
                         <div class="single-footer-widget mb-80">
                             <!-- Widget Title -->
-                            <h5 class="widget-title">BUAP</h5> 
+                            <h5 class="widget-title">BUAP</h5>
                             <!-- Footer Nav -->
                             <ul class="footer-nav">
                                 <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Calendario Escolar </a></li>
                                 <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Correo BUAP</a></li>
                                 <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Identidad Gráfica</a></li>
                                 <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Directorio</a></li>
-                            </ul> 
+                            </ul>
                         </div>
                     </div>
                 </div>

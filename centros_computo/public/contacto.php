@@ -99,12 +99,6 @@
                                 <li><a href="{{route('usuariosP')}}">Usuarios</a></li>
                                 <li><a href="{{route('materiasP')}}">Materias</a></li>
                             </ul>
-
-                            <!-- Buscador -->
-                            <div class="search-btn ml-4">
-                                <i class="fa fa-search" aria-hidden="true"></i>
-                            </di>
-                        </div>
                         <!-- Fin del menu-->
                     </div>
                 </nav>
@@ -160,7 +154,7 @@
                         <div class="single-contact-info">
                             <i class="fa fa-clock-o" aria-hidden="true"></i>
                             <h4>Horarios</h4>
-                            <p>08:00 am to 15:00 pm</p>
+                            <p>08:00 am a 15:00 pm</p>
                         </div>
                     </div>
                     <!-- Single Contact Info -->
@@ -222,27 +216,6 @@
     </div>
     <!-- Contact Form Area End -->
 
-       <!-- Call To Action Area Start -->
-       <section class="roberto-cta-area">
-        <div class="container">
-            <div class="cta-content bg-img bg-overlay jarallax" style="background-image: url(img/bg-img/slider_3.png);">
-                <div class="row align-items-center">
-                    <div class="col-12 col-md-7">
-                        <div class="cta-text mb-50">
-                            <h2>¡Contacta con nosotros ahora!</h2>
-                            <h6>Comuniquese al 222 229 5500 para reservar directamente o para recibir asesoramiento</h6>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-5 text-right">
-                        <a href="#" class="btn roberto-btn mb-50">Contacto</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Call To Action Area End -->
-
-
     <!-- Footer Area Start -->
     <footer class="footer-area section-padding-80-0">
         <!-- Main Footer Area -->
@@ -301,14 +274,14 @@
                     <div class="col-12 col-sm-8 col-lg-3">
                         <div class="single-footer-widget mb-80">
                             <!-- Widget Title -->
-                            <h5 class="widget-title">BUAP</h5> 
+                            <h5 class="widget-title">BUAP</h5>
                             <!-- Footer Nav -->
                             <ul class="footer-nav">
                                 <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Calendario Escolar </a></li>
                                 <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Correo BUAP</a></li>
                                 <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Identidad Gráfica</a></li>
                                 <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Directorio</a></li>
-                            </ul> 
+                            </ul>
                         </div>
                     </div>
                 </div>

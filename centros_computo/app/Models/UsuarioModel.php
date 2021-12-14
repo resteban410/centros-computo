@@ -4,14 +4,15 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\ Foundation\ Auth\ User as Authenticatable;
 
-class UsuarioModel extends Model
+class UsuarioModel extends Authenticatable
 {
-    protected $table = 'usuario';
+    protected $table = 'users';
     public $timestamps = false;
 
-    
-    public function setPasswordAttribute($contraseña){
-        $this->attributes['contraseña'] = bcrypt($contraseña);
+
+    public function setPasswordAttribute($password){
+        $this->attributes['password'] = bcrypt($password);
     }
 }

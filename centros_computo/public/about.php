@@ -98,12 +98,6 @@
                                     <li><a href="./blog.php">Laboratorios</a></li>
                                     <li><a href="./contact.php">Contacto</a></li>
                                 </ul>
-
-                                <!-- Search -->
-                                <div class="search-btn ml-4">
-                                    <i class="fa fa-search" aria-hidden="true"></i>
-                                </div>
-
                                 <!-- Book Now -->
                                 <div class="book-now-btn ml-3 ml-lg-5">
                                     <a href="#">Reservaciones <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>

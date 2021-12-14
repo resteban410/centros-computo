@@ -11,7 +11,7 @@
 
     <!-- Favicon -->
     <link rel="icon" href="./img/core-img/favicon.png">
-    
+
     <!-- Stylesheet -->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link href='css/main.css' rel='stylesheet' />
@@ -33,8 +33,8 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.6/css/responsive.bootstrap4.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
-   
-    
+
+
 </head>
 
 <body>
@@ -104,7 +104,7 @@
                             </div>
                             <!-- Nav Start -->
                             <div class="classynav">
-                                <ul id="nav">
+                                <ul id="nav" class="menu">
                                     <li class="active"><a href="{{route('index')}}">Inicio</a></li>
                                     <li><a href="{{route('alumnosP')}}">Alumnos</a></li>
                                     <li><a href="{{route('laboratoriosP')}}">Laboratorios</a></li>
@@ -112,10 +112,7 @@
                                     <li><a href="{{route('materiasP')}}">Materias</a></li>
                                 </ul>
 
-                                <!-- Search -->
-                                <div class="search-btn ml-4">
-                                    <i class="fa fa-search" aria-hidden="true"></i>
-                                </div>
+
                             </div>
                             <!-- Nav End -->
                         </div>
@@ -133,7 +130,7 @@
                 <div class="col-12">
                     <div class="breadcrumb-content text-center">
                         <h2 class="page-title">{{$nombrePag}}</h2>
-                        
+
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb justify-content-center">
                             </ol>
@@ -148,7 +145,7 @@
         @yield('contenido')
     </div>
 
-   
+
        <!-- Footer Area Start -->
        <footer class="footer-area section-padding-80-0">
         <!-- Main Footer Area -->
@@ -200,14 +197,14 @@
                     <div class="col-12 col-sm-8 col-lg-3">
                         <div class="single-footer-widget mb-80">
                             <!-- Widget Title -->
-                            <h5 class="widget-title">BUAP</h5> 
+                            <h5 class="widget-title">BUAP</h5>
                             <!-- Footer Nav -->
                             <ul class="footer-nav">
                                 <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Calendario Escolar </a></li>
                                 <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Correo BUAP</a></li>
                                 <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Identidad Gráfica</a></li>
                                 <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Directorio</a></li>
-                            </ul> 
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -237,12 +234,12 @@
         </div>
     </footer>
     <!-- Footer Area End -->
-    
+
 
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-    
+
     <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
 
@@ -254,6 +251,6 @@
 
     <div class="container">
         @yield('editarborrar')
-    </div>   
+    </div>
 </body>
 </html>
