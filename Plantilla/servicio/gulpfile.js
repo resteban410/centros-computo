@@ -51,7 +51,7 @@ gulp.task('scripts', function () {
     'node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js',
     'node_modules/jquery-ui-slider/jquery-ui.min.js'
   ])
-        .pipe(concat('roberto.bundle.js'))
+        .pipe(concat('sjch.bundle.js'))
         .pipe(gulp.dest('./src/js/'))
 });
 

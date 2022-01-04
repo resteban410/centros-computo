@@ -374,7 +374,7 @@ input:focus {
 .btn:focus {
   box-shadow: none; }
 
-.roberto-btn {
+.sjch-btn {
   position: relative;
   z-index: 1;
   min-width: 150px;
@@ -393,20 +393,20 @@ input:focus {
   -webkit-transition-duration: 500ms;
   -o-transition-duration: 500ms;
   transition-duration: 500ms; }
-  .roberto-btn:focus, .roberto-btn:hover {
+  .sjch-btn:focus, .sjch-btn:hover {
     font-weight: 500;
     -webkit-box-shadow: 0 2px 40px 8px rgba(15, 15, 15, 0.15);
     box-shadow: 0 2px 40px 8px rgba(15, 15, 15, 0.15);
     background-color: #ffffff;
     color: #00b5e2; }
-  .roberto-btn.btn-2 {
+  .sjch-btn.btn-2 {
     min-width: 180px;
     height: 50px;
     line-height: 46px;
     border: 2px solid #00b5e2;
     background-color: transparent;
     color: #ffffff; }
-    .roberto-btn.btn-2:focus, .roberto-btn.btn-2:hover {
+    .sjch-btn.btn-2:focus, .sjch-btn.btn-2:hover {
       color: #ffffff;
       background-color: #00b5e2; }
 
@@ -969,61 +969,61 @@ input:focus {
     visibility: visible; }
 
 /* :: 12.0 CTA CSS */
-.roberto-cta-area {
+.sjch-cta-area {
   position: relative;
   padding-bottom: 60px;
   padding-top: 60px;
   z-index: 1; }
-  .roberto-cta-area .cta-content {
+  .sjch-cta-area .cta-content {
     padding-top: 50px;
     padding-left: 50px;
     padding-right: 50px; }
-  .roberto-cta-area .cta-text h2 {
+  .sjch-cta-area .cta-text h2 {
     color: #ffffff;
     font-size: 36px;
     margin-bottom: 10px; }
-  .roberto-cta-area .cta-text h6 {
+  .sjch-cta-area .cta-text h6 {
     margin-bottom: 0;
     color: #ffffff; }
 
 /* :: 13.0 Testimonial Area CSS */
-.roberto-testimonials-area {
+.sjch-testimonials-area {
   position: relative;
   z-index: 1; }
-  .roberto-testimonials-area .testimonial-thumbnail {
+  .sjch-testimonials-area .testimonial-thumbnail {
     position: relative;
     z-index: 1;
     padding-right: 15px; }
-    .roberto-testimonials-area .testimonial-thumbnail img {
+    .sjch-testimonials-area .testimonial-thumbnail img {
       border-radius: 8px;
       width: 100% !important; }
-  .roberto-testimonials-area .single-testimonial-slide h5 {
+  .sjch-testimonials-area .single-testimonial-slide h5 {
     color: #636a76;
     font-weight: 400;
     font-size: 18px;
     line-height: 1.8; }
     @media only screen and (min-width: 992px) and (max-width: 1199px) {
-      .roberto-testimonials-area .single-testimonial-slide h5 {
+      .sjch-testimonials-area .single-testimonial-slide h5 {
         font-size: 16px; } }
     @media only screen and (min-width: 768px) and (max-width: 991px) {
-      .roberto-testimonials-area .single-testimonial-slide h5 {
+      .sjch-testimonials-area .single-testimonial-slide h5 {
         font-size: 16px; } }
     @media only screen and (max-width: 767px) {
-      .roberto-testimonials-area .single-testimonial-slide h5 {
+      .sjch-testimonials-area .single-testimonial-slide h5 {
         font-size: 16px; } }
-  .roberto-testimonials-area .single-testimonial-slide .rating-title {
+  .sjch-testimonials-area .single-testimonial-slide .rating-title {
     position: relative;
     z-index: 1;
     margin-top: 15px; }
-    .roberto-testimonials-area .single-testimonial-slide .rating-title .rating {
+    .sjch-testimonials-area .single-testimonial-slide .rating-title .rating {
       display: block;
       margin-bottom: 10px; }
-      .roberto-testimonials-area .single-testimonial-slide .rating-title .rating i {
+      .sjch-testimonials-area .single-testimonial-slide .rating-title .rating i {
         color: #f5b917;
         font-size: 14px; }
-    .roberto-testimonials-area .single-testimonial-slide .rating-title h6 {
+    .sjch-testimonials-area .single-testimonial-slide .rating-title h6 {
       margin-bottom: 0; }
-      .roberto-testimonials-area .single-testimonial-slide .rating-title h6 span {
+      .sjch-testimonials-area .single-testimonial-slide .rating-title h6 span {
         color: #00b5e2;
         font-size: 14px;
         font-weight: 400; }
@@ -1627,11 +1627,11 @@ html .ui-button.ui-state-disabled:active {
   .single-service-area:hover .service-title, .single-service-area:focus .service-title {
     background-color: #2a303b; }
 
-.roberto-service-area {
+.sjch-service-area {
   position: relative;
   z-index: 1; }
   @media only screen and (max-width: 767px) {
-    .roberto-service-area .service-content {
+    .sjch-service-area .service-content {
       -ms-flex-wrap: wrap;
       flex-wrap: wrap;
       margin-bottom: 70px; } }
@@ -1727,10 +1727,10 @@ html .ui-button.ui-state-disabled:active {
         box-shadow: none;
         border-color: #00b5e2; }
 
-.roberto-about-area {
+.sjch-about-area {
   position: relative;
   z-index: 1; }
-  .roberto-about-area .hotel-search-form-area {
+  .sjch-about-area .hotel-search-form-area {
     position: absolute;
     width: 100%;
     z-index: 100;
@@ -1738,18 +1738,18 @@ html .ui-button.ui-state-disabled:active {
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%); }
-    .roberto-about-area .hotel-search-form-area .nice-select {
+    .sjch-about-area .hotel-search-form-area .nice-select {
       line-height: 35px; }
 
-.roberto--video--area {
+.sjch--video--area {
   position: relative;
   z-index: 1;
   padding-top: 150px;
   padding-bottom: 150px; }
-  .roberto--video--area .video-content-area {
+  .sjch--video--area .video-content-area {
     position: relative;
     z-index: 1; }
-    .roberto--video--area .video-content-area .video-play-btn {
+    .sjch--video--area .video-content-area .video-play-btn {
       display: inline-block;
       width: 70px;
       height: 70px;
@@ -1765,32 +1765,32 @@ html .ui-button.ui-state-disabled:active {
       margin-top: -35px;
       margin-left: -35px;
       z-index: 100; }
-      .roberto--video--area .video-content-area .video-play-btn i {
+      .sjch--video--area .video-content-area .video-play-btn i {
         padding-left: 5px; }
       @media only screen and (max-width: 767px) {
-        .roberto--video--area .video-content-area .video-play-btn {
+        .sjch--video--area .video-content-area .video-play-btn {
           width: 60px;
           height: 60px;
           font-size: 24px;
           line-height: 60px;
           margin-top: -30px;
           margin-left: -30px; } }
-      .roberto--video--area .video-content-area .video-play-btn:hover, .roberto--video--area .video-content-area .video-play-btn:focus {
+      .sjch--video--area .video-content-area .video-play-btn:hover, .sjch--video--area .video-content-area .video-play-btn:focus {
         background-color: #00b5e2;
         color: #ffffff; }
 
 /* :: 16.0 Contact Area CSS */
-.roberto-contact-form {
+.sjch-contact-form {
   position: relative;
   z-index: 1; }
-  .roberto-contact-form h2 {
+  .sjch-contact-form h2 {
     margin-bottom: 30px;
     font-size: 22px;
     display: block; }
     @media only screen and (max-width: 767px) {
-      .roberto-contact-form h2 {
+      .sjch-contact-form h2 {
         font-size: 24px; } }
-  .roberto-contact-form .form-control {
+  .sjch-contact-form .form-control {
     width: 100%;
     height: 50px;
     padding: 0 20px;
@@ -1798,10 +1798,10 @@ html .ui-button.ui-state-disabled:active {
     color: #afb4bf;
     font-size: 14px;
     border: 1px solid #ebebeb; }
-    .roberto-contact-form .form-control:focus {
+    .sjch-contact-form .form-control:focus {
       box-shadow: none;
       border-color: #00b5e2; }
-  .roberto-contact-form textarea.form-control {
+  .sjch-contact-form textarea.form-control {
     height: 150px;
     padding: 20px; }
 
@@ -2257,20 +2257,20 @@ html .ui-button.ui-state-disabled:active {
         .blog-details-text ul li {
           font-size: 16px; } }
 
-.roberto-blockquote {
+.sjch-blockquote {
   position: relative;
   z-index: 1;
   margin-bottom: 30px;
   margin-top: 30px; }
-  .roberto-blockquote .icon {
+  .sjch-blockquote .icon {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 70px;
     flex: 0 0 70px;
     max-width: 70px;
     width: 70px; }
-    .roberto-blockquote .icon img {
+    .sjch-blockquote .icon img {
       padding-top: 10px; }
-  .roberto-blockquote .text h5 {
+  .sjch-blockquote .text h5 {
     margin-bottom: 10px;
     color: #707070;
     font-style: italic;

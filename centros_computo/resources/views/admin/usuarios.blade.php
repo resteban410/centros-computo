@@ -11,7 +11,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
     <form action="{{route('altaUsu')}}" method="post">
-      <div class="modal-body">       
+      <div class="modal-body">
                 @csrf
             <div class="form-group">
                 <label>ID:</label>
@@ -21,19 +21,19 @@
 
             <div class="form-group">
                 <label>Nombre:</label>
-                    <input type="text" name="nombre_usuario" class= "form-control" placeholder="Escriba el nombre"> 
+                    <input type="text" name="nombre_usuario" class= "form-control" placeholder="Escriba el nombre">
                     {!! $errors->first('nombre_usuario', '<small>:message</small><br>') !!}
             </div>
 
             <div class="form-group">
                 <label>Apellido:</label>
                     <input type="text" name="apellido" class= "form-control" placeholder="Escriba los apellidos">
-                    {!! $errors->first('apellido', '<small>:message</small><br>') !!} 
+                    {!! $errors->first('apellido', '<small>:message</small><br>') !!}
             </div>
 
             <div class="form-group">
                 <label>Contraseña:</label>
-                    <input type="password" name="contraseña" class= "form-control" placeholder="Escriba la contraseña"> 
+                    <input type="password" name="contraseña" class= "form-control" placeholder="Escriba la contraseña">
                     {!! $errors->first('contraseña', '<small>:message</small><br>') !!}
             </div>
 
@@ -45,13 +45,13 @@
 
             <div class="form-group">
                 <label>Dirección:</label>
-                    <input type="text" name="direccion" class= "form-control" placeholder="Escriba la direccion"> 
+                    <input type="text" name="direccion" class= "form-control" placeholder="Escriba la direccion">
                     {!! $errors->first('direccion', '<small>:message</small><br>') !!}
             </div>
 
             <div class="form-group">
                 <label>Teléfono:</label>
-                    <input type="text" name="telefono" class= "form-control" placeholder="Escriba el número de telefono"> 
+                    <input type="text" name="telefono" class= "form-control" placeholder="Escriba el número de telefono">
                     {!! $errors->first('telefono', '<small>:message</small><br>') !!}
             </div>
 
@@ -60,8 +60,8 @@
                     <select name="tipo">
                         <option value="usu">Usuario</option>
                         <option value="admin">Administrador</option>
-                    </select> 
-                    {!! $errors->first('tipo', '<small>:message</small><br>') !!}                                     
+                    </select>
+                    {!! $errors->first('tipo', '<small>:message</small><br>') !!}
             </div>
       </div>
       <div class="modal-footer">
@@ -83,7 +83,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
     <form action="{{route('editarUsu')}}" method="post" id="editForm">
-      <div class="modal-body">       
+      <div class="modal-body">
                 @csrf
                 @method('PUT')
             <div class="form-group">
@@ -94,19 +94,19 @@
 
             <div class="form-group">
                 <label>Nombre:</label>
-                    <input type="text" name="nombre_usuario" id="nombre_usuario" class= "form-control" placeholder="Escriba el nombre"> 
+                    <input type="text" name="nombre_usuario" id="nombre_usuario" class= "form-control" placeholder="Escriba el nombre">
                     {!! $errors->first('nombre_usuario', '<small>:message</small><br>') !!}
             </div>
 
             <div class="form-group">
                 <label>Apellido:</label>
-                    <input type="text" name="apellido" id="apellido" class= "form-control" placeholder="Escriba los apellidos"> 
-                    {!! $errors->first('apellido', '<small>:message</small><br>') !!} 
+                    <input type="text" name="apellido" id="apellido" class= "form-control" placeholder="Escriba los apellidos">
+                    {!! $errors->first('apellido', '<small>:message</small><br>') !!}
             </div>
 
             <div class="form-group">
                 <label>Contraseña:</label>
-                    <input type="password" name="contraseña" id="contraseña" class= "form-control" placeholder="Escriba la contraseña"> 
+                    <input type="password" name="contraseña" id="contraseña" class= "form-control" placeholder="Escriba la contraseña">
                     {!! $errors->first('contraseña', '<small>:message</small><br>') !!}
             </div>
 
@@ -118,13 +118,13 @@
 
             <div class="form-group">
                 <label>Dirección:</label>
-                    <input type="text" name="direccion" id="direccion" class= "form-control" placeholder="Escriba la direccion"> 
+                    <input type="text" name="direccion" id="direccion" class= "form-control" placeholder="Escriba la direccion">
                     {!! $errors->first('direccion', '<small>:message</small><br>') !!}
             </div>
 
             <div class="form-group">
                 <label>Teléfono:</label>
-                    <input type="text" name="telefono" id="telefono" class= "form-control" placeholder="Escriba el número de telefono"> 
+                    <input type="text" name="telefono" id="telefono" class= "form-control" placeholder="Escriba el número de telefono">
                     {!! $errors->first('telefono', '<small>:message</small><br>') !!}
             </div>
 
@@ -133,8 +133,8 @@
                     <select name="tipo" id="tipo">
                         <option value="usu">Usuario</option>
                         <option value="admin">Administrador</option>
-                    </select>               
-                    {!! $errors->first('tipo', '<small>:message</small><br>') !!}                           
+                    </select>
+                    {!! $errors->first('tipo', '<small>:message</small><br>') !!}
             </div>
       </div>
       <div class="modal-footer">
@@ -158,7 +158,7 @@
     <form action="{{route('borrarUsu')}}" method="POST" id="deleteForm">
       @csrf
       @method('DELETE')
-      <div class="modal-body">       
+      <div class="modal-body">
             <input type="hidden" name="_method" value="DELETE">
         <p>¿Estas seguro de borrar este registro? Esta acción no puede revertirse. Para asegurarse, vuelva a escribir el ID del usuario. </p>
 
@@ -166,7 +166,7 @@
                 <label>ID:</label>
                     <input type="text" name="id" id="id" class= "form-control" placeholder="Escriba la clave">
                     {!! $errors->first('id', '<small>:message</small><br>') !!}
-            </div>       
+            </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -203,7 +203,7 @@
 </div>
 
 <br></br>
-    <div class="card"> 
+    <div class="card">
         <div class="card-body">
         <h4> Usuarios registrados</h4>
         <table id="usuarios" class="display nowrap" style="width:100%">
@@ -213,14 +213,14 @@
                 <th>ID</th>
                 <th>Nombre</th>
                 <th>Apellidos</th>
-               	<th>Contraseña</th>	
+               	<th>Contraseña</th>
                 <th>Correo Electrónico</th>
-               	<th>Dirección</th>	
+               	<th>Dirección</th>
                 <th>Teléfono</th>
                 <th>Tipo</th>
-                
-            </tr>   
-            </thead> 
+
+            </tr>
+            </thead>
             <tbody>
                 @foreach($usuarios as $usuario)
                 <tr>
@@ -231,12 +231,12 @@
                     <td>{{$usuario->id}}</td>
                     <td>{{$usuario->nombre_usuario}}</td>
                     <td>{{$usuario->apellido}}</td>
-                   	<td>{{$usuario->contraseña}}</td>	
+                   	<td>{{$usuario->contraseña}}</td>
                     <td>{{$usuario->correo_electronico}}</td>
-                   	<td>{{$usuario->direccion}}</td>		
+                   	<td>{{$usuario->direccion}}</td>
                     <td>{{$usuario->telefono}}</td>
                     <td>{{$usuario->tipo}}</td>
-                    
+
                 </tr>
                 @endforeach
             </tbody>
@@ -264,7 +264,7 @@
                             "previous": "Anterior"
                     }}
                     });
-                    //start edit record 
+                    //start edit record
                     table.on('click', '.edit', function(){
 
                         $tr = $(this).closest('tr');
@@ -282,14 +282,14 @@
                         $('#direccion').val(data[6]);
                         $('#telefono').val(data[7]);
                         $('#tipo').val(data[8]);
-                 
+
                         $('#editForm').attr('route', 'editarUsu', + data[1]);
                         $('#editModal').modal('show');
                     });
 
-                    //end edit record 
+                    //end edit record
 
-                    //star delete record 
+                    //star delete record
                     table.on('click', '.delete', function(){
 
                         $tr = $(this).closest('tr');
@@ -304,7 +304,7 @@
                         $('#deleteForm').attr('route', 'borrarUsu', + data[1]);
                         $('#deleteModal').modal('show');
                     });
-                    //end delete record 
+                    //end delete record
                 });
         </script>
 @endsection

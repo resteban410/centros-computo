@@ -50,9 +50,7 @@
                         </div>
                     </div>
 
-                    <div class="col-6" style="
-    padding-right: 36px;"
->
+                    <div class="col-6">
                         <div class="top-header-content">
                             <!-- Top Social Area -->
                             <div class="top-social-area ml-auto">

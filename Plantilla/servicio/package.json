@@ -1,7 +1,7 @@
 {
-  "name": "roberto-hotel-and-resort-html-template",
+  "name": "sjch-hotel-and-resort-html-template",
   "version": "1.0.0",
-  "description": "Roberto Hotel & Resort HTML Template",
+  "description": "sjch Hotel & Resort HTML Template",
   "main": "index.js",
   "scripts": {
     "start": "gulp"
