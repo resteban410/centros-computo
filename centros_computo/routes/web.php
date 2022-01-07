@@ -24,6 +24,7 @@ use App\Http\Controllers\HomeGenController;
 use App\Http\Controllers\PerdidaFallaController;
 use App\Http\Controllers\SoftwareGenController;
 use App\Http\Controllers\AdeudoGenController;
+use App\Http\Controllers\ContactoController;
 
 //INDEX
 
@@ -161,3 +162,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/', function(){
     return view('index');
 });
+
+
+Route::get('/contacto', ContactoController::class, 'index') ->name('contacto');
