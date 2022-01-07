@@ -193,7 +193,7 @@
                 <div class="col-12">
                     <!-- Form -->
                     <div class="roberto-contact-form">
-                        <form action="#" method="post">
+                        <form action="#" method="get">
                             <div class="row">
                                 <div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
                                     <input type="text" name="message-name" class="form-control mb-30" placeholder="Tu nombre">
