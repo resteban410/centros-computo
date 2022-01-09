@@ -30,7 +30,7 @@ use App\Http\Controllers\ContactoController;
 
 Route::get('/admin', HomeController::class) ->middleware('auth.admin')->name('index');
 Route::get('/general', HomeGenController::class) ->middleware('auth.user')->name('indexGeneral');
-Route::get('/index', [AdeudoGenController::class, 'index']) ->name('indexPrincipal');
+Route::get('/consulta_de_adeudos', AdeudoGenController::class)->name('adeudos');
 
 //PAGINAS ADMINISTRADOR
 
@@ -161,7 +161,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/', function(){
     return view('index');
-});
+})->name('principal');
 
 
 Route::get('/contacto', ContactoController::class, 'index') ->name('contacto');

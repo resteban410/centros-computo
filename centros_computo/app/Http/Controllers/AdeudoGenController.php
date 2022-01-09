@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
 
 class AdeudoGenController extends Controller
 {
-    public function index(){
+    public function __invoke()
+    {
         $nombrePag = "Consulta de adeudos";
         $adeudos = AdeudoModel::all();
         return view ('adeudosGen', compact('nombrePag', 'adeudos'));

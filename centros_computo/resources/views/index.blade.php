@@ -92,8 +92,8 @@
                             <!-- Nav Start -->
                             <div class="classynav">
                                 <ul id="nav">
-                                <li class="active"><a href="{{route('index')}}">Inicio</a></li>
-                                <li><a href="{{route('alumnosP')}}">Alumnos</a></li>
+                                <li class="active"><a href="{{route('principal')}}">Inicio</a></li>
+                                <li><a href="{{route('adeudos')}}">Adeudos</a></li>
                                 <li><a href="{{route('contacto')}}">Contacto</a></li>
                                 <li><a href="{{route('login')}}">Ingresar</a></li>
                                 </ul>

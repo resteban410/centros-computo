@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Title -->
-    <title> Index </title>
+    <title> Consulta de adeudos </title>
 
     <!-- Favicon -->
     <link rel="icon" href="./img/core-img/favicon.png">
@@ -92,7 +92,10 @@
                             <!-- Nav Start -->
                             <div class="classynav">
                                 <ul id="nav">
-                                    <li class="active"><a href="{{route('indexPrincipal')}}">Inicio</a></li>
+                                    <li class="active"><a href="{{route('principal')}}">Inicio</a></li>
+                                    <li><a href="{{route('adeudos')}}">Adeudos</a></li>
+                                    <li><a href="{{route('contacto')}}">Contacto</a></li>
+                                    <li><a href="{{route('login')}}">Ingresar</a></li>
                                 </ul>
 
 
