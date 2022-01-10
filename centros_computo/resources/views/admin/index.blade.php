@@ -12,7 +12,7 @@
 
     <!-- Favicon -->
     <link rel="icon" href="img/core-img/favicon.png">
-        <link href="../css/LineIcons.min.css" rel="stylesheet">
+    <link href="../css/LineIcons.min.css" rel="stylesheet">
     <link href="vendor/css/line-awesome.min.css" rel="stylesheet">
     <link href="../css/line-awesome.min.css" rel="stylesheet">
 
