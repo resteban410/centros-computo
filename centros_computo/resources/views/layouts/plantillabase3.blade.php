@@ -105,11 +105,10 @@
                             <!-- Nav Start -->
                             <div class="classynav">
                                 <ul id="nav" class="menu">
-                                    <li class="active"><a href="{{route('index')}}">Inicio</a></li>
-                                    <li><a href="{{route('alumnosP')}}">Alumnos</a></li>
-                                    <li><a href="{{route('laboratoriosP')}}">Laboratorios</a></li>
-                                    <li><a href="{{route('usuariosP')}}">Usuarios</a></li>
-                                    <li><a href="{{route('materiasP')}}">Materias</a></li>
+                                    <li class="active"><a href="{{route('principal')}}">Inicio</a></li>
+                                    <li><a href="{{route('adeudos')}}">Adeudos</a></li>
+                                    <li><a href="{{route('contacto')}}">Contacto</a></li>
+                                    <li><a href="{{route('login')}}">Ingresar</a></li>
                                 </ul>
 
 

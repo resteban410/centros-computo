@@ -94,47 +94,47 @@
 
             <div class="form-group">
                 <label>Nombre:</label>
-                    <input type="text" name="nombre_usuario" id="nombre_usuario" class= "form-control" placeholder="Escriba el nombre">
-                    {!! $errors->first('nombre_usuario', '<small>:message</small><br>') !!}
+                    <input type="text" name="name" id="name" class= "form-control" placeholder="Escriba el nombre">
+                    {!! $errors->first('name', '<small>:message</small><br>') !!}
             </div>
 
             <div class="form-group">
                 <label>Apellido:</label>
-                    <input type="text" name="apellido" id="apellido" class= "form-control" placeholder="Escriba los apellidos">
-                    {!! $errors->first('apellido', '<small>:message</small><br>') !!}
+                    <input type="text" name="last_name" id="last_name" class= "form-control" placeholder="Escriba los apellidos">
+                    {!! $errors->first('last_name', '<small>:message</small><br>') !!}
             </div>
 
             <div class="form-group">
                 <label>Contraseña:</label>
-                    <input type="password" name="contraseña" id="contraseña" class= "form-control" placeholder="Escriba la contraseña">
-                    {!! $errors->first('contraseña', '<small>:message</small><br>') !!}
+                    <input type="password" name="password" id="password" class= "form-control" placeholder="Escriba la contraseña">
+                    {!! $errors->first('password', '<small>:message</small><br>') !!}
             </div>
 
             <div class="form-group">
                 <label>Correo Electronico:</label>
-                    <input type="email" name="correo_electronico" id="correo_electronico" class="form-control" placeholder="Ej.:usuario@servidor.com">
-                    {!! $errors->first('correo_electronico', '<small>:message</small><br>') !!}
+                    <input type="email" name="email" id="email" class="form-control" placeholder="Ej.:usuario@servidor.com">
+                    {!! $errors->first('email', '<small>:message</small><br>') !!}
             </div>
 
             <div class="form-group">
                 <label>Dirección:</label>
-                    <input type="text" name="direccion" id="direccion" class= "form-control" placeholder="Escriba la direccion">
-                    {!! $errors->first('direccion', '<small>:message</small><br>') !!}
+                    <input type="text" name="address" id="address" class= "form-control" placeholder="Escriba la direccion">
+                    {!! $errors->first('address', '<small>:message</small><br>') !!}
             </div>
 
             <div class="form-group">
                 <label>Teléfono:</label>
-                    <input type="text" name="telefono" id="telefono" class= "form-control" placeholder="Escriba el número de telefono">
-                    {!! $errors->first('telefono', '<small>:message</small><br>') !!}
+                    <input type="text" name="telephone" id="telephone" class= "form-control" placeholder="Escriba el número de telefono">
+                    {!! $errors->first('telephone', '<small>:message</small><br>') !!}
             </div>
 
             <div class="form-group">
                 <label>Tipo:</label>
-                    <select name="tipo" id="tipo">
+                    <select name="role" id="role">
                         <option value="usu">Usuario</option>
                         <option value="admin">Administrador</option>
                     </select>
-                    {!! $errors->first('tipo', '<small>:message</small><br>') !!}
+                    {!! $errors->first('role', '<small>:message</small><br>') !!}
             </div>
       </div>
       <div class="modal-footer">
@@ -209,33 +209,32 @@
         <table id="usuarios" class="display nowrap" style="width:100%">
             <thead>
             <tr>
+                <th>Acciones</th>
                 <th>ID</th>
                 <th>Nombre</th>
                 <th>Apellidos</th>
-               	<!-- <th>Contraseña</th> -->
+               	<!--<th>Contraseña</th>-->
                 <th>Correo Electrónico</th>
                	<th>Dirección</th>
                 <th>Teléfono</th>
                 <th>Tipo</th>
-                <th>Acciones </th>
-
             </tr>
             </thead>
             <tbody>
                 @foreach($usuarios as $usuario)
                 <tr>
-                    <td>{{$usuario->id}}</td>
-                    <td>{{$usuario->name}}</td>
-                    <td>{{$usuario->last_name}}</td>
-                   	<!-- <td>{{$usuario->password}}</td> -->
-                    <td>{{$usuario->email}}</td>
-                   	<td>{{$usuario->address}}</td>
-                    <td>{{$usuario->telephone}}</td>
-                    <td>{{$usuario->role}}</td>
                     <td>
                         <a href="#" class="btn btn-success edit">Editar</a>
                         <a href="#" class="btn btn-danger delete">Borrar</a>
                     </td>
+                    <td>{{$usuario->id}}</td>
+                    <td>{{$usuario->name}}</td>
+                    <td>{{$usuario->last_name}}</td>
+                   	<!--<td>{{$usuario->password}}</td> -->
+                    <td>{{$usuario->email}}</td>
+                   	<td>{{$usuario->address}}</td>
+                    <td>{{$usuario->telephone}}</td>
+                    <td>{{$usuario->role}}</td>
                 </tr>
                 @endforeach
             </tbody>
@@ -274,13 +273,13 @@
                         console.log(data);
 
                         $('#id').val(data[1]);
-                        $('#nombre_usuario').val(data[2]);
-                        $('#apellido').val(data[3]);
-                        $('#contraseña').val(data[4]);
-                        $('#correo_electronico').val(data[5]);
-                        $('#direccion').val(data[6]);
-                        $('#telefono').val(data[7]);
-                        $('#tipo').val(data[8]);
+                        $('#name').val(data[2]);
+                        $('#last_name').val(data[3]);
+                        $('#password').val(data[4]);
+                        $('#email').val(data[5]);
+                        $('#address').val(data[6]);
+                        $('#telephone').val(data[7]);
+                        $('#role').val(data[8]);
 
                         $('#editForm').attr('route', 'editarUsu', + data[1]);
                         $('#editModal').modal('show');

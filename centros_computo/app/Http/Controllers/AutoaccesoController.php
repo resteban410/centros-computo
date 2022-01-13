@@ -3,17 +3,15 @@
 namespace App\Http\Controllers;
 use App\Models\AutoaccesoModel;
 use App\Models\EquipoModel;
-use App\Models\UsuarioModel;
 use App\Models\AlumnoModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-
 class AutoaccesoController extends Controller
 {
     public function index(){
-        $usuarios = DB::table('usuario')
-            ->select('usuario.*')
+        $usuarios = DB::table('users')
+            ->select('users.*')
             ->get();
     	$equipos = EquipoModel::all(); 
         $alumnos = AlumnoModel::all(); 
@@ -49,7 +47,6 @@ class AutoaccesoController extends Controller
 
         $autoacceso->save(); 
         return redirect()->route('autoaccesoP');
-        //return redirect('/autoaccesos')->with('Exitoso', 'Datos guardados'); 
     }
 
     public function edit(Request $request){ 
@@ -78,7 +75,6 @@ class AutoaccesoController extends Controller
             'matricula_alumno' => $request->matricula_alumno]
         );
         return redirect()->route('autoaccesoP');
-        //return redirect('/autoaccesos')->with('Exitoso', 'Datos actualizados'); 
     }
 
     public function destroy(Request $request){
@@ -91,8 +87,6 @@ class AutoaccesoController extends Controller
    
         $autoacceso = DB::table('autoacceso')->where('folio', $folio)->delete();
         return redirect()->route('autoaccesoP');
-        //return redirect('/autoaccesos')->with('Exitoso', 'Datos eliminados'); 
-    
     }
 
 }

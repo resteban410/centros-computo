@@ -56,18 +56,18 @@ class UsuarioController extends Controller
             'telephone' => 'required',
             'role' => 'required'
         ]);
-        $id = $request->id;
 
-        $usuarios = DB::table('usuario')->where('id', $id)->update(
+        $id = $request->id;
+        $usuarios = DB::table('users')->where('id', $id)->update(
             ['id' => $request->id, 
-            'nombre_usuario' => $request->nombre_usuario,
-            'apellido' => $request->apellido,
-            'contraseña' => $request->contraseña,
-            'correo_electronico' => $request->correo_electronico,
-        	'direccion' => $request->direccion,
-        	'telefono' => $request->telefono,
-        	'tipo' => $request->tipo]
-        );
+            'name' => $request->name,
+            'last_name' => $request->last_name,
+            'password' => $request->password,
+            'email' => $request->email,
+        	'address' => $request->address,
+        	'telephone' => $request->telephone,
+        	'role' => $request->role
+            ]);
         return redirect()->route('usuariosP');
     }
 
@@ -80,7 +80,7 @@ class UsuarioController extends Controller
 
         $id = $request->id;
    
-        $usuario = DB::table('usuario')->where('id', $id)->delete();
+        $usuario = DB::table('users')->where('id', $id)->delete();
         return redirect()->route('usuariosP');
     }
 }

@@ -58,7 +58,7 @@
                 
                        <select name="usuario_id">
                        	@foreach($usuarios as $item)
-                       	  <option value="{{$item->id}}">{{$item->nombre_usuario}} - {{$item->apellido}}
+                       	  <option value="{{$item->id}}">{{$item->name}} - {{$item->last_name}}
                        	  </option>
                        	@endforeach 
                         </select>  
@@ -146,7 +146,7 @@
                 
                        <select name="usuario_id">
                        	@foreach($usuarios as $item)
-                       	  <option value="{{$item->id}}">{{$item->nombre_usuario}} - {{$item->apellido}}
+                       	  <option value="{{$item->id}}">{{$item->name}} - {{$item->last_name}}
                        	  </option>
                        	@endforeach 
                         </select>
