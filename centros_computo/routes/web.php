@@ -29,7 +29,7 @@ use App\Http\Controllers\ContactoController;
 //INDEX
 
 Route::get('/admin', HomeController::class) ->middleware('auth.admin')->name('index');
-Route::get('/general', HomeGenController::class) ->middleware('auth.user')->name('indexGeneral');
+Route::get('/general',[HomeController::class, 'index']) ->middleware('auth.user')->name('indexGeneral');
 Route::get('/consulta_de_adeudos', AdeudoGenController::class)->name('adeudos');
 
 //PAGINAS ADMINISTRADOR

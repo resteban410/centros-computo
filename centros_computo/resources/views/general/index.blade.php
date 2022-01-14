@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Title -->
-    <title>Centros Computo - SJCH - Administrador</title>
+    <title>Centros Computo - SJCH </title>
 
     <!-- Favicon -->
     <link rel="icon" href="img/core-img/favicon.png">
@@ -95,7 +95,7 @@
                             <!-- Nav Start -->
                             <div class="classynav">
                                 <ul id="nav">
-                                    <li class="active"><a href="{{route('indexGeneral')}}">Inicio</a></li>
+                                    <li class="active"><a href="{{route('home')}}">Inicio</a></li>
                                     <div class="btn-group">
                                     <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         Mi cuenta

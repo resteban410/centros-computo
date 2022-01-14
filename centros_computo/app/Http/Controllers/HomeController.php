@@ -23,7 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('general.index');
     }
     public function __invoke(){
         return view('admin.index');
