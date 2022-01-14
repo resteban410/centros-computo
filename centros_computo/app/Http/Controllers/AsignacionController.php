@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\PeriodoModel;
 use App\Models\LaboratorioModel;
 use App\Models\AsignacionModel;
-use App\Models\UsuarioModel;
 use App\Models\UsuHoraModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -17,15 +16,15 @@ class AsignacionController extends Controller
     	$laboratorios = LaboratorioModel::all();
     	$asignaciones = AsignacionModel::all();
     	$usoHora = UsuHoraModel::all();
-		$usuarios = DB::table('usuario')
-            ->select('usuario.*')
+		$usuarios = DB::table('users')
+            ->select('users.*')
             ->get();
 		$data = DB::table('usuario_asignacion')
 			->join('asignacion', 'usuario_asignacion.id_asignacion', '=', 'asignacion.num_asignacion')
-			->join('usuario', 'usuario_asignacion.id_usuario', '=', 'usuario.id')
+			->join('users', 'usuario_asignacion.id_usuario', '=', 'users.id')
 			->join('laboratorio', 'asignacion.laboratorio_lab_clave', '=', 'laboratorio.lab_clave')
 			->join('periodo', 'asignacion.periodo_id_periodo', '=', 'periodo.id_periodo')
-			->select('asignacion.*', 'usuario.nombre_usuario', 'laboratorio.nombre_laboratorio', 'periodo.nombre_periodo')
+			->select('asignacion.*', 'users.name', 'laboratorio.nombre_laboratorio', 'periodo.nombre_periodo')
 			->get();
 
     	$nombrePag = "Asignación";

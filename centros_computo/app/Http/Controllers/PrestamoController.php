@@ -12,8 +12,8 @@ class PrestamoController extends Controller
 {
    public function index(){
 	   	$laboratorios = LaboratorioModel::all();
-		$usuarios = DB::table('usuario')
-		->select('usuario.*')
+		$usuarios = DB::table('users')
+		->select('users.*')
 		->get();
 
 	   	$nombrePag = "Préstamos";

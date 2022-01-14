@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 use App\Models\MateriaModel;
 use App\Models\MateriaUsuarioModel;
-use App\Models\UsuarioModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -15,10 +14,9 @@ class MateriaController extends Controller
         $nombrePag =  "Materias";
         $materias = MateriaModel::all(); 
         $matUso = MateriaUsuarioModel::all();
-        //$usuarios = UsuarioModel::all();
 
-        $usuarios = DB::table('usuario')
-            ->select('usuario.*')
+        $usuarios = DB::table('users')
+            ->select('users.*')
             ->get();
         return view('admin.materias',compact('materias', 'nombrePag', 'matUso', 'usuarios')); 
     }

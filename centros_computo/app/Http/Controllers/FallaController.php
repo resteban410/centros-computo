@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 use App\Models\FallaModel;
 use App\Models\EquipoModel;
-use App\Models\UsuarioModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -11,8 +10,8 @@ class FallaController extends Controller
 {
     public function index(){
     	$equipos = EquipoModel::all(); 
-        $usuarios = DB::table('usuario')
-            ->select('usuario.*')
+        $usuarios = DB::table('users')
+            ->select('users.*')
             ->get();
     	$nombrePag =  "Fallas";
     	$fallas = FallaModel::all();

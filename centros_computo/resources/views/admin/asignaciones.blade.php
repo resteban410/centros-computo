@@ -141,7 +141,7 @@
                     <td>{{$dat->num_asignacion}} - {{$dat->nombre_periodo}}</td>
                     <td>{{$dat->fecha}}</td>
                     <td>{{$dat->hora_inicio}}hrs - {{$dat->hora_termino}}hrs</td>
-                    <td>{{$dat->nombre_usuario}}</td>
+                    <td>{{$dat->name}}</td>
                     <td>{{$dat->nombre_laboratorio}}</td>
                 </tr>
                 @endforeach

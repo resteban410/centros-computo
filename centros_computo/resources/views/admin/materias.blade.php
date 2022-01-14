@@ -145,8 +145,8 @@
                 @csrf
             <div class="form-group">
                 <label>Clave:</label>
-                    <input type="text" name="clave" class= "form-control" placeholder="Asignado automaticamente" readonly>
-                    {!! $errors->first('clave', '<small>:message</small><br>') !!}
+                    <input type="text" name="id_mat_uso" class= "form-control" placeholder="Asignado automaticamente" readonly>
+                    {!! $errors->first('id_mat_uso', '<small>:message</small><br>') !!}
             </div>
 
             <div class="form-group">
@@ -163,7 +163,7 @@
                 <label>Usuario:</label>
                     <select name="usu_id_usu">
                         @foreach($usuarios as $usu)
-                          <option value="{{$usu->id}}">{{$usu->nombre_usuario}} - {{$usu->apellido}}
+                          <option value="{{$usu->id}}">{{$usu->name}} - {{$usu->last_name}}
                           </option>
                         @endforeach 
                     </select>
@@ -197,8 +197,8 @@
 
             <div class="form-group">
                 <label>Clave:</label>
-                    <input type="text" name="clave" class= "form-control" placeholder="Escriba la clave">
-                    {!! $errors->first('clave', '<small>:message</small><br>') !!}
+                    <input type="text" name="id_mat_uso" class= "form-control" placeholder="Escriba la clave">
+                    {!! $errors->first('id_mat_uso', '<small>:message</small><br>') !!}
             </div>     
       </div>
       <div class="modal-footer">
@@ -382,9 +382,9 @@
                         var data = table.row($tr).data();
                         console.log(data);
 
-                        $('#clave').val(data[0]);
+                        $('#id_mat_uso').val(data[0]);
 
-                        $('#deleteForm1').attr('route', 'borrarMatUso', + data[0]);
+                        $('#deleteForm1').attr('route', 'borrarMatUsoS', + data[0]);
                         $('#deleteModal1').modal('show');
                     });
                     //end delete record 
