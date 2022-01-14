@@ -95,7 +95,7 @@
                             <!-- Nav Start -->
                             <div class="classynav">
                                 <ul id="nav">
-                                    <li class="active"><a href="{{route('indexGeneral')}}">Inicio</a></li>
+                                    <li class="active"><a href="{{route('principal')}}">Inicio</a></li>
                                 </ul>
                         </div>
                     </nav>

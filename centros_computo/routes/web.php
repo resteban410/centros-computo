@@ -140,7 +140,6 @@ Route::put('/perdidas_editar', [PerdidaFallaController::class,'editPerdida'])->n
 Route::delete('/fallas_borrar', [PerdidaFallaController::class, 'destroyFalla'])->name('FallaC');
 Route::delete('/perdidas_borrar', [PerdidaFallaController::class, 'destroyPerdida'])->name('PerdidaC');
 
-//PAGINAS PENDIENTES
 //Rutas de la pagina asignacion
 
 Route::get('asignaciones', [AsignacionController::class,'index'])->middleware('auth.admin')->name('asignacionP');

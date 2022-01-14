@@ -45,7 +45,7 @@
             <div class="form-group">
                 <select name="usuario_id_usuario">
                 @foreach($usuarios as $item)
-                    <option value="{{$item->id}}">{{$item->nombre_usuario}} - {{$item->apellido}}
+                    <option value="{{$item->id}}">{{$item->name}} - {{$item->last_name}}
                     </option>
                 @endforeach 
                 </select>
@@ -104,7 +104,7 @@
                 <label>Usuario:</label>
                 <select name="usuario_id_usuario">
                 @foreach($usuarios as $item)
-                    <option value="{{$item->id}}">{{$item->nombre_usuario}} - {{$item->apellido}}
+                    <option value="{{$item->id}}">{{$item->name}} - {{$item->last_name}}
                     </option>
                 @endforeach 
                 </select>
