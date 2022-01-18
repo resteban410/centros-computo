@@ -38,6 +38,7 @@ class PrestamoController extends Controller
 	   	$prestamos->start = $request->start;
 	   	$prestamos->end = $request->end;
 	   	$prestamos->title = $request->title;
+		$prestamos->descripcion = $request->descripcion;
 	   	$prestamos->labora_lab_clave = $request->labora_lab_clave;
 		$prestamos->usuario_usu_id = $request->usuario_usu_id;	
 	   	$prestamos->save();
@@ -57,6 +58,7 @@ class PrestamoController extends Controller
     		'start' => $request->start,
     		'end' => $request->end,
     		'title' => $request->title,
+			'descripcion' => $request->descripcion,
 			'labora_lab_clave' => $request->labora_lab_clave,
 			'usuario_usu_id' => $request->usuario_usu_id,	
     	]);

@@ -25,6 +25,7 @@ use App\Http\Controllers\PerdidaFallaController;
 use App\Http\Controllers\SoftwareGenController;
 use App\Http\Controllers\AdeudoGenController;
 use App\Http\Controllers\ContactoController;
+use App\Http\Controllers\PrestamoGenController;
 
 //INDEX
 
@@ -146,6 +147,8 @@ Route::get('asignaciones', [AsignacionController::class,'index'])->middleware('a
 Route::post('alta_asignacion', [AsignacionController::class, 'store'])->name('altaAsignacion');
 Route::delete('borrar_asignacion', [AsignacionController::class, 'destroy'])->name('borrarAsignacion');
 
+//Rutas de la pagina prestamo administrador
+
 Route::get('/prestamos', [PrestamoController::class,'index'])->name('prestamosP');
 Route::get('prestamos/show', [PrestamoController::class, 'show'])->name('showPrestamos');
 
@@ -153,6 +156,18 @@ Route::post('alta_prestamo', [PrestamoController::class, 'store'])->name('altaPr
 Route::post('editar_prestamo/{id}', [PrestamoController::class, 'edit'])->name('editarPrestamo');
 Route::post('actualizar_prestamo', [PrestamoController::class, 'update'])->name('actualizarPrestamo');
 Route::post('borrar_prestamo/{id}', [PrestamoController::class, 'destroy'])->name('borrarPrestamo');
+
+//Rutas de la pagina de prestamos general
+
+Route::get('/prestamoss', [PrestamoGenController::class,'index'])->name('prestamosPG');
+Route::get('prestamos/showw', [PrestamoGenController::class, 'show'])->name('showPrestamosG');
+
+Route::post('alta_prestamos', [PrestamoGenController::class, 'store'])->name('altaPrestamoG');
+Route::post('editar_prestamos/{id}', [PrestamoGenController::class, 'edit'])->name('editarPrestamoG');
+Route::post('actualizar_prestamos', [PrestamoGenController::class, 'update'])->name('actualizarPrestamoG');
+Route::post('borrar_prestamos/{id}', [PrestamoGenController::class, 'destroy'])->name('borrarPrestamoG');
+
+//rutas de login
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Auth::routes();
