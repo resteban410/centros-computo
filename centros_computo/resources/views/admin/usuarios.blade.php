@@ -105,12 +105,6 @@
             </div>
 
             <div class="form-group">
-                <label>Contraseña:</label>
-                    <input type="password" name="password" id="password" class= "form-control" placeholder="Escriba la contraseña">
-                    {!! $errors->first('password', '<small>:message</small><br>') !!}
-            </div>
-
-            <div class="form-group">
                 <label>Correo Electronico:</label>
                     <input type="email" name="email" id="email" class="form-control" placeholder="Ej.:usuario@servidor.com">
                     {!! $errors->first('email', '<small>:message</small><br>') !!}
@@ -213,7 +207,6 @@
                 <th>ID</th>
                 <th>Nombre</th>
                 <th>Apellidos</th>
-               	<!--<th>Contraseña</th>-->
                 <th>Correo Electrónico</th>
                	<th>Dirección</th>
                 <th>Teléfono</th>
@@ -230,7 +223,6 @@
                     <td>{{$usuario->id}}</td>
                     <td>{{$usuario->name}}</td>
                     <td>{{$usuario->last_name}}</td>
-                   	<!--<td>{{$usuario->password}}</td> -->
                     <td>{{$usuario->email}}</td>
                    	<td>{{$usuario->address}}</td>
                     <td>{{$usuario->telephone}}</td>
@@ -275,11 +267,10 @@
                         $('#id').val(data[1]);
                         $('#name').val(data[2]);
                         $('#last_name').val(data[3]);
-                        $('#password').val(data[4]);
-                        $('#email').val(data[5]);
-                        $('#address').val(data[6]);
-                        $('#telephone').val(data[7]);
-                        $('#role').val(data[8]);
+                        $('#email').val(data[4]);
+                        $('#address').val(data[5]);
+                        $('#telephone').val(data[6]);
+                        $('#role').val(data[7]);
 
                         $('#editForm').attr('route', 'editarUsu', + data[1]);
                         $('#editModal').modal('show');
