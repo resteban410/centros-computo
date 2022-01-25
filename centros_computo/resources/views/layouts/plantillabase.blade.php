@@ -110,6 +110,9 @@
                                     <li><a href="{{route('laboratoriosP')}}">Laboratorios</a></li>
                                     <li><a href="{{route('usuariosP')}}">Usuarios</a></li>
                                     <li><a href="{{route('materiasP')}}">Materias</a></li>
+                                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Mi cuenta
+                                    </button>
                                 </ul>
 
 

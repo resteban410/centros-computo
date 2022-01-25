@@ -36,21 +36,21 @@ Route::get('/consulta_de_adeudos', AdeudoGenController::class)->name('adeudos');
 //PAGINAS ADMINISTRADOR
 
 //Rutas de la pagina alumnos
-Route::get('/alumnos',[AlumnoController::class,'alumShow'])->name('alumnosP'); // metodo de select
+Route::get('/alumnos',[AlumnoController::class,'alumShow'])->middleware('auth.admin')->name('alumnosP'); // metodo de select
 Route::post('alta_alumno', [AlumnoController::class, 'store'])->name('altalum'); // metodo de create
 Route::put('editar_alumno', [AlumnoController::class, 'edit'])->name('editaralumno'); // editar registro
 Route::delete('borrar_alumno', [AlumnoController::class, 'destroy'])->name('borraralumno'); // borrar registro
 
 //Rutas de la pagina laboratorio
 
-Route::get('laboratorios', [LaboratorioController::class,'index'])->name('laboratoriosP');
+Route::get('laboratorios', [LaboratorioController::class,'index'])->middleware('auth.admin')->name('laboratoriosP');
 Route::post('alta_laboratorio', [LaboratorioController::class, 'store'])->name('altaLab');
 Route::put('editar_laboratorio', [LaboratorioController::class, 'edit'])->name('editarLab');
 Route::delete('borrar_laboratorio', [LaboratorioController::class, 'destroy'])->name('borrarLab');
 
 //Rutas de la pagina materia
 
-Route::get('materias', [MateriaController::class,'index'])->name('materiasP');
+Route::get('materias', [MateriaController::class,'index'])->middleware('auth.admin')->name('materiasP');
 Route::post('alta_materia', [MateriaController::class, 'store'])->name('altaMat');
 Route::put('editar_materia', [MateriaController::class, 'edit'])->name('editarMat');
 Route::delete('borrar_materia', [MateriaController::class, 'destroy'])->name('borrarMat');
@@ -71,35 +71,35 @@ Route::delete('borrar_equipo', [EquipoController::class, 'destroy'])->name('borr
 
 //Rutas de la pagina autoacceso
 
-Route::get('autoaccesos', [AutoaccesoController::class,'index'])->name('autoaccesoP');
+Route::get('autoaccesos', [AutoaccesoController::class,'index'])->middleware('auth.admin')->name('autoaccesoP');
 Route::post('alta_autoacceso', [AutoaccesoController::class, 'store'])->name('altaAuto');
 Route::put('editar_autoacceso', [AutoaccesoController::class, 'edit'])->name('editarAuto');
 Route::delete('borrar_autoacceso', [AutoaccesoController::class, 'destroy'])->name('borrarAuto');
 
 //Rutas de la pagina de adeudo
 
-Route::get('adeudos', [AdeudoController::class,'index'])->name('adeudoP');
+Route::get('adeudos', [AdeudoController::class,'index'])->middleware('auth.admin')->name('adeudoP');
 Route::post('alta_adeudo', [AdeudoController::class, 'store'])->name('altaAde');
 Route::put('editar_adeudo', [AdeudoController::class, 'edit'])->name('editarAde');
 Route::delete('borrar_adeudo', [AdeudoController::class, 'destroy'])->name('borrarAde');
 
 //Rutas de la pagina de fallas
 
-Route::get('fallas', [FallaController::class,'index'])->name('fallaP');
+Route::get('fallas', [FallaController::class,'index'])->middleware('auth.admin')->name('fallaP');
 Route::post('alta_falla', [FallaController::class, 'store'])->name('altaFalla');
 Route::put('editar_falla', [FallaController::class, 'edit'])->name('editarFalla');
 Route::delete('borrar_falla', [FallaController::class, 'destroy'])->name('borrarFalla');
 
 //Rutas de la pagina de perdidas
 
-Route::get('perdidas', [PerdidaController::class,'index'])->name('perdidaP');
+Route::get('perdidas', [PerdidaController::class,'index'])->middleware('auth.admin')->name('perdidaP');
 Route::post('alta_perdida', [PerdidaController::class, 'store'])->name('altaPerdida');
 Route::put('editar_perdida', [PerdidaController::class, 'edit'])->name('editarPerdida');
 Route::delete('borrar_perdida', [PerdidaController::class, 'destroy'])->name('borrarPerdida');
 
 
 //Rutas de la pagina de software
-Route::get('software', [SoftwareController::class,'index'])->name('softwareP');
+Route::get('software', [SoftwareController::class,'index'])->middleware('auth.admin')->name('softwareP');
 Route::post('alta_software', [SoftwareController::class, 'store'])->name('altaSoftware');
 Route::put('editar_software', [SoftwareController::class, 'edit'])->name('editarSoftware');
 Route::delete('borrar_software', [SoftwareController::class, 'destroy'])->name('borrarSoftware');
@@ -117,13 +117,13 @@ Route::put('editar_MatUsu', [MateriaUsuarioController::class, 'edit'])->name('ed
 Route::delete('borrar_MatUsu', [MateriaUsuarioController::class, 'destroy'])->name('borrarMatUsu');
 
 //Rutas de la pagina periodo
-Route::get('periodos', [PeriodoController::class,'index'])->name('periodoP');
+Route::get('periodos', [PeriodoController::class,'index'])->middleware('auth.admin')->name('periodoP');
 Route::post('alta_periodo', [PeriodoController::class, 'store'])->name('altaPeriodo');
 Route::put('editar_periodo', [PeriodoController::class, 'edit'])->name('editarPeriodo');
 Route::delete('borrar_periodo', [PeriodoController::class, 'destroy'])->name('borrarPeriodo');
 
 //Rutas de la pagina de marcas
-Route::get('marcas', [MarcaController::class,'index'])->name('marcaP');
+Route::get('marcas', [MarcaController::class,'index'])->middleware('auth.admin')->name('marcaP');
 Route::post('alta_marca', [MarcaController::class, 'store'])->name('altaMarca');
 Route::put('editar_marca', [MarcaController::class, 'edit'])->name('editarMarca');
 Route::delete('borrar_marca', [MarcaController::class, 'destroy'])->name('borrarMarca');
@@ -149,7 +149,7 @@ Route::delete('borrar_asignacion', [AsignacionController::class, 'destroy'])->na
 
 //Rutas de la pagina prestamo administrador
 
-Route::get('/prestamos', [PrestamoController::class,'index'])->name('prestamosP');
+Route::get('/prestamos', [PrestamoController::class,'index'])->middleware('auth.admin')->name('prestamosP');
 Route::get('prestamos/show', [PrestamoController::class, 'show'])->name('showPrestamos');
 
 Route::post('alta_prestamo', [PrestamoController::class, 'store'])->name('altaPrestamo');
