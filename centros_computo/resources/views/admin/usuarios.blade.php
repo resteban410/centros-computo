@@ -16,6 +16,7 @@
             <div class="form-group">
                 <label>ID:</label>
                     <input type="text" name="id" class= "form-control" placeholder="Escriba la clave">
+                    <label for="exampleInputEmail1">Email address</label>
                     {!! $errors->first('id', '<small>:message</small><br>') !!}
             </div>
 
@@ -33,7 +34,7 @@
 
             <div class="form-group">
                 <label>Contraseña:</label>
-                    <input type="password" name="password" class= "form-control" placeholder="Escriba la contraseña">
+                    <input type="password"  name="password" class= "form-control" placeholder="Escriba la contraseña">
                     {!! $errors->first('password', '<small>:message</small><br>') !!}
             </div>
 

@@ -57,7 +57,7 @@ Route::delete('borrar_materia', [MateriaController::class, 'destroy'])->name('bo
 
 //Rutas de la pagina usuario
 
-Route::get('usuarios', [UsuarioController::class,'index'])->middleware('auth.admin')->name('usuariosP');
+Route::get('usuarios', [UsuarioController::class,'index'])->name('usuariosP');
 Route::post('alta_usuario', [UsuarioController::class, 'store'])->name('altaUsu');
 Route::put('editar_usuario', [UsuarioController::class, 'edit'])->name('editarUsu');
 Route::delete('borrar_usuario', [UsuarioController::class, 'destroy'])->name('borrarUsu');

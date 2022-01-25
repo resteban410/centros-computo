@@ -201,6 +201,17 @@
                                 <div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
                                     <input type="email" name="message-email" class="form-control mb-30" placeholder="Tu correo electrónico">
                                 </div>
+                                <div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
+                                    <input type="text" name="message-name" class="form-control mb-30" placeholder="Asunto">
+                                </div>
+                                <div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
+                                <select class="form-control mb-30 form-select-lg mb-3" aria-label="Default select example">
+                                <option selected>Selecciona el servicio</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                                </select>
+                                </div>
                                 <div class="col-12 wow fadeInUp" data-wow-delay="100ms">
                                     <textarea name="message" class="form-control mb-30" placeholder="Tu mensaje"></textarea>
                                 </div>
