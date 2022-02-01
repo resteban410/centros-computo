@@ -16,7 +16,6 @@
             <div class="form-group">
                 <label>ID:</label>
                     <input type="text" name="id" class= "form-control" placeholder="Escriba la clave">
-                    <label for="exampleInputEmail1">Email address</label>
                     {!! $errors->first('id', '<small>:message</small><br>') !!}
             </div>
 
