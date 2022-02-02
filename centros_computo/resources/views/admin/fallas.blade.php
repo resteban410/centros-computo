@@ -20,7 +20,7 @@
 
       		<div class="form-group">
       			<label>Fecha Reporte:</label>
-      			<input type="date" name="fecha_reporte" id="fecha_reporte" class= "form-control">
+      			<input type="date" name="fecha_reporte" id="fecha_reporte" class= "form-control" required="">
                 {!! $errors->first('fecha_reporte', '<small>:message</small><br>') !!}
       		</div>
 
@@ -90,7 +90,7 @@
 
       		<div class="form-group">
       			<label>Fecha Reporte:</label>
-      			<input type="date" name="fecha_reporte" id="fecha_reporte" class= "form-control">
+      			<input type="date" name="fecha_reporte" id="fecha_reporte" class= "form-control" required="">
                 {!! $errors->first('fecha_reporte', '<small>:message</small><br>') !!}
       		</div>
 
@@ -157,7 +157,7 @@
 
             <div class="form-group">
                 <label>Folio:</label>
-                    <input type="text" name="clave_fallas" id="clave_fallas" class= "form-control" placeholder="Escriba el número de folio">
+                    <input type="text" name="clave_fallas" id="clave_fallas" class="form-control" placeholder="Escriba el número de folio" required="">
                     {!! $errors->first('clave_fallas', '<small>:message</small><br>') !!}  
             </div>      
       </div>

@@ -21,13 +21,13 @@
 
       			<div class="form-group">
                 <label>Fecha:</label>
-                    <input type="date" name="fecha" id="fecha" class= "form-control">
+                    <input type="date" name="fecha" id="fecha" class= "form-control" required="">
                     {!! $errors->first('fecha', '<small>:message</small><br>') !!}
             </div>
 
             <div class="form-group">
                 <label>Hora:</label>
-                    <input type="time" name="hora" class= "form-control">
+                    <input type="time" name="hora" class="form-control" required="">
                     {!! $errors->first('hora', '<small>:message</small><br>') !!}
             </div>
 
@@ -102,19 +102,19 @@
 
             <div class="form-group">
                 <label>Fecha:</label>
-                    <input type="text" name="fecha "id="fecha"></p>
+                    <input type="text" name="fecha "id="fecha" required=""></p>
                     {!! $errors->first('fecha', '<small>:message</small><br>') !!}
             </div>
 
             <div class="form-group">
                 <label>Hora:</label>
-                    <input type="time" name="hora" id="hora" class= "form-control">
+                    <input type="time" name="hora" id="hora" class= "form-control" required="">
                     {!! $errors->first('hora', '<small>:message</small><br>') !!}
             </div>
 
             <label>Descripcion:</label>
             <div class="form-group">                
-                    <textarea name="descripcion" id="descripcion" rows="5" cols="40"></textarea>
+                    <textarea name="descripcion" id="descripcion" rows="5" cols="40" required=""></textarea>
                     {!! $errors->first('descripcion', '<small>:message</small><br>') !!}
             </div>
 
@@ -180,7 +180,7 @@
 
             <div class="form-group">
                 <label>Folio:</label>
-                    <input type="text" name="folio" id="folio" class= "form-control" placeholder="Escriba el número de folio">
+                    <input type="text" name="folio" id="folio" class= "form-control" placeholder="Escriba el número de folio" required="">
                     {!! $errors->first('folio', '<small>:message</small><br>') !!}  
             </div>      
       </div>

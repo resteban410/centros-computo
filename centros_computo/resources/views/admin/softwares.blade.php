@@ -15,13 +15,13 @@
                 @csrf
             <div class="form-group">
                 <label>Clave de producto:</label>
-                    <input type="text" name="clave" class= "form-control" placeholder="Escriba la clave">
+                    <input type="text" name="clave" class= "form-control" placeholder="Escriba la clave" required="">
                     {!! $errors->first('clave', '<small>:message</small><br>') !!}
             </div>
 
             <div class="form-group">
                 <label>Nombre:</label>
-                    <input type="text" name="nombre" class= "form-control" placeholder="Escriba el nombre">
+                    <input type="text" name="nombre" class= "form-control" placeholder="Escriba el nombre" required="">
                     {!! $errors->first('nombre', '<small>:message</small><br>') !!}
             </div>
             <div class="form-group">
@@ -60,7 +60,7 @@
 
             <div class="form-group">
                 <label>Nombre:</label>
-                    <input type="text" name="nombre" id="nombre" class= "form-control" placeholder="Escriba el nombre">
+                    <input type="text" name="nombre" id="nombre" class= "form-control" placeholder="Escriba el nombre" required="">
                     {!! $errors->first('nombre', '<small>:message</small><br>') !!}
             </div>
             <div class="form-group">
@@ -96,7 +96,7 @@
 
             <div class="form-group">
                 <label>Clave de producto:</label>
-                    <input type="text" name="clave" class= "form-control" placeholder="Escriba la clave">
+                    <input type="text" name="clave" class= "form-control" placeholder="Escriba la clave" required="">
                     {!! $errors->first('clave', '<small>:message</small><br>') !!}
             </div>     
       </div>
@@ -175,7 +175,7 @@
 
             <div class="form-group">
                 <label>Clave:</label>
-                    <input type="text" name="clave" class= "form-control" placeholder="Escriba la clave">
+                    <input type="text" name="clave" class= "form-control" placeholder="Escriba la clave" required="">
                     {!! $errors->first('clave', '<small>:message</small><br>') !!}
             </div>     
       </div>

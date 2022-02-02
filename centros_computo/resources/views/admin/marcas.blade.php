@@ -21,7 +21,7 @@
 
             <div class="form-group">
                 <label>Nombre:</label>
-                    <input type="text" name="nombre_marca" class= "form-control" placeholder="Escriba el nombre">
+                    <input type="text" name="nombre_marca" class= "form-control" placeholder="Escriba el nombre" required="">
                     {!! $errors->first('nombre_marca', '<small>:message</small><br>') !!}
             </div>
       </div>
@@ -55,7 +55,7 @@
 
             <div class="form-group">
                 <label>Nombre:</label>
-                    <input type="text" name="nombre_marca" id="nombre_marca" class= "form-control" placeholder="Escriba el nombre">
+                    <input type="text" name="nombre_marca" id="nombre_marca" class= "form-control" placeholder="Escriba el nombre" required="">
                     {!! $errors->first('nombre_marca', '<small>:message</small><br>') !!}
             </div>
       </div>
@@ -86,7 +86,7 @@
 
             <div class="form-group">
                 <label>ID Marca:</label>
-                    <input type="text" name="id_marca" id="id_marca" class= "form-control" placeholder="Escribe el ID del periodo">
+                    <input type="text" name="id_marca" id="id_marca" class= "form-control" placeholder="Escribe el ID del periodo" required="">
                     {!! $errors->first('id_marca', '<small>:message</small><br>') !!}
             </div>     
       </div>

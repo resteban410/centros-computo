@@ -21,17 +21,17 @@
 
             <div class="form-group">
                 <label>Nombre:</label>
-                    <input type="text" name="nombre_periodo" class= "form-control" placeholder="Escriba el nombre">
+                    <input type="text" name="nombre_periodo" class= "form-control" placeholder="Escriba el nombre" required="">
                     {!! $errors->first('nombre_periodo', '<small>:message</small><br>') !!}
             </div>
             <div class="form-group">
                 <label>Fecha de Inicio:</label>
-                    <input type="date" name="fecha_inicio" id="fecha_inicio" rows="5" cols="40">
+                    <input type="date" name="fecha_inicio" id="fecha_inicio" rows="5" cols="40" required="">
                     {!! $errors->first('fecha_inicio', '<small>:message</small><br>') !!}
             </div>
             <div class="form-group">
                 <label>Fecha de Termino:</label>
-                    <input type="date" name="fecha_termino" id="fecha_termino" rows="5" cols="40">
+                    <input type="date" name="fecha_termino" id="fecha_termino" rows="5" cols="40" required=""> 
                     {!! $errors->first('fecha_termino', '<small>:message</small><br>') !!}
             </div>
       </div>
@@ -65,17 +65,17 @@
 
             <div class="form-group">
                 <label>Nombre:</label>
-                    <input type="text" name="nombre_periodo" id="nombre_periodo" class= "form-control" placeholder="Escriba el nombre">
+                    <input type="text" name="nombre_periodo" id="nombre_periodo" class= "form-control" placeholder="Escriba el nombre" required="">
                     {!! $errors->first('nombre_periodo', '<small>:message</small><br>') !!}
             </div>
             <div class="form-group">
                 <label>Fecha de Inicio:</label>
-                    <input type="date" name="fecha_inicio" id="fecha_inicio" rows="5" cols="40">
+                    <input type="date" name="fecha_inicio" id="fecha_inicio" rows="5" cols="40" required="">
                     {!! $errors->first('fecha_inicio', '<small>:message</small><br>') !!}
             </div>
             <div class="form-group">
                 <label>Fecha de Termino:</label>
-                    <input type="date" name="fecha_termino" id="fecha_termino" rows="5" cols="40">
+                    <input type="date" name="fecha_termino" id="fecha_termino" rows="5" cols="40" required="">
                     {!! $errors->first('fecha_termino', '<small>:message</small><br>') !!}
             </div>
       </div>
@@ -106,7 +106,7 @@
 
             <div class="form-group">
                 <label>ID Periodo:</label>
-                    <input type="text" name="id_periodo" id="id_periodo" class= "form-control" placeholder="Escribe el ID del periodo">
+                    <input type="text" name="id_periodo" id="id_periodo" class= "form-control" placeholder="Escribe el ID del periodo" required="">
                     {!! $errors->first('id_periodo', '<small>:message</small><br>') !!}
             </div>     
       </div>

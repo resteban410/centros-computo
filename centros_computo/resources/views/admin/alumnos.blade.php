@@ -15,19 +15,19 @@
                 @csrf
             <div class="form-group">
                 <label>Matricula:</label>
-                    <input type="text" name="matricula" class= "form-control" placeholder="Escriba la matricula">
+                    <input type="text" name="matricula" class= "form-control" placeholder="Escriba la matricula" required="" pattern="[0-9]+">
                     {!! $errors->first('matricula', '<small>:message</small><br>') !!}
             </div>
 
             <div class="form-group">
                 <label>Nombre:</label>
-                    <input type="text" name="nombre" class= "form-control" placeholder="Escriba el nombre">
+                    <input type="text" name="nombre" class= "form-control" placeholder="Escriba el nombre" required="">
                     {!! $errors->first('nombre', '<small>:message</small><br>') !!}
             </div>
 
             <div class="form-group">
                 <label>Apellido:</label>
-                    <input type="text" name="apellido" class= "form-control" placeholder="Escriba los apellidos"> 
+                    <input type="text" name="apellido" class= "form-control" placeholder="Escriba los apellidos" required=""> 
                     {!! $errors->first('apellido', '<small>:message</small><br>') !!}
             </div>
 
@@ -43,7 +43,7 @@
 
             <div class="form-group">
                 <label>Correo Electronico:</label>
-                       <input type="email" name="correo_electronico" class="form-control" placeholder="Ej.:usuario@servidor.com">
+                       <input type="email" name="correo_electronico" class="form-control" placeholder="Ej.:usuario@servidor.com" required="">
                     {!! $errors->first('correo_electronico', '<small>:message</small><br>') !!}
             </div>  
       </div>
@@ -73,19 +73,19 @@
                 @method('PUT')
             <div class="form-group">
                 <label>Matricula:</label>
-                    <input type="text" name="matricula" id="matricula" class= "form-control" placeholder="Escriba la matricula">
+                    <input type="text" name="matricula" id="matricula" class= "form-control" placeholder="Escriba la matricula" required="" pattern="[0-9]+">
                     {!! $errors->first('matricula', '<small>:message</small><br>') !!}
             </div>
 
             <div class="form-group">
                 <label>Nombre:</label>
-                    <input type="text" name="nombre" id="nombre" class= "form-control" placeholder="Escriba el nombre">
+                    <input type="text" name="nombre" id="nombre" class= "form-control" placeholder="Escriba el nombre" required="">
                     {!! $errors->first('nombre', '<small>:message</small><br>') !!}
             </div>
 
             <div class="form-group">
                 <label>Apellido:</label>
-                    <input type="text" name="apellido" id="apellido" class= "form-control" placeholder="Escriba los apellidos"> 
+                    <input type="text" name="apellido" id="apellido" class= "form-control" placeholder="Escriba los apellidos" required=""> 
                     {!! $errors->first('apellido', '<small>:message</small><br>') !!}
             </div>
 
@@ -101,7 +101,7 @@
 
             <div class="form-group">
                 <label>Correo Electronico:</label>
-                       <input type="email" name="correo_electronico" id="correo_electronico" class="form-control" placeholder="Ej.:usuario@servidor.com">
+                       <input type="email" name="correo_electronico" id="correo_electronico" class="form-control" placeholder="Ej.:usuario@servidor.com" required="">
                        {!! $errors->first('correo_electronico', '<small>:message</small><br>') !!}
             </div>  
       </div>
@@ -134,7 +134,7 @@
 
             <div class="form-group">
                 <label>Matricula:</label>
-                    <input type="text" name="matricula" id="matricula" class= "form-control" placeholder="Escriba la matricula">
+                    <input type="text" name="matricula" id="matricula" class= "form-control" placeholder="Escriba la matricula" required="" pattern="[0-9]+">
                     {!! $errors->first('matricula', '<small>:message</small><br>') !!}
             </div>        
       </div>

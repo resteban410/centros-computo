@@ -20,24 +20,24 @@
 
             <div class="form-group">
                 <label>Hora de inicio:</label>
-                    <input type="time" name="hora_inicio" class= "form-control">
+                    <input type="time" name="hora_inicio" class= "form-control" required="">
                     {!! $errors->first('hora_inicio', '<small>:message</small><br>') !!}
             </div>
             <div class="form-group">
                 <label>Hora de termino:</label>
-                    <input type="time" name="hora_termino" class= "form-control">
+                    <input type="time" name="hora_termino" class= "form-control" required="">
                     {!! $errors->first('hora_termino', '<small>:message</small><br>') !!}
             </div>
 
 		      	<div class="form-group">
                 <label>Fecha:</label>
-                    <input type="date" name="fecha" id="fecha" class= "form-control">
+                    <input type="date" name="fecha" id="fecha" class= "form-control" required="">
                     {!! $errors->first('fecha', '<small>:message</small><br>') !!}
             </div>
 
             <div class="form-group">
                 <label>Actividad:</label>
-                    <input type="text" name="actividad" class= "form-control" placeholder="Describa la actividad a realizar">
+                    <input type="text" name="actividad" class= "form-control" placeholder="Describa la actividad a realizar" required="">
                     {!! $errors->first('actividad', '<small>:message</small><br>') !!}
             </div>
 
@@ -106,25 +106,25 @@
 
             <div class="form-group">
                 <label>Hora de inicio:</label>
-                    <input type="time" name="hora_inicio" id="hora_inicio" class= "form-control">
+                    <input type="time" name="hora_inicio" id="hora_inicio" class= "form-control" required="">
                     {!! $errors->first('hora_inicio', '<small>:message</small><br>') !!}
             </div>
 
             <div class="form-group">
                 <label>Hora de termino:</label>
-                    <input type="time" name="hora_termino" id="hora_termino" class= "form-control">
+                    <input type="time" name="hora_termino" id="hora_termino" class= "form-control" required="">
                     {!! $errors->first('hora_termino', '<small>:message</small><br>') !!}
             </div>
 
 			     <div class="form-group">
                 <label>Fecha:</label>
-                    <input type="date" name="fecha" id="fecha" class= "form-control">
+                    <input type="date" name="fecha" id="fecha" class= "form-control" required="">
                     {!! $errors->first('fecha', '<small>:message</small><br>') !!}
             </div>
 
             <div class="form-group">
                 <label>Actividad:</label>
-                    <input type="text" name="actividad" id="actividad" class= "form-control" placeholder="Describa la actividad a realizar">
+                    <input type="text" name="actividad" id="actividad" class= "form-control" placeholder="Describa la actividad a realizar" required="">
                     {!! $errors->first('actividad', '<small>:message</small><br>') !!}
             </div>
 
@@ -191,7 +191,7 @@
 
             <div class="form-group">
                 <label>Folio:</label>
-                    <input type="text" name="folio" id="folio" class= "form-control" placeholder="Escriba el número de folio">
+                    <input type="text" name="folio" id="folio" class= "form-control" placeholder="Escriba el número de folio" required="">
                     {!! $errors->first('folio', '<small>:message</small><br>') !!}
             </div>      
       </div>

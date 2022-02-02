@@ -15,19 +15,19 @@
                 @csrf
             <div class="form-group">
                 <label>Clave - Laboratorio:</label>
-                    <input type="text" name="lab_clave" class= "form-control" placeholder="Escriba la clave">
+                    <input type="text" name="lab_clave" class= "form-control" placeholder="Escriba la clave" required="" pattern="[0-9]+">
                     {!! $errors->first('lab_clave', '<small>:message</small><br>') !!}
             </div>
 
             <div class="form-group">
                 <label>Ubicación:</label>
-                    <input type="text" name="ubicacion" class= "form-control" placeholder="Escriba la ubicacion">
+                    <input type="text" name="ubicacion" class= "form-control" placeholder="Escriba la ubicacion" required="">
                     {!! $errors->first('ubicacion', '<small>:message</small><br>') !!}
             </div>
 
             <div class="form-group">
                 <label>Nombre:</label>
-                    <input type="text" name="nombre_laboratorio" class= "form-control" placeholder="Escriba el nombre"> 
+                    <input type="text" name="nombre_laboratorio" class= "form-control" placeholder="Escriba el nombre" required=""> 
                     {!! $errors->first('nombre_laboratorio', '<small>:message</small><br>') !!}
             </div>
       </div>
@@ -55,19 +55,19 @@
                 @method('PUT')
             <div class="form-group">
                 <label>Clave -Laboratorio:</label>
-                    <input type="text" name="lab_clave" id="lab_clave" class= "form-control" placeholder="Escriba la clave">
+                    <input type="text" name="lab_clave" id="lab_clave" class= "form-control" placeholder="Escriba la clave" required="" pattern="[0-9]+">
                     {!! $errors->first('lab_clave', '<small>:message</small><br>') !!}
             </div>
 
             <div class="form-group">
                 <label>Ubicación:</label>
-                    <input type="text" name="ubicacion" id="ubicacion" class= "form-control" placeholder="Escriba la ubicación">
+                    <input type="text" name="ubicacion" id="ubicacion" class= "form-control" placeholder="Escriba la ubicación" required="">
                     {!! $errors->first('ubicacion', '<small>:message</small><br>') !!}
             </div>
 
             <div class="form-group">
                 <label>Nombre:</label>
-                    <input type="text" name="nombre_laboratorio" id="nombre_laboratorio" class= "form-control" placeholder="Escriba el nombre">
+                    <input type="text" name="nombre_laboratorio" id="nombre_laboratorio" class= "form-control" placeholder="Escriba el nombre" required="">
                     {!! $errors->first('nombre_laboratorio', '<small>:message</small><br>') !!} 
             </div>
       </div>
@@ -98,7 +98,7 @@
 
             <div class="form-group">
                 <label>Clave -Laboratorio:</label>
-                    <input type="text" name="lab_clave" id="lab_clave" class= "form-control" placeholder="Escriba la clave">
+                    <input type="text" name="lab_clave" id="lab_clave" class= "form-control" placeholder="Escriba la clave" required="" pattern="[0-9]+">
                     {!! $errors->first('lab_clave', '<small>:message</small><br>') !!}
             </div>       
       </div>

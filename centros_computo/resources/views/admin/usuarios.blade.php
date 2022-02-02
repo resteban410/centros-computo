@@ -2,9 +2,6 @@
 @section('contenido')
 <br></br>
 
-
-
-
 <!-- Modal Crear nuevo alumno-->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -18,43 +15,43 @@
                 @csrf
             <div class="form-group">
                 <label>ID:</label>
-                    <input type="text" name="id" class= "form-control" placeholder="Escriba la clave">
+                    <input type="text" name="id" class= "form-control" placeholder="Escriba la clave" required="">
                     {!! $errors->first('id', '<small>:message</small><br>') !!}
             </div>
 
             <div class="form-group">
                 <label>Nombre:</label>
-                    <input type="text" name="name" class= "form-control" placeholder="Escriba el nombre">
+                    <input type="text" name="name" class= "form-control" placeholder="Escriba el nombre" required="">
                     {!! $errors->first('name', '<small>:message</small><br>') !!}
             </div>
 
             <div class="form-group">
                 <label>Apellido:</label>
-                    <input type="text" name="last_name" class= "form-control" placeholder="Escriba los apellidos">
+                    <input type="text" name="last_name" class= "form-control" placeholder="Escriba los apellidos" required="">
                     {!! $errors->first('last_name', '<small>:message</small><br>') !!}
             </div>
 
             <div class="form-group">
                 <label>Contraseña:</label>
-                    <input type="password"  name="password" class= "form-control" placeholder="Escriba la contraseña">
+                    <input type="password"  name="password" class= "form-control" placeholder="Escriba la contraseña" required="">
                     {!! $errors->first('password', '<small>:message</small><br>') !!}
             </div>
 
             <div class="form-group">
                 <label>Correo Electronico:</label>
-                    <input type="email" name="email" class="form-control" placeholder="Ej.:usuario@servidor.com">
+                    <input type="email" name="email" class="form-control" placeholder="Ej.:usuario@servidor.com" required="">
                     {!! $errors->first('email', '<small>:message</small><br>') !!}
             </div>
 
             <div class="form-group">
                 <label>Dirección:</label>
-                    <input type="text" name="address" class= "form-control" placeholder="Escriba la direccion">
+                    <input type="text" name="address" class= "form-control" placeholder="Escriba la direccion" required="">
                     {!! $errors->first('address', '<small>:message</small><br>') !!}
             </div>
 
             <div class="form-group">
                 <label>Teléfono:</label>
-                    <input type="text" name="telephone" class= "form-control" placeholder="Escriba el número de telefono">
+                    <input type="text" name="telephone" class= "form-control" placeholder="Escriba el número de telefono" required="" pattern="[0-9]+" maxlength="10">
                     {!! $errors->first('telephone', '<small>:message</small><br>') !!}
             </div>
 
@@ -91,37 +88,37 @@
                 @method('PUT')
             <div class="form-group">
                 <label>ID:</label>
-                    <input type="text" name="id" id="id" class= "form-control" placeholder="Escriba la clave">
+                    <input type="text" name="id" id="id" class= "form-control" placeholder="Escriba la clave" required="">
                     {!! $errors->first('id', '<small>:message</small><br>') !!}
             </div>
 
             <div class="form-group">
                 <label>Nombre:</label>
-                    <input type="text" name="name" id="name" class= "form-control" placeholder="Escriba el nombre">
+                    <input type="text" name="name" id="name" class= "form-control" placeholder="Escriba el nombre" required="">
                     {!! $errors->first('name', '<small>:message</small><br>') !!}
             </div>
 
             <div class="form-group">
                 <label>Apellido:</label>
-                    <input type="text" name="last_name" id="last_name" class= "form-control" placeholder="Escriba los apellidos">
+                    <input type="text" name="last_name" id="last_name" class= "form-control" placeholder="Escriba los apellidos" required="">
                     {!! $errors->first('last_name', '<small>:message</small><br>') !!}
             </div>
 
             <div class="form-group">
                 <label>Correo Electronico:</label>
-                    <input type="email" name="email" id="email" class="form-control" placeholder="Ej.:usuario@servidor.com">
+                    <input type="email" name="email" id="email" class="form-control" placeholder="Ej.:usuario@servidor.com" required="">
                     {!! $errors->first('email', '<small>:message</small><br>') !!}
             </div>
 
             <div class="form-group">
                 <label>Dirección:</label>
-                    <input type="text" name="address" id="address" class= "form-control" placeholder="Escriba la direccion">
+                    <input type="text" name="address" id="address" class= "form-control" placeholder="Escriba la direccion" required="">
                     {!! $errors->first('address', '<small>:message</small><br>') !!}
             </div>
 
             <div class="form-group">
                 <label>Teléfono:</label>
-                    <input type="text" name="telephone" id="telephone" class= "form-control" placeholder="Escriba el número de telefono">
+                    <input type="text" name="telephone" id="telephone" class= "form-control" placeholder="Escriba el número de telefono" required="" pattern="[0-9]+" maxlength="10">
                     {!! $errors->first('telephone', '<small>:message</small><br>') !!}
             </div>
 
@@ -161,7 +158,7 @@
 
             <div class="form-group">
                 <label>ID:</label>
-                    <input type="text" name="id" id="id" class= "form-control" placeholder="Escriba la clave">
+                    <input type="text" name="id" id="id" class= "form-control" placeholder="Escriba la clave"  required="">
                     {!! $errors->first('id', '<small>:message</small><br>') !!}
             </div>
       </div>
@@ -192,12 +189,12 @@
 
             <div class="form-group">
                 <label>ID:</label>
-                    <input type="text" name="id" id="id" class= "form-control" placeholder="Escriba la clave">
+                    <input type="text" name="id" id="id" class= "form-control" placeholder="Escriba la clave"  required="">
                     {!! $errors->first('id', '<small>:message</small><br>') !!}
             </div>
             <div class="form-group">
                 <label>Contraseña:</label>
-                    <input type="password"  name="password" class= "form-control" placeholder="Escriba la contraseña">
+                    <input type="password"  name="password" class= "form-control" placeholder="Escriba la contraseña"  required="">
                     {!! $errors->first('password', '<small>:message</small><br>') !!}
             </div>
       </div>
@@ -245,7 +242,6 @@
         <table id="usuarios" class="display nowrap" style="width:100%">
             <thead>
             <tr>
-                <th>Acciones</th>
                 <th>ID</th>
                 <th>Nombre</th>
                 <th>Apellidos</th>
@@ -253,15 +249,12 @@
                	<th>Dirección</th>
                 <th>Teléfono</th>
                 <th>Tipo</th>
+                <th>Acciones</th>
             </tr>
             </thead>
             <tbody>
                 @foreach($usuarios as $usuario)
                 <tr>
-                    <td>
-                        <a href="#" class="btn btn-success edit">Editar</a>
-                        <a href="#" class="btn btn-danger delete">Borrar</a>
-                    </td>
                     <td>{{$usuario->id}}</td>
                     <td>{{$usuario->name}}</td>
                     <td>{{$usuario->last_name}}</td>
@@ -269,6 +262,10 @@
                    	<td>{{$usuario->address}}</td>
                     <td>{{$usuario->telephone}}</td>
                     <td>{{$usuario->role}}</td>
+                    <td>
+                        <a href="#" class="btn btn-success edit">Editar</a>
+                        <a href="#" class="btn btn-danger delete">Borrar</a>
+                    </td>
                 </tr>
                 @endforeach
             </tbody>
@@ -306,15 +303,15 @@
                         var data = table.row($tr).data();
                         console.log(data);
 
-                        $('#id').val(data[1]);
-                        $('#name').val(data[2]);
-                        $('#last_name').val(data[3]);
-                        $('#email').val(data[4]);
-                        $('#address').val(data[5]);
-                        $('#telephone').val(data[6]);
-                        $('#role').val(data[7]);
+                        $('#id').val(data[0]);
+                        $('#name').val(data[1]);
+                        $('#last_name').val(data[2]);
+                        $('#email').val(data[3]);
+                        $('#address').val(data[4]);
+                        $('#telephone').val(data[5]);
+                        $('#role').val(data[6]);
 
-                        $('#editForm').attr('route', 'editarUsu', + data[1]);
+                        $('#editForm').attr('route', 'editarUsu', + data[0]);
                         $('#editModal').modal('show');
                     });
 
@@ -330,9 +327,9 @@
                         var data = table.row($tr).data();
                         console.log(data);
 
-                        $('#id').val(data[1]);
+                        $('#id').val(data[0]);
 
-                        $('#deleteForm').attr('route', 'borrarUsu', + data[1]);
+                        $('#deleteForm').attr('route', 'borrarUsu', + data[0]);
                         $('#deleteModal').modal('show');
                     });
                     //end delete record

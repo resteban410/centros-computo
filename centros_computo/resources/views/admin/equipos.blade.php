@@ -15,18 +15,18 @@
                 @csrf
             <div class="form-group">
                 <label>Número de serie:</label>
-                    <input type="text" name="no_serie" class= "form-control" placeholder="Escriba el número de serie del equipo">
+                    <input type="text" name="no_serie" class= "form-control" placeholder="Escriba el número de serie del equipo" required="">
                     {!! $errors->first('no_serie', '<small>:message</small><br>') !!}
             </div>
 
             <div class="form-group">
                 <label>Número de equipo:</label>
-                    <input type="text" name="num_equipo" class= "form-control" placeholder="Escriba el número del equipo">
+                    <input type="text" name="num_equipo" class= "form-control" placeholder="Escriba el número del equipo" required="">
                     {!! $errors->first('num_equipo', '<small>:message</small><br>') !!}
             </div>
             <div class="form-group">
                 <label>Modelo:</label>
-                    <input type="text" name="modelo" class= "form-control" placeholder="Escriba el modelo del equipo"> 
+                    <input type="text" name="modelo" class= "form-control" placeholder="Escriba el modelo del equipo" required=""> 
                     {!! $errors->first('modelo', '<small>:message</small><br>') !!}
             </div>
             <label>Laboratorio:</label>
@@ -78,18 +78,18 @@
                 @method('PUT')
             <div class="form-group">
                 <label>Número de serie:</label>
-                    <input type="text" name="no_serie" id="no_serie" class= "form-control" placeholder="Escriba el número de serie del equipo">
+                    <input type="text" name="no_serie" id="no_serie" class= "form-control" placeholder="Escriba el número de serie del equipo" required="">
                     {!! $errors->first('no_serie', '<small>:message</small><br>') !!}
             </div>
 
             <div class="form-group">
                 <label>Número de equipo:</label>
-                    <input type="text" name="num_equipo" id="num_equipo" class= "form-control" placeholder="Escriba el número del equipo">
+                    <input type="text" name="num_equipo" id="num_equipo" class= "form-control" placeholder="Escriba el número del equipo" required="">
                     {!! $errors->first('num_equipo', '<small>:message</small><br>') !!}
             </div>
             <div class="form-group">
                 <label>Modelo:</label>
-                    <input type="text" name="modelo" id="modelo" class= "form-control" placeholder="Escriba el modelo del equipo"> 
+                    <input type="text" name="modelo" id="modelo" class= "form-control" placeholder="Escriba el modelo del equipo" required=""> 
                     {!! $errors->first('modelo', '<small>:message</small><br>') !!}
             </div>
             <label>Laboratorio:</label>
@@ -144,7 +144,7 @@
 
             <div class="form-group">
                 <label>Número de serie:</label>
-                    <input type="text" name="no_serie" id="no_serie" class= "form-control" placeholder="Escriba el número de serie del equipo">
+                    <input type="text" name="no_serie" id="no_serie" class= "form-control" placeholder="Escriba el número de serie del equipo" required="">
                     {!! $errors->first('no_serie', '<small>:message</small><br>') !!}
             </div>      
       </div>

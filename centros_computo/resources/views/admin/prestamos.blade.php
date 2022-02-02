@@ -111,20 +111,20 @@
 			</div>
 			<div class="form-group">
 				<label><b>Fecha/Hora de prestamo:</b> aaaa-mm-dd hh:mm</label>
-				<input type="text" name="start" id="start" class= "form-control">   
+				<input type="text" name="start" id="start" class= "form-control" required="">   
 			</div>
 			<div class="form-group">
 			<label><b>Fecha/Hora de termino:</b> aaaa-mm-dd hh:mm</label>
 				<label>Si el evento termina el mismo día, colocar la fecha de prestamo.</label>
-				<input type="text" name="end" id="end" class= "form-control">
+				<input type="text" name="end" id="end" class= "form-control" required="">
 			</div>
 			<div class="form-group">
 				<label for="title"><b>Titulo del evento:</b></label>
-				<input type="text" name="title" id="title" class="form-control">
+				<input type="text" name="title" id="title" class="form-control" required="">
 			</div>
 			<div class="form-group">
 				<label for="descripcion"><b>Descripción:</b></label>
-				<input type="text" name="descripcion" id="descripcion" class="form-control">
+				<input type="text" name="descripcion" id="descripcion" class="form-control" required="">
 			</div>
 			<div class="form-group">
 				<label>Usuario:</label>

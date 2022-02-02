@@ -20,13 +20,13 @@
 
       		<div class="form-group">
       			<label>Fecha Perdida:</label>
-      			<input type="date" name="fecha_perdida" id="fecha_perdida" class= "form-control">
+      			<input type="date" name="fecha_perdida" id="fecha_perdida" class= "form-control" required="">
                 {!! $errors->first('fecha_perdida', '<small>:message</small><br>') !!}
       		</div>
 
             <div class="form-group">
       			<label>Hora Perdida:</label>
-      			<input type="time" name="hora_perdida" id="hora_perdida" class= "form-control">
+      			<input type="time" name="hora_perdida" id="hora_perdida" class= "form-control" required="">
                 {!! $errors->first('hora_perdida', '<small>:message</small><br>') !!}
       		</div>
 
@@ -77,13 +77,13 @@
 
       		<div class="form-group">
       			<label>Fecha Perdida:</label>
-      			<input type="date" name="fecha_perdida" id="fecha_perdida" class= "form-control">
+      			<input type="date" name="fecha_perdida" id="fecha_perdida" class= "form-control" required="">
                 {!! $errors->first('fecha_perdida', '<small>:message</small><br>') !!}
       		</div>
 
             <div class="form-group">
       			<label>Hora Perdida:</label>
-      			<input type="time" name="hora_perdida" id="hora_perdida" class= "form-control">
+      			<input type="time" name="hora_perdida" id="hora_perdida" class= "form-control" required="">
                 {!! $errors->first('hora_perdida', '<small>:message</small><br>') !!}
       		</div>
 
@@ -132,7 +132,7 @@
 
             <div class="form-group">
                 <label>Folio:</label>
-                    <input type="text" name="clave" id="clave" class= "form-control" placeholder="Escriba el numero de folio">
+                    <input type="text" name="clave" id="clave" class= "form-control" placeholder="Escriba el numero de folio" required="">
                     {!! $errors->first('clave', '<small>:message</small><br>') !!}  
             </div>      
       </div>
