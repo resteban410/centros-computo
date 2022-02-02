@@ -2,6 +2,9 @@
 @section('contenido')
 <br></br>
 
+
+
+
 <!-- Modal Crear nuevo alumno-->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -172,6 +175,42 @@
 </div>
 <!--Termina modal de eliminar alumno-->
 
+
+<!-- Empieza modal de eliminar alumno -->
+<div class="modal fade" id="changeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cambiar contraseña</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+    <form action="{{route('changePass')}}" method="POST" id="changeForm">
+      @csrf
+      @method('PUT')
+      <div class="modal-body">
+        <p>Para cambiar la contraseña de un usuario, ingresa su id y su nueva contraseña.</p>
+
+            <div class="form-group">
+                <label>ID:</label>
+                    <input type="text" name="id" id="id" class= "form-control" placeholder="Escriba la clave">
+                    {!! $errors->first('id', '<small>:message</small><br>') !!}
+            </div>
+            <div class="form-group">
+                <label>Contraseña:</label>
+                    <input type="password"  name="password" class= "form-control" placeholder="Escriba la contraseña">
+                    {!! $errors->first('password', '<small>:message</small><br>') !!}
+            </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="submit" class="btn btn-primary">Cambiar contraseña</button>
+      </div>
+    </form>
+    </div>
+  </div>
+</div>
+<!--Termina modal de eliminar alumno-->
+
 <div class="container">
     @if(count($errors) > 0)
     <div class="alert alert-danger">
@@ -193,6 +232,9 @@
 
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
         Agregar nuevo registro
+    </button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#changeModal">
+        Cambiar contraseña
     </button>
 </div>
 

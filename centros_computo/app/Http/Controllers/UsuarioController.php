@@ -81,4 +81,18 @@ class UsuarioController extends Controller
         $usuario = DB::table('users')->where('id', $id)->delete();
         return redirect()->route('usuariosP');
     }
+
+    public function change_password(Request $request){
+        request()->validate([
+            'id' => 'required',
+            'password' => 'required'
+        ]);
+
+        $usuarios = User::find($request->id);
+        $usuarios->password = $request->password;
+        $usuarios->save();
+
+
+        return redirect()->route('usuariosP');
+    }
 }

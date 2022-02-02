@@ -61,6 +61,7 @@ Route::get('usuarios', [UsuarioController::class,'index'])->middleware('auth.adm
 Route::post('alta_usuario', [UsuarioController::class, 'store'])->name('altaUsu');
 Route::put('editar_usuario', [UsuarioController::class, 'edit'])->name('editarUsu');
 Route::delete('borrar_usuario', [UsuarioController::class, 'destroy'])->name('borrarUsu');
+Route::put('changePassword', [UsuarioController::class, 'change_password'])->name('changePass');
 
 //Rutas de la pagina equipo
 
