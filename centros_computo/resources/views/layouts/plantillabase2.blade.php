@@ -89,7 +89,7 @@
                     <nav class="classy-navbar justify-content-between" id="robertoNav">
 
                         <!-- Logo -->
-                        <a class="nav-brand" href="http://127.0.0.1:8000/admin"><img src="./img/core-img/logo-buap.png" alt=""></a>
+                        <a class="nav-brand" href="{{route('index')}}"><img src="./img/core-img/logo-buap.png" alt=""></a>
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
@@ -107,8 +107,6 @@
                                 <ul id="nav" class="menu">
                                     <li class="active"><a href="{{route('home')}}">Inicio</a></li>
                                 </ul>
-
-
                             </div>
                             <!-- Nav End -->
                         </div>

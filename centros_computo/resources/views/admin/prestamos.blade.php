@@ -42,6 +42,7 @@
 						$('#start').val(respuesta.data[0].start);
 						$('#end').val(respuesta.data[0].end);
 						$('#title').val(respuesta.data[0].title);
+						$('#descripcion').val(respuesta.data[0].descripcion);
 						$('#usuario_usu_id').val(respuesta.data[0].usuario_usu_id);
 						$('#labora_lab_clave').val(respuesta.data[0].labora_lab_clave);
 						$('#prestamo').modal('show');

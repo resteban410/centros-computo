@@ -93,7 +93,6 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel2">Editar registro</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
     <form action="{{route('editarAuto')}}" method="post" id="editForm">
       <div class="modal-body">       
@@ -165,8 +164,8 @@
             </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
         <button type="submit" class="btn btn-primary">Actualizar</button>
+        <a href=""class="btn btn-secondary">Cerrar</a>
       </div>
     </form>
     </div>
@@ -180,7 +179,6 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Eliminar registro</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
     <form action="{{route('borrarAuto')}}" method="POST" id="deleteForm">
       @csrf
@@ -196,8 +194,8 @@
             </div>      
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <button type="submit" class="btn btn-primary">Borrar registro</button>
+        <button type="submit" class="btn btn-primary">Borrar</button>
+        <a href=""class="btn btn-secondary">Cerrar</a>
       </div>
     </form>
     </div>

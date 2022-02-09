@@ -109,12 +109,7 @@
                                     <li><a href="{{route('adeudos')}}">Adeudos</a></li>
                                     <li><a href="{{route('contacto')}}">Contacto</a></li>
                                     <li><a href="{{route('login')}}">Ingresar</a></li>
-                                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Mi cuenta
-                                    </button>
                                 </ul>
-
-
                             </div>
                             <!-- Nav End -->
                         </div>

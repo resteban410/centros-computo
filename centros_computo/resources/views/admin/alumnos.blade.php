@@ -8,7 +8,6 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Nuevo registro</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
     <form action="{{route('altalum')}}" method="post">
       <div class="modal-body">       
@@ -48,8 +47,8 @@
             </div>  
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <button type="submit" class="btn btn-primary">Guardar</button>
+        <button type="submit" class="btn btn-primary">Actualizar</button>
+        <a href=""class="btn btn-secondary">Cerrar</a>
       </div>
     </form>
     </div>
@@ -65,7 +64,6 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Editar registro</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
     <form action="{{route('editaralumno')}}" method="post" id="editForm">
       <div class="modal-body">       
@@ -106,8 +104,8 @@
             </div>  
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
         <button type="submit" class="btn btn-primary">Actualizar</button>
+        <a href=""class="btn btn-secondary">Cerrar</a>
       </div>
     </form>
     </div>
@@ -123,7 +121,6 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Eliminar registro</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
     <form action="{{route('borraralumno')}}" method="POST" id="deleteForm">
       @csrf
@@ -139,8 +136,8 @@
             </div>        
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <button type="submit" class="btn btn-primary">Borrar registro</button>
+        <button type="submit" class="btn btn-primary">Borrar</button>
+        <a href=""class="btn btn-secondary">Cerrar</a>
       </div>
     </form>
     </div>
@@ -207,64 +204,63 @@
         </div>
     </div>
 @endsection
-
 @section('editarborrar')
 <script type="text/javascript">
-            $(document).ready(function() {
+    $(document).ready(function() {
 
-                var table= $('#alumnos').DataTable({
-                    responsive: true,
-                    autoWidth: false,
-                    "language": {
-                        "lengthMenu": "Mostrar _MENU_ registros por página",
-                        "zeroRecords": "Nada encontrado - disculpa",
-                        "info": "Mostrando la página _PAGE_ de _PAGES_",
-                        "infoEmpty": "Registros no disponibles",
-                        "infoFiltered": "(flitrado de _MAX_ registros totales)",
-                        "search": "Buscar",
-                        "paginate": {
-                            "next": "Siguiente",
-                            "previous": "Anterior"
-                    }}
-                    });
-                    //start edit record 
-                    table.on('click', '.edit', function(){
+      var table= $('#alumnos').DataTable({
+          responsive: true,
+          autoWidth: false,
+          "language": {
+              "lengthMenu": "Mostrar _MENU_ registros por página",
+              "zeroRecords": "Nada encontrado - disculpa",
+              "info": "Mostrando la página _PAGE_ de _PAGES_",
+              "infoEmpty": "Registros no disponibles",
+              "infoFiltered": "(flitrado de _MAX_ registros totales)",
+              "search": "Buscar",
+              "paginate": {
+                  "next": "Siguiente",
+                  "previous": "Anterior"
+          }}
+      });
+      //start edit record 
+      table.on('click', '.edit', function(){
 
-                        $tr = $(this).closest('tr');
-                        if ($($tr).hasClass('child')){
-                            $tr =  $tr.prev('.parent');
-                        }
-                        var data = table.row($tr).data();
-                        console.log(data);
+          $tr = $(this).closest('tr');
+          if ($($tr).hasClass('child')){
+              $tr =  $tr.prev('.parent');
+          }
+          var data = table.row($tr).data();
+          console.log(data);
 
-                        $('#matricula').val(data[0]);
-                        $('#nombre').val(data[1]);
-                        $('#apellido').val(data[2]);
-                        $('#carrera').val(data[3]);
-                        $('#correo_electronico').val(data[4]);
+          $('#matricula').val(data[0]);
+          $('#nombre').val(data[1]);
+          $('#apellido').val(data[2]);
+          $('#carrera').val(data[3]);
+          $('#correo_electronico').val(data[4]);
 
-                        $('#editForm').attr('route', 'editaralumno', + data[0]);
-                        $('#editModal').modal('show');
-                    });
+          $('#editForm').attr('route', 'editaralumno', + data[0]);
+          $('#editModal').modal('show');
+      });
 
-                    //end edit record 
+      //end edit record 
 
-                    //star delete record 
-                    table.on('click', '.delete', function(){
+      //star delete record 
+      table.on('click', '.delete', function(){
 
-                        $tr = $(this).closest('tr');
-                        if ($($tr).hasClass('child')){
-                            $tr =  $tr.prev('.parent');
-                        }
-                        var data = table.row($tr).data();
-                        console.log(data);
+          $tr = $(this).closest('tr');
+          if ($($tr).hasClass('child')){
+              $tr =  $tr.prev('.parent');
+          }
+          var data = table.row($tr).data();
+          console.log(data);
 
-                        $('#matricula').val(data[0]);
+          $('#matricula').val(data[0]);
 
-                        $('#deleteForm').attr('route', 'borraralumno', + data[0]);
-                        $('#deleteModal').modal('show');
-                    });
-                    //end delete record 
-                });
-        </script>
+          $('#deleteForm').attr('route', 'borraralumno', + data[0]);
+          $('#deleteModal').modal('show');
+      });
+      //end delete record 
+  });
+</script>
 @endsection

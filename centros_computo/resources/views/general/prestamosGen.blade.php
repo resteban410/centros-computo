@@ -41,6 +41,7 @@
 						$('#start').val(respuesta.data[0].start);
 						$('#end').val(respuesta.data[0].end);
 						$('#title').val(respuesta.data[0].title);
+						$('#descripcion').val(respuesta.data[0].descripcion);
 						$('#usuario_usu_id').val(respuesta.data[0].usuario_usu_id);
 						$('#labora_lab_clave').val(respuesta.data[0].labora_lab_clave);
 						$('#prestamo').modal('show');
@@ -160,7 +161,7 @@
 
 
 <div class="modal fade" id="asignacion" tabindex="-1" aria-labelledby="modelTitleId" aria-hidden="true">
-	<div class="modal-dialog" style="max-width: 75%;" role="document">
+	<div class="modal-dialog" style="max-width:60%;" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
 				<h5 class="modal-title">Horarios</h5>
@@ -170,7 +171,7 @@
 			</div>
 			<div class="card"> 
                 <div class="card-body">
-                    <table id="asignaciones" class="table table-striped table-bordered" style="width:50%">
+                    <table id="asignaciones" class="table table-striped table-bordered" style="max-width:60%;">
                         <thead>
                             <tr>
                                 <th>Periodo</th>
