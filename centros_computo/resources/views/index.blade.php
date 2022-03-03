@@ -111,7 +111,7 @@
     <section class="welcome-area">
         <div class="welcome-slides owl-carousel">
             <!-- Single Welcome Slide -->
-            <div class="single-welcome-slide bg-img bg-overlay" style="background-image: url(img/bg-img/62.png);" data-img-url="img/bg-img/62.png">
+            <div class="single-welcome-slide bg-img bg-overlay" style="background-image: url(img/bg-img/851.png);" data-img-url="img/bg-img/851.png">
                 <!-- Welcome Content -->
                 <div class="welcome-content h-100">
                     <div class="container h-100">
@@ -147,7 +147,7 @@
             </div>
 
             <!-- Single Welcome Slide -->
-            <div class="single-welcome-slide bg-img bg-overlay" style="background-image: url(img/bg-img/61.png);" data-img-url="img/bg-img/61.png">
+            <div class="single-welcome-slide bg-img bg-overlay" style="background-image: url(img/bg-img/850.png);" data-img-url="img/bg-img/850.png">
                 <!-- Welcome Content -->
                 <div class="welcome-content h-100">
                     <div class="container h-100">
