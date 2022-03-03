@@ -824,7 +824,9 @@ input:focus {
   .single-footer-widget p {
     color: #afb4bf; }
   .single-footer-widget h4 {
-    color: #00b5e2; }
+    color: #00b5e2;
+    font-size: 18px;
+ }
   .single-footer-widget span {
     color: #afb4bf;
     font-size: 14px;

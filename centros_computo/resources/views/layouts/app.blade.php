@@ -47,7 +47,7 @@
 
                     <div class="col-6">
                         <div class="top-header-content">
-                            <a href="#"><i class="icon_phone"></i> <span> 222 229 5500 ext. 1510</span></a>
+                            <a href="#"><i class="icon_phone"></i> <span> 222 229 5500 ext. 1525</span></a>
                             <a href="#"><span>Autoservicios</span></a>
                             <a href="#"><span>Correo BUAP</span></a>
                         </div>

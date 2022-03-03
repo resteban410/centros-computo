@@ -44,7 +44,7 @@
 
                     <div class="col-6">
                         <div class="top-header-content">
-                            <a href="#"><i class="icon_phone"></i> <span> 222 229 5500 ext. 1510</span></a>
+                            <a href="#"><i class="icon_phone"></i> <span> 222 229 5500 ext. 1525</span></a>
                             <a href="#"><span>Autoservicios</span></a>
                             <a href="#"><span>Correo BUAP</span></a>
                         </div>
@@ -266,8 +266,8 @@
     </div>
     <!-- Partner Area End -->
 
-    <!-- Footer Area Start -->
-    <footer class="footer-area section-padding-80-0">
+<!-- Footer Area Start -->
+<footer class="footer-area section-padding-80-0">
         <!-- Main Footer Area -->
         <div class="main-footer-area">
             <div class="container">
@@ -276,68 +276,60 @@
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="single-footer-widget mb-80">
                             <!-- Footer Logo -->
-                            <a href="#" class="footer-logo"><img src="img/core-img/logo2.png" alt=""></a>
-
-                            <h4>+12 345-678-9999</h4>
-                            <span>Info.colorlib@gmail.com</span>
-                            <span>856 Cordia Extension Apt. 356, Lake Deangeloburgh, South Africa</span>
+                            <a href="#" class="footer-logo"><img src="../img/core-img/logo_buap.png" alt=""></a>
+                            <h4> 222 229 5500 ext. 1525</h4>
+                            <span>centroschiapa@gmail.com</span>
+                            <span>Blvd. Audi Sur,  S/N San Jose Chiapa Puebla</span>
                         </div>
                     </div>
-
                     <!-- Single Footer Widget Area -->
-                    <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="col-12 col-sm-2 col-lg-2">
                         <div class="single-footer-widget mb-80">
                             <!-- Widget Title -->
-                            <h5 class="widget-title">Our Blog</h5>
-
+                            <h5 class="widget-title">Horarios</h5>
                             <!-- Single Blog Area -->
                             <div class="latest-blog-area">
-                                <a href="#" class="post-title">Freelance Design Tricks How</a>
-                                <span class="post-date"><i class="fa fa-clock-o" aria-hidden="true"></i> Jan 02, 2019</span>
+                                <a href="#" class="post-title">Horario Matutino</a>
+                                <span class="post-date"><i class="fa fa-clock-o" aria-hidden="true"></i> 08:00 AM- 12:00 PM</span>
                             </div>
-
                             <!-- Single Blog Area -->
                             <div class="latest-blog-area">
-                                <a href="#" class="post-title">Free Advertising For Your Online</a>
-                                <span class="post-date"><i class="fa fa-clock-o" aria-hidden="true"></i> Jan 02, 2019</span>
+                                <a href="#" class="post-title">Horario Vespertinos</a>
+                                <span class="post-date"><i class="fa fa-clock-o" aria-hidden="true"></i> 13:00 PM- 15:00 PM</span>
                             </div>
                         </div>
                     </div>
-
                     <!-- Single Footer Widget Area -->
-                    <div class="col-12 col-sm-4 col-lg-2">
+                    <div class="col-12 col-md-6 col-lg-1">
                         <div class="single-footer-widget mb-80">
                             <!-- Widget Title -->
-                            <h5 class="widget-title">Links</h5>
-
+                            <h5 class="widget-title">Páginas</h5>
                             <!-- Footer Nav -->
                             <ul class="footer-nav">
-                                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> About Us</a></li>
-                                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Our Room</a></li>
-                                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Career</a></li>
-                                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> FAQs</a></li>
+                            <li><a href="/"><i class="fa fa-caret-right" aria-hidden="true"></i> Inicio</a></li>
+                                <li><a href="{{route('usuariosP')}}"><i class="fa fa-caret-right" aria-hidden="true"></i> Usuario</a></li>
+                                <li><a href="{{route('equiposP')}}"><i class="fa fa-caret-right" aria-hidden="true"></i> Equipo</a></li>
+                                <li><a href="{{route('fallaP')}}"><i class="fa fa-caret-right" aria-hidden="true"></i> Fallas</a></li>
                             </ul>
                         </div>
                     </div>
-
                     <!-- Single Footer Widget Area -->
-                    <div class="col-12 col-sm-8 col-lg-4">
+                    <div class="col-12 col-sm-8 col-lg-2">
                         <div class="single-footer-widget mb-80">
                             <!-- Widget Title -->
-                            <h5 class="widget-title">Subscribe Newsletter</h5>
-                            <span>Subscribe our newsletter gor get notification about new updates.</span>
-
-                            <!-- Newsletter Form -->
-                            <form action="index.html" class="nl-form">
-                                <input type="email" class="form-control" placeholder="Enter your email...">
-                                <button type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
-                            </form>
+                            <h5 class="widget-title">BUAP</h5>
+                            <!-- Footer Nav -->
+                            <ul class="footer-nav">
+                                <li><a href="https://www.buap.mx/calendario-escolar"><i class="fa fa-caret-right" aria-hidden="true"></i> Calendario Escolar </a></li>
+                                <li><a href="https://login.microsoftonline.com/common/oauth2/authorize?client_id=00000002-0000-0ff1-ce00-000000000000&redirect_uri=https%3a%2f%2foutlook.office365.com%2fowa%2f&resource=00000002-0000-0ff1-ce00-000000000000&response_mode=form_post&response_type=code+id_token&scope=openid&msafed=0&client-request-id=6345705e-2644-4bd6-91ce-9abcd644db66&protectedtoken=true&claims=%7b%22id_token%22%3a%7b%22xms_cc%22%3a%7b%22values%22%3a%5b%22CP1%22%5d%7d%7d%7d&nonce=637390622188402447.f19b5b33-db40-40aa-aada-6c482fd1a64d&state=DcsxEoAwCABBouNzMASQJM8hMraWfl-Kve4KAOxpS4Uy0E26TDLmNoYSq_bzaXNdSwRjKaGSO7qHo906-InmplHyPer7ef0B&sso_reload=true"><i class="fa fa-caret-right" aria-hidden="true"></i> Correo BUAP</a></li>
+                                <li><a href="https://comunicacion.buap.mx/"><i class="fa fa-caret-right" aria-hidden="true"></i> Identidad Gráfica</a></li>
+                                <li><a href="https://www.buap.mx/directorio-telefonico"><i class="fa fa-caret-right" aria-hidden="true"></i> Directorio</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
         <!-- Copywrite Area -->
         <div class="container">
             <div class="copywrite-content">

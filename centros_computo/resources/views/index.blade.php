@@ -44,7 +44,7 @@
 
                     <div class="col-6">
                         <div class="top-header-content">
-                            <a href="#"><i class="icon_phone"></i> <span> 222 229 5500 ext. 1510</span></a>
+                            <a href="#"><i class="icon_phone"></i> <span> 222 229 5500 ext. 1525</span></a>
                             <a href="#"><span>Autoservicios</span></a>
                             <a href="#"><span>Correo BUAP</span></a>
                         </div>
@@ -179,7 +179,7 @@
                     <!-- Section Heading -->
                     <div class="section-heading wow fadeInUp" data-wow-delay="300ms">
                         <h6>Centros de computo</h6>
-                        <h2>Sistema reservaciones</h2>
+                        <h2>Sistema de reservacion</h2>
                     </div>
                     <div class="about-content mb-100 wow fadeInUp" data-wow-delay="500ms">
                         <p>Innovamos nuestro sistema de reservaciones para los centros de cómputo mejorando los procesos para que todas las personas del complejo puedan tener un mejor acceso a los laboratorios de nuestra unidad. </p>
@@ -192,7 +192,7 @@
     <!-- About Us Area End -->
 
     <!-- Video Area Start -->
-    <div class="roberto--video--area bg-img bg-overlay jarallax section-padding-0-100" style="background-image: url(img/bg-img/65.png);">
+    <div class="roberto--video--area bg-img bg-overlay jarallax section-padding-0-100" style="background-image: url(img/bg-img/852.png);">
         <div class="container h-100">
             <div class="row h-100 align-items-center justify-content-center">
                 <div class="col-12 col-md-6">
@@ -218,7 +218,7 @@
                     <!-- Section Heading -->
                     <div class="section-heading text-center wow fadeInUp" data-wow-delay="100ms">
                         <h6>Soluciones eficientes </h6>
-                        <h2>Eficacia en los procesos </h2>
+                        <h2>EFICACIA EN LOS PROCESOS</h2>
                     </div>
                 </div>
             </div>
@@ -238,7 +238,7 @@
                     <div class="single-service-area mb-100 wow fadeInUp" data-wow-delay="500ms">
                         <img src="img/bg-img/home2.png" alt="">
                         <div class="service-title d-flex align-items-center justify-content-center">
-                            <h5>Prestamos</h5>
+                            <h5>Préstamos</h5>
                         </div>
                     </div>
                 </div>
@@ -265,7 +265,7 @@
                     <div class="col-12 col-md-7">
                         <div class="cta-text mb-50">
                             <h2>¡Contacta con nosotros ahora!</h2>
-                            <h6>Comuniquese al 222 229 5500 para reservar directamente o para recibir asesoramiento</h6>
+                            <h6>Comuniquese al 222 229 5500 ext. 1525 para reservar directamente o para recibir asesoramiento</h6>
                         </div>
                     </div>
                     <div class="col-12 col-md-5 text-right">
@@ -289,13 +289,13 @@
                         <div class="single-footer-widget mb-80">
                             <!-- Footer Logo -->
                             <a href="#" class="footer-logo"><img src="../img/core-img/logo_buap.png" alt=""></a>
-                            <h4> 222 229 5500</h4>
-                            <span>centros_com@gmail.com</span>
+                            <h4> 222 229 5500 ext. 1525</h4>
+                            <span>centroschiapa@gmail.com</span>
                             <span>Blvd. Audi Sur,  S/N San Jose Chiapa Puebla</span>
                         </div>
                     </div>
                     <!-- Single Footer Widget Area -->
-                    <div class="col-12 col-sm-6 col-lg-2">
+                    <div class="col-12 col-sm-2 col-lg-2">
                         <div class="single-footer-widget mb-80">
                             <!-- Widget Title -->
                             <h5 class="widget-title">Horarios</h5>
@@ -312,30 +312,30 @@
                         </div>
                     </div>
                     <!-- Single Footer Widget Area -->
-                    <div class="col-12 col-sm-4 col-lg-2">
+                    <div class="col-12 col-md-6 col-lg-1">
                         <div class="single-footer-widget mb-80">
                             <!-- Widget Title -->
                             <h5 class="widget-title">Páginas</h5>
                             <!-- Footer Nav -->
                             <ul class="footer-nav">
-                                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Equipo</a></li>
-                                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Galeria</a></li>
-                                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Nosotros</a></li>
-                                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> FAQs</a></li>
+                            <li><a href="/"><i class="fa fa-caret-right" aria-hidden="true"></i> Inicio</a></li>
+                                <li><a href="{{route('usuariosP')}}"><i class="fa fa-caret-right" aria-hidden="true"></i> Usuario</a></li>
+                                <li><a href="{{route('equiposP')}}"><i class="fa fa-caret-right" aria-hidden="true"></i> Equipo</a></li>
+                                <li><a href="{{route('fallaP')}}"><i class="fa fa-caret-right" aria-hidden="true"></i> Fallas</a></li>
                             </ul>
                         </div>
                     </div>
                     <!-- Single Footer Widget Area -->
-                    <div class="col-12 col-sm-8 col-lg-3">
+                    <div class="col-12 col-sm-8 col-lg-2">
                         <div class="single-footer-widget mb-80">
                             <!-- Widget Title -->
                             <h5 class="widget-title">BUAP</h5>
                             <!-- Footer Nav -->
                             <ul class="footer-nav">
-                                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Calendario Escolar </a></li>
-                                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Correo BUAP</a></li>
-                                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Identidad Gráfica</a></li>
-                                <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Directorio</a></li>
+                                <li><a href="https://www.buap.mx/calendario-escolar"><i class="fa fa-caret-right" aria-hidden="true"></i> Calendario Escolar </a></li>
+                                <li><a href="https://login.microsoftonline.com/common/oauth2/authorize?client_id=00000002-0000-0ff1-ce00-000000000000&redirect_uri=https%3a%2f%2foutlook.office365.com%2fowa%2f&resource=00000002-0000-0ff1-ce00-000000000000&response_mode=form_post&response_type=code+id_token&scope=openid&msafed=0&client-request-id=6345705e-2644-4bd6-91ce-9abcd644db66&protectedtoken=true&claims=%7b%22id_token%22%3a%7b%22xms_cc%22%3a%7b%22values%22%3a%5b%22CP1%22%5d%7d%7d%7d&nonce=637390622188402447.f19b5b33-db40-40aa-aada-6c482fd1a64d&state=DcsxEoAwCABBouNzMASQJM8hMraWfl-Kve4KAOxpS4Uy0E26TDLmNoYSq_bzaXNdSwRjKaGSO7qHo906-InmplHyPer7ef0B&sso_reload=true"><i class="fa fa-caret-right" aria-hidden="true"></i> Correo BUAP</a></li>
+                                <li><a href="https://comunicacion.buap.mx/"><i class="fa fa-caret-right" aria-hidden="true"></i> Identidad Gráfica</a></li>
+                                <li><a href="https://www.buap.mx/directorio-telefonico"><i class="fa fa-caret-right" aria-hidden="true"></i> Directorio</a></li>
                             </ul>
                         </div>
                     </div>
