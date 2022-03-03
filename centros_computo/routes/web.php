@@ -26,6 +26,7 @@ use App\Http\Controllers\SoftwareGenController;
 use App\Http\Controllers\AdeudoGenController;
 use App\Http\Controllers\ContactoController;
 use App\Http\Controllers\PrestamoGenController;
+use App\Http\Controllers\MailController;
 
 //INDEX
 
@@ -180,3 +181,7 @@ Route::get('/', function(){
 
 
 Route::get('/contacto', ContactoController::class, 'index') ->name('contacto');
+
+
+
+Route::get('/send-email', [MailController::class, 'sendEmail']);
