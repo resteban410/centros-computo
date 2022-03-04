@@ -213,7 +213,7 @@
                                 <input type="text" name="subject" class="form-control mb-30" placeholder="Asunto">
                                 </div>
                                 <div class="col-12 wow fadeInUp" data-wow-delay="100ms">
-                                    <textarea name="msg" class="form-control mb-30" placeholder="Tu mensaje"></textarea>
+                                    <textarea name="msg" class="form-control mb-30" placeholder="Mensaje"></textarea>
                                 </div>
                                 <div class="col-12 text-center wow fadeInUp" data-wow-delay="100ms">
                                     <button type="submit" class="btn roberto-btn mt-15">Enviar mensaje</button>
