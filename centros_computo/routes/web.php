@@ -24,7 +24,7 @@ use App\Http\Controllers\HomeGenController;
 use App\Http\Controllers\PerdidaFallaController;
 use App\Http\Controllers\SoftwareGenController;
 use App\Http\Controllers\AdeudoGenController;
-use App\Http\Controllers\ContactoController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PrestamoGenController;
 
 //INDEX
@@ -179,4 +179,6 @@ Route::get('/', function(){
 })->name('principal');
 
 
-Route::get('/contacto', ContactoController::class, 'index') ->name('contacto');
+Route::get('/contacto', [ContactController::class, 'contact'])->name('contact');
+
+Route::post('/send-message', [ContactController::class, 'sendEmail'])->name('contact.send');

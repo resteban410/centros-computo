@@ -94,7 +94,7 @@
                                 <ul id="nav">
                                 <li class="active"><a href="{{route('principal')}}">Inicio</a></li>
                                 <li><a href="{{route('adeudos')}}">Adeudos</a></li>
-                                <li><a href="{{route('contacto')}}">Contacto</a></li>
+                                <li><a href="{{route('contact')}}">Contacto</a></li>
                                 <li><a href="{{route('login')}}">Ingresar</a></li>
                                 </ul>
                             </div>

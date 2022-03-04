@@ -193,27 +193,27 @@
                 <div class="col-12">
                     <!-- Form -->
                     <div class="roberto-contact-form">
-                        <form action="#" method="get">
+                    @if(Session::has('message_sent'))
+                        <div class="alert alert-success" role="alert">
+                            {{Session::get('message_sent')}}
+                    @endif
+                        <form method="POST" action="{{route('contact.send')}}" enctype="multipart/form-data">
+                            @csrf
                             <div class="row">
                                 <div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
-                                    <input type="text" name="message-name" class="form-control mb-30" placeholder="Tu nombre">
+                                    <input type="text" name="name" class="form-control mb-30" placeholder="Tu nombre">
                                 </div>
                                 <div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
-                                    <input type="email" name="message-email" class="form-control mb-30" placeholder="Tu correo electrónico">
+                                    <input type="email" name="email" class="form-control mb-30" placeholder="Tu correo electrónico">
                                 </div>
                                 <div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
-                                    <input type="text" name="message-name" class="form-control mb-30" placeholder="Asunto">
+                                    <input type="phone" name="phone" class="form-control mb-30" placeholder="Telefono">
                                 </div>
                                 <div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
-                                <select class="form-control mb-30 form-select-lg mb-3" aria-label="Default select example">
-                                <option selected>Selecciona el servicio</option>
-                                <option value="1">Consultas</option>
-                                <option value="2">Fallas</option>
-                                <option value="3">Reservaciones</option>
-                                </select>
+                                <input type="text" name="subject" class="form-control mb-30" placeholder="Asunto">
                                 </div>
                                 <div class="col-12 wow fadeInUp" data-wow-delay="100ms">
-                                    <textarea name="message" class="form-control mb-30" placeholder="Tu mensaje"></textarea>
+                                    <textarea name="msg" class="form-control mb-30" placeholder="Tu mensaje"></textarea>
                                 </div>
                                 <div class="col-12 text-center wow fadeInUp" data-wow-delay="100ms">
                                     <button type="submit" class="btn roberto-btn mt-15">Enviar mensaje</button>
@@ -268,9 +268,9 @@
                             <!-- Footer Nav -->
                             <ul class="footer-nav">
                             <li><a href="/"><i class="fa fa-caret-right" aria-hidden="true"></i> Inicio</a></li>
-                                <li><a href="{{route('usuariosP')}}"><i class="fa fa-caret-right" aria-hidden="true"></i> Usuario</a></li>
-                                <li><a href="{{route('equiposP')}}"><i class="fa fa-caret-right" aria-hidden="true"></i> Equipo</a></li>
-                                <li><a href="{{route('fallaP')}}"><i class="fa fa-caret-right" aria-hidden="true"></i> Fallas</a></li>
+                                <li><a href=""><i class="fa fa-caret-right" aria-hidden="true"></i> Usuario</a></li>
+                                <li><a href=""><i class="fa fa-caret-right" aria-hidden="true"></i> Equipo</a></li>
+                                <li><a href=""><i class="fa fa-caret-right" aria-hidden="true"></i> Fallas</a></li>
                             </ul>
                         </div>
                     </div>
