@@ -180,14 +180,9 @@ Route::get('/', function(){
 })->name('principal');
 
 
-<<<<<<< HEAD
+
 Route::get('/contacto', [ContactController::class, 'contact'])->name('contact');
 
 Route::post('/send-message', [ContactController::class, 'sendEmail'])->name('contact.send');
-=======
-Route::get('/contacto', ContactoController::class, 'index') ->name('contacto');
 
 
-
-Route::get('/send-email', [MailController::class, 'sendEmail']);
->>>>>>> 54e833a4e56765fb7b4c841d974db4d7ddfcf06c
