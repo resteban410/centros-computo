@@ -29,7 +29,7 @@ class ContactMail extends Mailable
      */
     public function build()
     {
-        return $this->subject('Contact Message')->view('emails.ContactMail');
+        return $this->subject('Correo SJCH')->view('emails.ContactMail');
 
     }
 }
