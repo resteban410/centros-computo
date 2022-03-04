@@ -201,7 +201,7 @@
                             @csrf
                             <div class="row">
                                 <div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
-                                    <input type="text" name="name" class="form-control mb-30" placeholder="Tu nombre">
+                                    <input type="text" name="name" class="form-control mb-30" placeholder="Nombre">
                                 </div>
                                 <div class="col-12 col-lg-6 wow fadeInUp" data-wow-delay="100ms">
                                     <input type="email" name="email" class="form-control mb-30" placeholder="Tu correo electrónico">
