@@ -56,7 +56,7 @@
                   </div>
 
                   <a style="font-size: 14px;"class="small text-muted" href="#!">Olvido su contraseña?</a>
-                  <p style="font-size: 13px; "class="mb-5 pb-lg-2" style="color: #393f81;">¿No tiene una cuenta? <a href="#!" style="color: #393f81;">Solicite una cuenta</a></p>
+                  <p style="font-size: 13px; "class="mb-5 pb-lg-2" style="color: #393f81;"> ¿No tiene cuenta? Diríjase con el responsable de centros de cómputo</p>
               </div>
             </div>
           </div>
