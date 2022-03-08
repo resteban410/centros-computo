@@ -325,12 +325,7 @@
                             <!-- Single Blog Area -->
                             <div class="latest-blog-area">
                                 <a href="#" class="post-title">Horario Matutino</a>
-                                <span class="post-date"><i class="fa fa-clock-o" aria-hidden="true"></i> 08:00 AM- 12:00 PM</span>
-                            </div>
-                            <!-- Single Blog Area -->
-                            <div class="latest-blog-area">
-                                <a href="#" class="post-title">Horario Vespertinos</a>
-                                <span class="post-date"><i class="fa fa-clock-o" aria-hidden="true"></i> 13:00 PM- 15:00 PM</span>
+                                <span class="post-date"><i class="fa fa-clock-o" aria-hidden="true"></i> 08:00 AM - 15:00 PM</span>
                             </div>
                         </div>
                     </div>
