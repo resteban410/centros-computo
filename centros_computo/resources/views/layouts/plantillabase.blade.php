@@ -71,7 +71,6 @@
                                 <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                                 <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                                 <a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a>
-
                             </div>
                         </div>
                     </div>
@@ -96,8 +95,8 @@
                             <span class="navbarToggler"><span></span><span></span><span></span></span>
                         </div>
 
-                        <!-- Menu -->
-                        <div class="classy-menu">
+                      <!-- Menu -->
+                      <div class="classy-menu">
                             <!-- Menu Close Button -->
                             <div class="classycloseIcon">
                                 <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
@@ -110,7 +109,24 @@
                                     <li><a href="{{route('laboratoriosP')}}">Laboratorios</a></li>
                                     <li><a href="{{route('usuariosP')}}">Usuarios</a></li>
                                     <li><a href="{{route('materiasP')}}">Materias</a></li>
+                                    <div class="btn-group">
+                                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Mi cuenta
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Salir') }}
+                                    </a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                    </div>
+
+                                    </div>
                                 </ul>
+
                             </div>
                             <!-- Nav End -->
                         </div>
@@ -229,6 +245,18 @@
     </footer>
     <!-- Footer Area End -->
 
+ <!-- Footer Area End -->
+    <!-- **** All JS Files ***** -->
+    <!-- jQuery 2.2.4 -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Popper -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- All Plugins -->
+    <script src="js/roberto.bundle.js"></script>
+    <!-- Active -->
+    <script src="js/default-assets/active.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>

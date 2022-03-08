@@ -107,6 +107,22 @@
                                 <ul id="nav" class="menu">
                                     <li class="active"><a href="{{route('home')}}">Inicio</a></li>
                                 </ul>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Mi cuenta
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Salir') }}
+                                    </a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                    </div>
+
+                                    </div>
                             </div>
                             <!-- Nav End -->
                         </div>
@@ -223,7 +239,16 @@
         </div>
     </footer>
     <!-- Footer Area End -->
-
+  <!-- jQuery 2.2.4 -->
+  <script src="js/jquery.min.js"></script>
+    <!-- Popper -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- All Plugins -->
+    <script src="js/roberto.bundle.js"></script>
+    <!-- Active -->
+    <script src="js/default-assets/active.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
