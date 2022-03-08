@@ -269,7 +269,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-md-5 text-right">
-                        <a href="/contacto.php" class="btn roberto-btn mb-50">Contacto</a>
+                        <a href="{{route('contact')}}" class="btn roberto-btn mb-50">Contacto</a>
                     </div>
                 </div>
             </div>
